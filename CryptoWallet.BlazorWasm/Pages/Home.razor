@@ -1,0 +1,18 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+Welcome to your new app.
+<br />
+<br />
+<RadzenButton Text="Hi"></RadzenButton>
+<br />
+<br/>
+<RadzenButton Text=@text />
+<RadzenTextBox @bind-Value=@text />
+@code {
+    string text = "Hi";
+}
+

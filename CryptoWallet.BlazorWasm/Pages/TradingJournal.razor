@@ -1,0 +1,150 @@
+﻿@page "/TradingJournal"
+@inject HttpClient Http
+
+
+@if (oPositionVM == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+
+    <div class="rz-p-sm-12">
+        <RadzenAccordion Multiple="true">
+
+
+            <Items>
+                @foreach (var item in oPositionVM)
+                {
+                    <RadzenAccordionItem Text=@item.InstrumentName Icon="label">
+
+
+                        @if (listOptionTransaction == null)
+                        {
+                            <p><em>Loading...</em></p>
+                        }
+                        else
+                        {
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>instrumentName</th>
+                                        <th>size</th>
+                                        <th> average_price</th>
+                                        <th>MarkPrice</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>@item.InstrumentName</td>
+                                        <td>@item.size</td>
+                                        <td>@item.average_price</td>
+                                        <td>@item.MarkPrice</td>
+                                    </tr>
+                                    <br />
+                                    <tr>
+                                        <th>instrumentName</th>
+                                        <th>size</th>
+                                        <th> indexPrice</th>
+                                        <th>price</th>
+                                    </tr>
+
+                                    @foreach (var item2 in listOptionTransaction)
+                                    {
+                                        if (@item2["instrumentName"].ToString() == @item.InstrumentName)
+                                        {
+                                            <tr style="color:red">
+                                                <td>@item2["instrumentName"].ToString()</td>
+                                                <td>@item2["amount"].ToString()</td>
+                                                <td>@item2["indexPrice"].ToString()</td>
+                                                <td>@item2["price"].ToString()</td>
+                                            </tr>
+                                        }
+
+                                    }
+                                </tbody>
+                            </table>
+                        }
+
+
+                    </RadzenAccordionItem>
+                }
+            </Items>
+
+        </RadzenAccordion>
+    </div>
+}
+
+
+
+
+
+
+
+
+
+
+
+@if (listOptionTransaction == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>instrumentName</th>
+                <th>amount</th>
+                <th>indexPrice</th>
+                <th>price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in listOptionTransaction)
+            {
+                <tr>
+                    <td>@item["instrumentName"].ToString()</td>
+                    <td>@item["amount"].ToString()</td>
+                    <td>@item["indexPrice"].ToString()</td>
+                    <td>@item["price"].ToString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<br />
+<br />
+<br />
+
+@if (oPositionVM == null)
+{
+    <p><em>Loading...2</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>instrumentName</th>
+                <th>size</th>
+                <th>average_price</th>
+                <th>MarkPrice</th>
+                <th>delta</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in oPositionVM)
+            {
+                <tr>
+                    <td>@item.InstrumentName</td>
+                    <td>@item.size</td>
+                    <td>@item.average_price</td>
+                    <td>@item.MarkPrice</td>
+                    <td>@item.delta</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
