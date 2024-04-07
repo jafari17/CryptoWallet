@@ -1,4 +1,5 @@
-﻿using CryptoWallet.Application.Contracts.Persistence;
+﻿using CryptoWallet.Application.AutoMapperProfile;
+using CryptoWallet.Application.Contracts.Persistence;
 using CryptoWallet.Application.Services.User.Commands;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,6 +22,7 @@ namespace CryptoWallet.Application
 
             services.AddValidatorsFromAssembly(assembly);
 
+            services.AddAutoMapper(typeof(CustomProfile));
 
             //services.AddValidatorsFromAssemblyContaining<CreateUserCommand>(ServiceLifetime.Transient);
 

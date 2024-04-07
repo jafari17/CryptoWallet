@@ -1,6 +1,8 @@
 using CryptoWallet.API;
 using CryptoWallet.Application;
+using CryptoWallet.Application.AutoMapperProfile;
 using CryptoWallet.Infrastructure;
+using Microsoft.AspNetCore.Hosting;
 
 var builder = WebApplication.CreateBuilder(args);
 
