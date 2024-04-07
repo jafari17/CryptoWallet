@@ -37,3 +37,4 @@ C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet
 C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet.Infrastructure\obj\Debug\net8.0\CryptoWallet.Infrastructure.pdb
 C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet.Infrastructure\obj\Debug\net8.0\CryptoWallet.Infrastructure.genruntimeconfig.cache
 C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet.Infrastructure\obj\Debug\net8.0\ref\CryptoWallet.Infrastructure.dll
+C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.Infrastructure\obj\Debug\net8.0\CryptoWallet.Infrastructure.sourcelink.json

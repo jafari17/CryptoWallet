@@ -29,3 +29,4 @@ C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet
 C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet.Application\obj\Debug\net8.0\refint\CryptoWallet.Application.dll
 C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet.Application\obj\Debug\net8.0\CryptoWallet.Application.pdb
 C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet.Application\obj\Debug\net8.0\ref\CryptoWallet.Application.dll
+C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.Application\obj\Debug\net8.0\CryptoWallet.Application.sourcelink.json

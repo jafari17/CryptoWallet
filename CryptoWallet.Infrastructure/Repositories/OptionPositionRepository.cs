@@ -40,15 +40,19 @@ namespace CryptoWallet.Infrastructure.Repositories
 
         public async Task<long> GetResponseOutMax()
         {
-            try
+            if (await _context.optionPosition.AnyAsync())
             {
-                return await _context.optionPosition.MaxAsync(op => op.ResponseOut);
-            }
-            catch (Exception)
-            {
+                try
+                {
+                    return await _context.optionPosition.MaxAsync(op => op.ResponseOut);
+                }
+                catch (Exception)
+                {
 
-                return 0;
-            }
+                    return 0;
+                }
+            }else { return 0; }
+            
         }
 
         public async Task   SaveChangesAsync()

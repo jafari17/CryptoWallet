@@ -21,3 +21,4 @@ C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet
 C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet.Domain\obj\Debug\net8.0\refint\CryptoWallet.Domain.dll
 C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet.Domain\obj\Debug\net8.0\CryptoWallet.Domain.pdb
 C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet.Domain\obj\Debug\net8.0\ref\CryptoWallet.Domain.dll
+C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.Domain\obj\Debug\net8.0\CryptoWallet.Domain.sourcelink.json

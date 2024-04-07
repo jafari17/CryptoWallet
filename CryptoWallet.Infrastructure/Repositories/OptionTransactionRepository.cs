@@ -36,15 +36,19 @@ namespace CryptoWallet.Infrastructure.Repositories
 
         public async Task<long> GetTimestampMax()
         {
-            try
+            if (await _context.optionTransaction.AnyAsync())
             {
-                return await _context.optionTransaction.MaxAsync(ot => ot.Timestamp);
-            }
-            catch (Exception)
-            {
+                try
+                {
+                    return await _context.optionTransaction.MaxAsync(ot => ot.Timestamp);
+                }
+                catch (Exception)
+                {
 
-                return 0;
-            }
+                    return 0;
+                }
+
+            }else { return 0; }
         }
 
         public async Task SaveChangesAsync()
