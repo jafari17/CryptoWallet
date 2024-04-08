@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CryptoWallet.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e7fb7d97300153ab43255bda4f412b6738e13d2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b15e9a36b9cccd370f0da76ec4ed4f07dbff1012")]
 [assembly: System.Reflection.AssemblyProductAttribute("CryptoWallet.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CryptoWallet.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

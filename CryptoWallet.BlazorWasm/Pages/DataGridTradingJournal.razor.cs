@@ -90,7 +90,7 @@ namespace CryptoWallet.BlazorWasm.Pages
             public double TotalProfitLoss { get; set; }
             public double delta { get; set; }
 
-            public ICollection<OptionTransactionVM2> optionTransactionVM2 { get; set; }
+            //public ICollection<OptionTransactionVM2> optionTransactionVM2 { get; set; }
         }
         public class OptionTransactionVM2
         {
