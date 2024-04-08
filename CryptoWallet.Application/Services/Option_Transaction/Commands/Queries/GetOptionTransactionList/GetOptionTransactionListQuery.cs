@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace CryptoWallet.Application.Services.Option_Transaction.Commands.Queries.GetOptionTransactionList
 {
-    public class GetOptionTransactionListQuery : IRequest<GetOptionTransactionListQueryResponse>
+    public class GetOptionTransactionListQuery : IRequest<IEnumerable<GetOptionTransactionListQueryResponse>>
     {
 
 

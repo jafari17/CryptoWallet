@@ -8,11 +8,9 @@
 }
 else
 {
-
+    
     <div class="rz-p-sm-12">
         <RadzenAccordion Multiple="true">
-
-
             <Items>
                 @foreach (var item in oPositionVM)
                 {
@@ -49,15 +47,15 @@ else
                                         <th>price</th>
                                     </tr>
 
-                                    @foreach (var item2 in listOptionTransaction)
+                                    @foreach (var item2 in oTransactionVM)
                                     {
-                                        if (@item2["instrumentName"].ToString() == @item.InstrumentName)
+                                        if (@item2.InstrumentName == @item.InstrumentName)
                                         {
                                             <tr style="color:red">
-                                                <td>@item2["instrumentName"].ToString()</td>
-                                                <td>@item2["amount"].ToString()</td>
-                                                <td>@item2["indexPrice"].ToString()</td>
-                                                <td>@item2["price"].ToString()</td>
+                                                <td>@item2.InstrumentName </td>
+                                                <td>@item2.Amount</td>
+                                                <td>@item2.IndexPrice </td>
+                                                <td>@item2.Price</td>
                                             </tr>
                                         }
 
@@ -85,7 +83,7 @@ else
 
 
 
-@if (listOptionTransaction == null)
+@if (oTransactionVM == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -101,13 +99,13 @@ else
             </tr>
         </thead>
         <tbody>
-            @foreach (var item in listOptionTransaction)
+            @foreach (var item in oTransactionVM)
             {
                 <tr>
-                    <td>@item["instrumentName"].ToString()</td>
-                    <td>@item["amount"].ToString()</td>
-                    <td>@item["indexPrice"].ToString()</td>
-                    <td>@item["price"].ToString()</td>
+                    <td>@item.InstrumentName </td>
+                    <td>@item.Amount</td>
+                    <td>@item.IndexPrice </td>
+                    <td>@item.Price</td>
                 </tr>
             }
         </tbody>

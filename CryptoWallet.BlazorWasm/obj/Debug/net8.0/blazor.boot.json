@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "CryptoWallet.BlazorWasm",
   "resources": {
-    "hash": "sha256-eOb6Ue9Pg52xv7HDDvyv8yWEvhbo7CNQrR9+c4e+bCw=",
+    "hash": "sha256-JRfnYr2g/Y0k1fUYFBV9GX6u3faRb25rlrztQ0lDi7o=",
     "jsModuleNative": {
       "dotnet.native.8.0.2.uvek90s3jt.js": "sha256-gPMK16QWoJSTxorlZJqcVtbBRTniIQWlLsJN2O4cJHg="
     },
@@ -211,10 +211,10 @@
       "mscorlib.wasm": "sha256-OH3kXneWqQMz6CUSo6POZqIeMqn9+5RR+IgHn5TnIwA=",
       "netstandard.wasm": "sha256-ZOswxXEbR2TmqjpbaBEdgr85Bv1NC4GwOwoJ+oxXM3M=",
       "System.Private.CoreLib.wasm": "sha256-I2w0iHf5nvSQyF1YE1VbgdTzmmz6a4OE6J7vo5wFa/4=",
-      "CryptoWallet.BlazorWasm.wasm": "sha256-R2Smiln06rao2jbzDd/VNWOzFj4rJW9RGYwO20HagfU="
+      "CryptoWallet.BlazorWasm.wasm": "sha256-1zdcrfBtHzgiqYq3akXRwyzWYtV6VoLzf8/Wf2HHvgQ="
     },
     "pdb": {
-      "CryptoWallet.BlazorWasm.pdb": "sha256-Y86I54uUx7nhPggnbMla26bnfX4LSnJVVQ4QJGE+/pU="
+      "CryptoWallet.BlazorWasm.pdb": "sha256-/Kvvo6YhTqHhEfoaEK2gHzUtpyxwAXIQbkXrPyI0eJ0="
     }
   },
   "cacheBootResources": true,

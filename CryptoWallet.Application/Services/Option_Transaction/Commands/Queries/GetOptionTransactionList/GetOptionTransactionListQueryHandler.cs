@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace CryptoWallet.Application.Services.Option_Transaction.Commands.Queries.GetOptionTransactionList
 {
-    public class GetOptionTransactionListQueryHandler : IRequestHandler<GetOptionTransactionListQuery, GetOptionTransactionListQueryResponse>
+    public class GetOptionTransactionListQueryHandler : IRequestHandler<GetOptionTransactionListQuery, IEnumerable<GetOptionTransactionListQueryResponse>>
     {
         private readonly IOptionTransactionRepository _optionTransactionRepository;
         public GetOptionTransactionListQueryHandler(IOptionTransactionRepository optionTransactionRepository)
@@ -19,15 +19,15 @@ namespace CryptoWallet.Application.Services.Option_Transaction.Commands.Queries.
             _optionTransactionRepository = optionTransactionRepository;
         }
 
-        public async Task<GetOptionTransactionListQueryResponse> Handle(GetOptionTransactionListQuery request, CancellationToken cancellationToken)
+        public async Task<IEnumerable<GetOptionTransactionListQueryResponse>> Handle(GetOptionTransactionListQuery request, CancellationToken cancellationToken)
         {
             var optionTransactionList =  await _optionTransactionRepository.GetOptionTransactionListAsync();
 
             GetOptionTransactionListQueryResponse response = new GetOptionTransactionListQueryResponse();
-
+            List<GetOptionTransactionListQueryResponse> optionTransactionListQueryResponse = new List<GetOptionTransactionListQueryResponse>();
             foreach (var item in optionTransactionList)
             {
-                GetOptionTransactionDetalis optionTransactionDetalis = new GetOptionTransactionDetalis()
+                GetOptionTransactionListQueryResponse optionTransactionDetalis = new GetOptionTransactionListQueryResponse()
                 {
                     TransactionLogId = item.TransactionLogId,
                     ProfitAsCashflow = item.ProfitAsCashflow,
@@ -60,10 +60,10 @@ namespace CryptoWallet.Application.Services.Option_Transaction.Commands.Queries.
                     IdJson = item.IdJson,
                 };
 
-                response.List.Add(optionTransactionDetalis);
+                optionTransactionListQueryResponse.Add(optionTransactionDetalis);
             }
-            response.Total = response.List.Count;
-            return response;
+             
+            return optionTransactionListQueryResponse;
         }
     }
 }
