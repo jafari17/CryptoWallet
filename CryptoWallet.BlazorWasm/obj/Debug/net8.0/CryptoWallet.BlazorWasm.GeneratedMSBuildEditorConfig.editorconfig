@@ -30,8 +30,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291bnRlci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/RED/Documents/GitHubP/CryptoWallet/CryptoWallet.BlazorWasm/Pages/DataGridTradingJournal.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGF0YUdyaWRUcmFkaW5nSm91cm5hbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/RED/Documents/GitHubP/CryptoWallet/CryptoWallet.BlazorWasm/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/RED/Documents/GitHubP/CryptoWallet/CryptoWallet.BlazorWasm/Pages/Test.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVGVzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/RED/Documents/GitHubP/CryptoWallet/CryptoWallet.BlazorWasm/Pages/TradingJournal.razor]

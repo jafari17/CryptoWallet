@@ -276,3 +276,4 @@ C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet
 C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet.API\obj\Debug\net8.0\CryptoWallet.API.genruntimeconfig.cache
 C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet.API\obj\Debug\net8.0\ref\CryptoWallet.API.dll
 C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.API\obj\Debug\net8.0\CryptoWallet.API.sourcelink.json
+C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.API\bin\Debug\net8.0\AutoMapper.dll

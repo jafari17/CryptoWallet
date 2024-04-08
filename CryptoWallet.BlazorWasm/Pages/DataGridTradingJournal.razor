@@ -1,0 +1,62 @@
+﻿@page "/DataGridTradingJournal"
+@inject HttpClient Http
+
+
+@if (oPositionVM == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div style="display: flex; align-items: center; margin-bottom: 16px">
+        <div style="white-space:nowrap; margin-right: 16px">ExpandMode:</div>
+        <RadzenSelectBar @bind-Value="@expandMode" TextProperty="Text" ValueProperty="Value" style="margin-right: 16px"
+                         Data="@(Enum.GetValues(typeof(DataGridExpandMode)).Cast<DataGridExpandMode>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" />
+        <RadzenButton Text="Expand all rows" Click="@(args => ToggleRowsExpand(true))" style="margin-right: 16px"
+                      Disabled=@(allRowsExpanded == true || expandMode == DataGridExpandMode.Single) />
+        <RadzenButton Text="Collapse all rows" Click="@(args => ToggleRowsExpand(false))"
+                      Disabled=@(allRowsExpanded == false || expandMode == DataGridExpandMode.Single) />
+    </div>
+
+
+
+    <RadzenDataGrid @ref="grid" Data="@oPositionVM" TItem="OptionPositionVM2" AllowFiltering="true" AllowPaging="true" PageSize="3" AllowSorting="true" RowRender="@RowRender" ExpandMode="@expandMode">
+
+
+
+        <Template Context="OptionPositionVM2">
+            <RadzenCard Style="margin-bottom:20px">
+                Company:
+                <b>@OptionPositionVM2?.InstrumentName</b>
+            </RadzenCard>
+             
+                    <RadzenTabs>
+                        <Tabs>
+                            <RadzenTabsItem Text="Order Details">
+                                <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" Data="@oTransactionVM" TItem="OptionTransactionVM2">
+                                    <Columns>
+                                        <RadzenDataGridColumn TItem="OptionTransactionVM2" Property="InstrumentName" Title="InstrumentName" />
+                                        <RadzenDataGridColumn TItem="OptionTransactionVM2" Property="Amount" Title="Amount" />
+                                        <RadzenDataGridColumn TItem="OptionTransactionVM2" Property="IndexPrice" Title="IndexPrice" />
+                                        <RadzenDataGridColumn TItem="OptionTransactionVM2" Property="Price" Title="Price" />
+
+                                    </Columns>
+                                </RadzenDataGrid>
+                            </RadzenTabsItem>
+                        </Tabs>
+                    </RadzenTabs>
+        </Template>
+
+
+        <Columns>
+            <RadzenDataGridColumn TItem="OptionPositionVM2" Property="InstrumentName" Title="Instrument Name" Width="120px" />
+            <RadzenDataGridColumn TItem="OptionPositionVM2" Property="size" Title="size" Width="120px" />
+            <RadzenDataGridColumn TItem="OptionPositionVM2" Property="average_price" Title="average price" Width="120px" />
+            <RadzenDataGridColumn TItem="OptionPositionVM2" Property="MarkPrice" Title="MarkPrice" Width="120px" />
+            <RadzenDataGridColumn TItem="OptionPositionVM2" Property="TotalProfitLoss" Title="Total ProfitLoss" Width="120px" />
+            <RadzenDataGridColumn TItem="OptionPositionVM2" Property="delta" Title="delta" Width="120px" />
+
+        </Columns>
+    </RadzenDataGrid>
+
+}

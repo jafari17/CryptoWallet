@@ -6,19 +6,9 @@ using System.Threading.Tasks;
 
 namespace CryptoWallet.Application.Services.Option_Transaction.Commands.Queries.GetOptionTransactionList
 {
-    public class GetOptionTransactionListQueryResponse
-    {
-        public List<GetOptionTransactionDetalis> List { get; set; }
-        public int Total { get; set; }
-
-        public GetOptionTransactionListQueryResponse( )
-        {
-            List = new List<GetOptionTransactionDetalis> ();
-            
-        }
-    }  
+ 
     
-    public class GetOptionTransactionDetalis
+    public class GetOptionTransactionListQueryResponse
     {
         public long TransactionLogId { get; set; }
         public string ProfitAsCashflow { get; set; }

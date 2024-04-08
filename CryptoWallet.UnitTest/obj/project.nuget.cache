@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "Mjr9k2y7SRK8Pt1B7T/CxlvI4i4wNuUOiS0jplNaCr3V+hJzR7IJi3X/0zXb5q/cLhuO6gsvpx6M3mZH+moTtQ==",
+  "dgSpecHash": "N3BesAr1QLcX709bkTbpK/6NYZBD4dqUp25GrjVyX4jYigHtMsp9mKUiGMZ49JhF5CA5n+QUCGcLh/svceWT8g==",
   "success": true,
   "projectFilePath": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.UnitTest\\CryptoWallet.UnitTest.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\RED\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\RED\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",
     "C:\\Users\\RED\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\RED\\.nuget\\packages\\dartsassbuilder\\1.0.0\\dartsassbuilder.1.0.0.nupkg.sha512",

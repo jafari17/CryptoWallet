@@ -48,7 +48,8 @@ namespace CryptoWallet.Infrastructure.Repositories
                     return 0;
                 }
 
-            }else { return 0; }
+            }
+            else { return 0; }
         }
 
         public async Task SaveChangesAsync()

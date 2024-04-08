@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "54ZZgBmX1lfwjubceOZ6EaimHvkYgKRhtYiDMQS4j9kyQSwlbJVsw3KyEe6rkJggqYyr7rJFXhMrDb5fwSVedw==",
+  "dgSpecHash": "IMteyQo7kxGW2UF9zKfyt31rzNtmwDqLs17tMdyQv/CV3WdCz4pCN9ReaClFLhsAEs2dGnClrgLZjQG276Y46A==",
   "success": true,
   "projectFilePath": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Infrastructure\\CryptoWallet.Infrastructure.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\RED\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\RED\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
     "C:\\Users\\RED\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.9.0\\fluentvalidation.dependencyinjectionextensions.11.9.0.nupkg.sha512",
     "C:\\Users\\RED\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

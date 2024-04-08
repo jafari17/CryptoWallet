@@ -16,18 +16,18 @@ namespace CryptoWallet.BlazorWasm.Pages
             try
             {
 
-                var response =  await Http.GetStringAsync("https://localhost:7185/api/OptionTransaction/GetOptionTransaction");
+                //var response = await Http.GetStringAsync("https://localhost:7185/api/OptionTransaction/GetOptionTransaction");
 
+                //JObject jsonObject = JObject.Parse(response);
 
-
-                JObject jsonObject = JObject.Parse(response);
-
-                listOptionTransaction = (JArray)jsonObject["list"];
-
+                //listOptionTransaction = (JArray)jsonObject["list"];
 
                 //string ListString =  jsonObject["list"].ToString();
 
                 //oTransactionVM = await Http.GetFromJsonAsync<OptionTransactionVM[]>(ListString);
+
+                oTransactionVM = await Http.GetFromJsonAsync<OptionTransactionVM[]>("https://localhost:7185/api/OptionTransaction/GetOptionTransaction");
+
 
             }
             catch (Exception)
