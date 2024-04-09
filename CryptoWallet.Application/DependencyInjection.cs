@@ -23,6 +23,7 @@ namespace CryptoWallet.Application
             services.AddValidatorsFromAssembly(assembly);
 
             services.AddAutoMapper(typeof(CustomProfile));
+            services.AddAutoMapper(typeof(QueryResponseProfile));
 
             //services.AddValidatorsFromAssemblyContaining<CreateUserCommand>(ServiceLifetime.Transient);
 

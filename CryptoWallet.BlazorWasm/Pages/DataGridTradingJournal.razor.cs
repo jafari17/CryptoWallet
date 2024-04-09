@@ -15,12 +15,12 @@ namespace CryptoWallet.BlazorWasm.Pages
         bool? allRowsExpanded;
 
 
-        IEnumerable<OptionPositionVM2> oPositionVM;
+        IEnumerable<OptionPositionVM> oPositionVM;
 
-        RadzenDataGrid<OptionPositionVM2> grid;
+        RadzenDataGrid<OptionPositionVM> grid;
 
 
-        IEnumerable<OptionTransactionVM2>? oTransactionVM;
+        IEnumerable<optionTransactionDetalisVM>? oTransactionVM;
         //private OptionPositionVM[]? oPositionVM;
 
         private JArray listOptionTransaction;
@@ -40,11 +40,24 @@ namespace CryptoWallet.BlazorWasm.Pages
         protected override async Task OnInitializedAsync()
         {
 
-
             await base.OnInitializedAsync();
+            //try
+            //{
+            //    oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM2[]>("https://localhost:7185/api/OptionPosition/GetOptionPositionList");
+            //    oTransactionVM = await Http.GetFromJsonAsync<OptionTransactionVM2[]>("https://localhost:7185/api/OptionTransaction/GetOptionTransaction");
+
+            //}
+            //catch (Exception)
+            //{
+            //    Console.WriteLine("_____________________");
+            //    throw;
+            //}
+
             try
             {
-                oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM2[]>("https://localhost:7185/api/OptionPosition/GetOptionPositionList");
+                var test = await Http.GetStringAsync("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList");
+
+                oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList");
 
             }
             catch (Exception)
@@ -54,19 +67,11 @@ namespace CryptoWallet.BlazorWasm.Pages
             }
 
 
-            try
-            {
-                oTransactionVM = await Http.GetFromJsonAsync<OptionTransactionVM2[]>("https://localhost:7185/api/OptionTransaction/GetOptionTransaction");
 
-            }
-            catch (Exception)
-            {
-                Console.WriteLine("_____________________");
-                throw;
-            }
+
 
         }
-        void RowRender(RowRenderEventArgs<OptionPositionVM2> args)
+        void RowRender(RowRenderEventArgs<OptionPositionVM> args)
         {
             
         }
@@ -80,7 +85,7 @@ namespace CryptoWallet.BlazorWasm.Pages
             }
         }
 
-        public class OptionPositionVM2
+        public class OptionPositionVM
         {
             public int optionId { get; set; }
             public string InstrumentName { get; set; }
@@ -90,9 +95,14 @@ namespace CryptoWallet.BlazorWasm.Pages
             public double TotalProfitLoss { get; set; }
             public double delta { get; set; }
 
-            //public ICollection<OptionTransactionVM2> optionTransactionVM2 { get; set; }
+            public ICollection<optionTransactionDetalisVM> optionTransactionDetalis { get; set; }
+
+            public OptionPositionVM()
+            {
+                optionTransactionDetalis = new List<optionTransactionDetalisVM>();
+            }
         }
-        public class OptionTransactionVM2
+        public class optionTransactionDetalisVM
         {
             public long TransactionLogId { get; set; }
             public string ProfitAsCashflow { get; set; }

@@ -40,6 +40,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CryptoWallet.API.Controllers.PositionTransactionLogController",
+    "Method": "GetPositionTransactionLogList",
+    "RelativePath": "api/PositionTransactionLog/GetPositionTransactionLogList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CryptoWallet.API.Controllers.UserController",
     "Method": "CreateUser",
     "RelativePath": "api/User/CreateUser",
