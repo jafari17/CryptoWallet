@@ -20,6 +20,7 @@ namespace CryptoWallet.Infrastructure.Repositories
         }
         public async Task AddOptionTransactionAsync(OptionTransaction optionTransaction)
         {
+
             await _context.optionTransaction.AddAsync(optionTransaction);
 
         }

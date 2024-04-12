@@ -11,6 +11,7 @@ namespace CryptoWallet.Application.Services.Option_Transaction.Commands.Queries.
     public class GetOptionTransactionListQueryResponse
     {
         public long TransactionLogId { get; set; }
+        public int OptionPositionId { get; set; }
         public string ProfitAsCashflow { get; set; }
         public string PriceCurrency { get; set; }
         public string UserRole { get; set; }

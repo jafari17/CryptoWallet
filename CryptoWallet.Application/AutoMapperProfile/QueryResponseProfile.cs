@@ -14,9 +14,12 @@ namespace CryptoWallet.Application.AutoMapperProfile
     {
         public QueryResponseProfile()
         {
-            CreateMap<OptionPosition, GETPositionTransactionLogListQueryResponse>();
+
+            CreateMap<OptionPosition, GETPositionTransactionLogListQueryResponse>()
+            .ForMember(dest => dest.optionTransactionDetalis, opt => opt.MapFrom(src => src.optionTransaction));
+
             CreateMap<OptionTransaction, OptionTransactionDetalis>();
- 
+
         }
     }
 }

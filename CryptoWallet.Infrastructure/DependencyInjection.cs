@@ -31,8 +31,9 @@ namespace CryptoWallet.Infrastructure
 
 
             services.AddScoped<IUserRepository, UserRepository>();
-            services.AddScoped<IOptionPositionRepository, OptionPositionRepository>();
+            services.AddScoped<IOptionPositionHistoryRepository, OptionPositionHistoryRepository>();
             services.AddScoped<IOptionTransactionRepository, OptionTransactionRepository>();
+            services.AddScoped<IOptionPositionRepository, OptionPositionRepository>();
             
             return services;
         }

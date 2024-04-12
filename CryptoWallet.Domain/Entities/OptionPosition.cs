@@ -18,5 +18,6 @@ namespace CryptoWallet.Domain.Entities
         public DateTime RegisterTime { get; set; }
         public long ResponseOut { get; set; }
 
+        public ICollection<OptionTransaction> optionTransaction { get; set; }
     }
 }

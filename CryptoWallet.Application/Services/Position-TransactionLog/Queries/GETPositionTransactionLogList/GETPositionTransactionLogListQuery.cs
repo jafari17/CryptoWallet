@@ -10,5 +10,12 @@ namespace CryptoWallet.Application.Services.Position_TransactionLog.Queries.GETP
 {
     public class GETPositionTransactionLogListQuery : IRequest<IEnumerable<GETPositionTransactionLogListQueryResponse>> 
     {
+        public bool LastUpdate { get; set; }
+
+
+        public GETPositionTransactionLogListQuery(bool lastUpdate)
+        {
+            LastUpdate = lastUpdate;
+        }
     }
 }

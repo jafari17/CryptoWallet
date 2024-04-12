@@ -42,7 +42,23 @@
   {
     "ContainingType": "CryptoWallet.API.Controllers.PositionTransactionLogController",
     "Method": "GetPositionTransactionLogList",
-    "RelativePath": "api/PositionTransactionLog/GetPositionTransactionLogList",
+    "RelativePath": "api/PositionTransactionLog/GetPositionTransactionLogList/{lastUpdate}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "lastUpdate",
+        "Type": "System.Boolean",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CryptoWallet.API.Controllers.PositionTransactionLogController",
+    "Method": "SavePositionList",
+    "RelativePath": "api/PositionTransactionLog/SavePositionList",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

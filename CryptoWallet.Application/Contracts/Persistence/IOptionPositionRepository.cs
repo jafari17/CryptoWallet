@@ -10,10 +10,10 @@ namespace CryptoWallet.Application.Contracts.Persistence
     public interface IOptionPositionRepository
     {
         Task AddOptionPositionAsync(OptionPosition optionPosition);
-        Task<IEnumerable<OptionPosition>> GetListOptionPositionAsync();
+        Task UpdateOptionPositionAsync(OptionPosition optionPosition);
+        Task<List<OptionPosition>> GetListOptionPositionAsync();
         Task<OptionPosition> GetOptionPositionAsync(int optionPositionId);
-        Task<IEnumerable<OptionPosition>> GetLastOptionPositionAsync(long responseOut);
-        Task<long> GetResponseOutMax();
+        //Task<IEnumerable<OptionPosition>> GetLastOptionPositionAsync(long responseOut); 
         Task SaveChangesAsync();
     }
 }

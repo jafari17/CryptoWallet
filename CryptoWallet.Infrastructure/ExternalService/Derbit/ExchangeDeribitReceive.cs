@@ -1,4 +1,6 @@
-﻿using CryptoWallet.Application.Contracts;
+﻿using AutoMapper;
+using CryptoWallet.Application.Contracts;
+using CryptoWallet.Application.Services.Position_TransactionLog.Queries.GETPositionTransactionLogList;
 using CryptoWallet.Application.ViewModels;
 using CryptoWallet.Domain.Entities;
 using MediatR;
@@ -16,10 +18,36 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
     public class ExchangeDeribitReceive : IExchangeReceive
     {
         private readonly IMediator _mediator;
+        private readonly IMapper _mapper;
 
-        public ExchangeDeribitReceive(IMediator mediator)
+        public ExchangeDeribitReceive(IMediator mediator, IMapper mapper)
         {
             _mediator = mediator;
+            _mapper = mapper;
+        }
+
+        public async Task<List<OptionPosition>> GetLastGetLastPositionsAndTransactionLog()
+        {
+            var ListPosition = await GetLastPositions();
+            var ListTransactionLog = await GetOptionTransactionDtoLog(1000000000000);
+
+            if (ListPosition.Count != 0)
+            {
+                foreach (var position in ListPosition)
+                {
+                    var listTransactionLog = ListTransactionLog.Where(op => op.InstrumentName == position.InstrumentName).ToList();
+
+                    foreach (var item in listTransactionLog)
+                    {
+                        position.optionTransactionDto.Add(item);
+                    }
+                }
+            }
+
+            var oPositionResponse = _mapper.Map<List<OptionPosition>>(ListPosition);
+
+
+            return oPositionResponse;
         }
 
         public async Task<List<OptionPositionDto>> GetLastPositions()
@@ -39,6 +67,7 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
                     TotalProfitLoss = item.total_profit_loss,
                     delta = item.delta,
                     ResponseOut = data.usOut,
+                    RegisterTime = DateTime.Now,
                 };
                 ListoptionVM.Add(optionVM);
             }
@@ -105,8 +134,6 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
         }
 
 
-
-
         public async Task get_Test()
         {
             dynamic data = await getApiResponse("https://test.deribit.com/api/v2/private/get_order_history_by_instrument");
@@ -121,17 +148,12 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
 
         }
 
-
-
-
         private async Task<dynamic> getApiResponse(string url)
         {
             string token = await GetToken();
 
-
             using (var client = new HttpClient())
             {
-
                 client.DefaultRequestHeaders.Add("Authorization", "Bearer " + token);
                 var response = await client.GetStringAsync(url);
 
@@ -179,9 +201,6 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
 
             return tokenText;
 
-
         }
-
-
     }
 }

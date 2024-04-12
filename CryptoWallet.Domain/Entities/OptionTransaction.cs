@@ -9,6 +9,7 @@ namespace CryptoWallet.Domain.Entities
     public class OptionTransaction
     {
         public long TransactionLogId { get; set; }
+        public int OptionPositionId { get; set; }
         public string ProfitAsCashflow { get; set; }
         public string PriceCurrency { get; set; }
         public string UserRole { get; set; }
@@ -37,5 +38,6 @@ namespace CryptoWallet.Domain.Entities
         public double Position { get; set; }
         public string Info { get; set; }
         public int IdJson { get; set; }
+        public OptionPosition optionPosition { get; set; }
     }
 }

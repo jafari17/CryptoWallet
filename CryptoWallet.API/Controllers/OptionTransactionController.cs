@@ -1,4 +1,4 @@
-﻿using CryptoWallet.Application.Services.Option_Position.Queries.GetOptionList;
+﻿using CryptoWallet.Application.Services.Option_Position_History.Queries.GetOptionList;
 using CryptoWallet.Application.Services.Option_Transaction.Commands.Create;
 using CryptoWallet.Application.Services.Option_Transaction.Commands.Queries.GetOptionTransactionList;
 using MediatR;
@@ -35,5 +35,7 @@ namespace CryptoWallet.API.Controllers
             var response = await _mediator.Send(query);
             return Ok(response);
         }
+
+ 
     }
 }

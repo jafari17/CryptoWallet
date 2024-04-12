@@ -1,4 +1,5 @@
 ﻿using CryptoWallet.Application.ViewModels;
+using CryptoWallet.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,9 @@ namespace CryptoWallet.Application.Contracts
         Task get_Test();
 
         Task<List<OptionTransactionDto>> GetOptionTransactionDtoLog(long timestampStrat);
-        
+
+        Task<List<OptionPosition>> GetLastGetLastPositionsAndTransactionLog();
+
+
     }
 }

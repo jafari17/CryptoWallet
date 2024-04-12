@@ -135,7 +135,6 @@ C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.API\bin\Debug\net8.0\tr
 C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.API\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.API\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.API\bin\Debug\net8.0\Newtonsoft.Json.dll
-C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.API\obj\Debug\net8.0\CryptoWallet.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet.API\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet.API\bin\Debug\net8.0\appsettings.json
 C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet.API\bin\Debug\net8.0\CryptoWallet.API.exe
@@ -277,3 +276,4 @@ C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet
 C:\Users\RED\Documents\GitHubP\CryptoWallet-6April2024\CryptoWallet\CryptoWallet.API\obj\Debug\net8.0\ref\CryptoWallet.API.dll
 C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.API\obj\Debug\net8.0\CryptoWallet.API.sourcelink.json
 C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.API\bin\Debug\net8.0\AutoMapper.dll
+C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.API\obj\Debug\net8.0\CryptoWallet.API.MvcApplicationPartsAssemblyInfo.cs

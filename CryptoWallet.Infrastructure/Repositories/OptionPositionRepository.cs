@@ -13,51 +13,39 @@ namespace CryptoWallet.Infrastructure.Repositories
     public class OptionPositionRepository : IOptionPositionRepository
     {
         private readonly CryptoWalletDbContext _context;
-
         public OptionPositionRepository(CryptoWalletDbContext context)
         {
             _context = context;
         }
+
         public async Task AddOptionPositionAsync(OptionPosition optionPosition)
         {
-                await _context.optionPosition.AddAsync(optionPosition);
+            await _context.optionPosition.AddAsync(optionPosition);
         }
 
-        public async Task<IEnumerable<OptionPosition>> GetLastOptionPositionAsync(long responseOut)
+        //public Task<IEnumerable<OptionPosition>> GetLastOptionPositionAsync(long responseOut)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        public async Task<List<OptionPosition>> GetListOptionPositionAsync()
         {
-            return await _context.optionPosition.Where(x => x.ResponseOut == responseOut).ToListAsync();
+            return await _context.optionPosition.Include(op => op.optionTransaction).ToListAsync();
         }
 
-        public async Task<IEnumerable<OptionPosition>> GetListOptionPositionAsync()
+        public Task<OptionPosition> GetOptionPositionAsync(int optionPositionId)
         {
-            return await _context.optionPosition.ToListAsync();
+            throw new NotImplementedException();
         }
 
-        public async Task<OptionPosition> GetOptionPositionAsync(int optionPositionId)
+        public async Task SaveChangesAsync()
         {
-            return await _context.optionPosition.Where(u => u.OptionPositionId == optionPositionId).FirstOrDefaultAsync();
+            await _context.SaveChangesAsync();
         }
 
-        public async Task<long> GetResponseOutMax()
+        public async Task UpdateOptionPositionAsync(OptionPosition optionPosition)
         {
-            if (await _context.optionPosition.AnyAsync())
-            {
-                try
-                {
-                    return await _context.optionPosition.MaxAsync(op => op.ResponseOut);
-                }
-                catch (Exception)
-                {
-
-                    return 0;
-                }
-            }else { return 0; }
-            
-        }
-
-        public async Task   SaveChangesAsync()
-        {
-               await _context.SaveChangesAsync();
+            _context.Entry(await _context.optionPosition.FirstOrDefaultAsync(x => x.OptionPositionId == optionPosition.OptionPositionId)).CurrentValues.SetValues(optionPosition);
         }
     }
 }

@@ -175,3 +175,4 @@ C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.UnitTest\bin\Debug\net8
 C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.UnitTest\bin\Debug\net8.0\Radzen.Blazor.dll
 C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.UnitTest\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll
 C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.UnitTest\obj\Debug\net8.0\CryptoWallet.UnitTest.sourcelink.json
+C:\Users\RED\Documents\GitHubP\CryptoWallet\CryptoWallet.UnitTest\bin\Debug\net8.0\AutoMapper.dll

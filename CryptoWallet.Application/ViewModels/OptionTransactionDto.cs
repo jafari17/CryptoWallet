@@ -11,6 +11,7 @@ namespace CryptoWallet.Application.ViewModels
     public class OptionTransactionDto
     {
         public long TransactionLogId { get; set; }
+        public int OptionPositionId { get; set; }
         public string ProfitAsCashflow { get; set; }
         public string PriceCurrency { get; set; }
         public string UserRole { get; set; }

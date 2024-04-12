@@ -11,7 +11,7 @@ namespace CryptoWallet.BlazorWasm.Pages
 {
     public partial class DataGridTradingJournal
     {
-        DataGridExpandMode expandMode = DataGridExpandMode.Single;
+        DataGridExpandMode expandMode = DataGridExpandMode.Multiple;
         bool? allRowsExpanded;
 
 
@@ -19,11 +19,8 @@ namespace CryptoWallet.BlazorWasm.Pages
 
         RadzenDataGrid<OptionPositionVM> grid;
 
-
         IEnumerable<optionTransactionDetalisVM>? oTransactionVM;
-        //private OptionPositionVM[]? oPositionVM;
-
-        private JArray listOptionTransaction;
+ 
         async Task ToggleRowsExpand(bool? value)
         {
             allRowsExpanded = value;
@@ -41,35 +38,16 @@ namespace CryptoWallet.BlazorWasm.Pages
         {
 
             await base.OnInitializedAsync();
-            //try
-            //{
-            //    oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM2[]>("https://localhost:7185/api/OptionPosition/GetOptionPositionList");
-            //    oTransactionVM = await Http.GetFromJsonAsync<OptionTransactionVM2[]>("https://localhost:7185/api/OptionTransaction/GetOptionTransaction");
-
-            //}
-            //catch (Exception)
-            //{
-            //    Console.WriteLine("_____________________");
-            //    throw;
-            //}
-
+  
             try
-            {
-                var test = await Http.GetStringAsync("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList");
-
-                oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList");
-
+            { 
+                oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList/false");
             }
             catch (Exception)
             {
                 Console.WriteLine("_____________________");
                 throw;
-            }
-
-
-
-
-
+            } 
         }
         void RowRender(RowRenderEventArgs<OptionPositionVM> args)
         {
@@ -84,6 +62,14 @@ namespace CryptoWallet.BlazorWasm.Pages
                 await grid.ExpandRow(oPositionVM.FirstOrDefault());
             }
         }
+
+        async Task onlinePositionTransaction()
+        {
+            oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList/true");
+
+        }
+
+
 
         public class OptionPositionVM
         {

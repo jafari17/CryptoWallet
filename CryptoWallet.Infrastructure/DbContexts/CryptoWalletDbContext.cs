@@ -22,8 +22,9 @@ namespace CryptoWallet.Infrastructure.DbContexts
 
         }
         public virtual DbSet<UserTest> userTests { get; set; } = null!;
-        public virtual DbSet<OptionPosition> optionPosition { get; set; } = null!;
+        public virtual DbSet<OptionPositionHistory> optionPositionHistory { get; set; } = null!;
         public virtual DbSet<OptionTransaction> optionTransaction { get; set; } = null!;
+        public virtual DbSet<OptionPosition> optionPosition  { get; set; } = null!;
 
 
 
@@ -31,6 +32,9 @@ namespace CryptoWallet.Infrastructure.DbContexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             ConfigUserTest(modelBuilder);
+            ConfigOptionPosition(modelBuilder);
+            //ConfigOptionTransaction(modelBuilder);
+
         }
 
         private void ConfigUserTest(ModelBuilder modelBuilder)
@@ -43,7 +47,7 @@ namespace CryptoWallet.Infrastructure.DbContexts
             #endregion
 
             #region optionPosition
-            modelBuilder.Entity<OptionPosition>().HasKey(t => t.OptionPositionId);
+            modelBuilder.Entity<OptionPositionHistory>().HasKey(t => t.OptionPositionId);
             #endregion
 
             #region optionTransaction
@@ -52,9 +56,38 @@ namespace CryptoWallet.Infrastructure.DbContexts
         }
         #endregion
 
+        private void ConfigOptionPosition(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<OptionPosition>(entity =>
+            {
+                entity.ToTable("OptionPositions");  
 
+                entity.HasKey(e => e.OptionPositionId);
 
+                entity.Property(e => e.OptionPositionId).HasColumnName("OptionPositionId");
 
+                entity.HasMany(e => e.optionTransaction)
+                     .WithOne(t => t.optionPosition)
+                     .HasForeignKey(t => t.OptionPositionId)
+                     .IsRequired();
+            });
+        }
+        //private void ConfigOptionTransaction(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<OptionTransaction>(entity =>
+        //    {
+        //        entity.ToTable("OptionTransactions"); 
 
-    }
+        //        entity.HasKey(e => e.TransactionLogId);
+
+        //        entity.Property(e => e.TransactionLogId).HasColumnName("TransactionLogId");
+
+        //        entity.HasOne(t => t.optionPosition)
+        //             .WithMany(e => e.optionTransaction)
+        //             .HasForeignKey(t => t.OptionPositionId)
+        //             .IsRequired();
+        //    });
+        //}
+
+        }
 }

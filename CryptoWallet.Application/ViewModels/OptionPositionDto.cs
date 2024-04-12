@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CryptoWallet.Application.Services.Position_TransactionLog.Queries.GETPositionTransactionLogList;
+using CryptoWallet.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,7 +11,6 @@ namespace CryptoWallet.Application.ViewModels
 {
     public class OptionPositionDto
     {
-         
         public int optionId { get; set; }
         [Required]
         public string InstrumentName { get; set; }
@@ -25,5 +26,11 @@ namespace CryptoWallet.Application.ViewModels
         public double delta { get; set; }
         public DateTime RegisterTime { get; set; }
         public long ResponseOut { get; set; }
+        public List<OptionTransactionDto> optionTransactionDto { get; set; }
+
+        public OptionPositionDto()
+        {
+            optionTransactionDto = new List<OptionTransactionDto>();
+        }
     }
 }

@@ -1,5 +1,6 @@
-﻿using CryptoWallet.Application.Services.Option_Position.Commands.Create;
+﻿using CryptoWallet.Application.Services.Option_Position_History.Commands.Create;
 using CryptoWallet.Application.Services.Option_Transaction.Commands.Create;
+using CryptoWallet.Application.Services.Position_TransactionLog.Commands.Create;
 using CryptoWallet.Application.Services.User.Queries.GetUser;
 using MediatR;
 using Microsoft.Extensions.Configuration;
@@ -27,7 +28,7 @@ namespace CryptoWallet.API
         {
             _scopeFactory = scopeFactory;
             _mediator = mediator;
-            _TimeSpanSeconds = 300;
+            _TimeSpanSeconds = 6 * 60 * 60;
         }
 
 
@@ -41,9 +42,15 @@ namespace CryptoWallet.API
             using (IServiceScope scope = _scopeFactory.CreateScope())
             {
 
-                var command = new CreateOptionTransactionCommand();
-                IMediator _iMediator = scope.ServiceProvider.GetRequiredService<IMediator>();
-                var X = _iMediator.Send(command).Result;
+                //var command = new CreateOptionTransactionCommand();
+                //IMediator _iMediator = scope.ServiceProvider.GetRequiredService<IMediator>();
+                //var X = _iMediator.Send(command).Result;
+
+                //var query = new CreateOptionPositionHistoryCommand();
+                //IMediator _iMediator2 = scope.ServiceProvider.GetRequiredService<IMediator>();
+                //var response = _iMediator2.Send(query);
+                 
+
 
 
                 Console.WriteLine(DateTime.Now);
@@ -58,13 +65,15 @@ namespace CryptoWallet.API
             DateTime now = DateTime.UtcNow.AddHours(tehranOffset);
             int hour = now.Hour;
 
+            Console.WriteLine(TimeSpan.FromSeconds(3000));
+
+              
+
             if (hour < 6)
             {
                 Console.WriteLine(" 12pm and 6am ");
-
                 return false;
             }
-
             else { return true; }
         }
     }

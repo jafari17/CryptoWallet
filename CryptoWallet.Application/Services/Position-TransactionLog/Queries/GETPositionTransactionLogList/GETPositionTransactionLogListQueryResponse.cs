@@ -18,7 +18,7 @@ namespace CryptoWallet.Application.Services.Position_TransactionLog.Queries.GETP
         public double delta { get; set; }
         public DateTime RegisterTime { get; set; }
         public long ResponseOut { get; set; }
-        public ICollection<OptionTransactionDetalis> optionTransactionDetalis { get; set; }
+        public List<OptionTransactionDetalis> optionTransactionDetalis { get; set; }
 
         public GETPositionTransactionLogListQueryResponse()
         {
@@ -29,6 +29,7 @@ namespace CryptoWallet.Application.Services.Position_TransactionLog.Queries.GETP
     public class  OptionTransactionDetalis
     {
         public long TransactionLogId { get; set; }
+        public int OptionPositionId { get; set; }
         public string ProfitAsCashflow { get; set; }
         public string PriceCurrency { get; set; }
         public string UserRole { get; set; }

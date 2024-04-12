@@ -1,5 +1,5 @@
 ﻿using CryptoWallet.Application.Contracts.Persistence;
-using CryptoWallet.Application.Services.Option_Position.Queries.GetOptionList;
+ 
 using CryptoWallet.Application.ViewModels;
 using CryptoWallet.Domain.Entities;
 using MediatR;
@@ -30,6 +30,7 @@ namespace CryptoWallet.Application.Services.Option_Transaction.Commands.Queries.
                 GetOptionTransactionListQueryResponse optionTransactionDetalis = new GetOptionTransactionListQueryResponse()
                 {
                     TransactionLogId = item.TransactionLogId,
+                    OptionPositionId = item.OptionPositionId,
                     ProfitAsCashflow = item.ProfitAsCashflow,
                     PriceCurrency = item.PriceCurrency,
                     UserRole = item.UserRole,

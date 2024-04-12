@@ -21,6 +21,43 @@ namespace CryptoWallet.Infrastructure.Migrations
                 {
                     b.Property<int>("OptionPositionId")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("OptionPositionId");
+
+                    b.Property<string>("InstrumentName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("MarkPrice")
+                        .HasColumnType("REAL");
+
+                    b.Property<DateTime>("RegisterTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<long>("ResponseOut")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<double>("TotalProfitLoss")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("average_price")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("delta")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("size")
+                        .HasColumnType("REAL");
+
+                    b.HasKey("OptionPositionId");
+
+                    b.ToTable("OptionPositions", (string)null);
+                });
+
+            modelBuilder.Entity("CryptoWallet.Domain.Entities.OptionPositionHistory", b =>
+                {
+                    b.Property<int>("OptionPositionId")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("InstrumentName")
@@ -50,7 +87,7 @@ namespace CryptoWallet.Infrastructure.Migrations
 
                     b.HasKey("OptionPositionId");
 
-                    b.ToTable("optionPosition");
+                    b.ToTable("optionPositionHistory");
                 });
 
             modelBuilder.Entity("CryptoWallet.Domain.Entities.OptionTransaction", b =>
@@ -107,6 +144,9 @@ namespace CryptoWallet.Infrastructure.Migrations
                     b.Property<double>("MarkPrice")
                         .HasColumnType("REAL");
 
+                    b.Property<int>("OptionPositionId")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("OrderId")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -156,6 +196,8 @@ namespace CryptoWallet.Infrastructure.Migrations
 
                     b.HasKey("TransactionLogId");
 
+                    b.HasIndex("OptionPositionId");
+
                     b.ToTable("optionTransaction");
                 });
 
@@ -183,6 +225,22 @@ namespace CryptoWallet.Infrastructure.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("userTests");
+                });
+
+            modelBuilder.Entity("CryptoWallet.Domain.Entities.OptionTransaction", b =>
+                {
+                    b.HasOne("CryptoWallet.Domain.Entities.OptionPosition", "optionPosition")
+                        .WithMany("optionTransaction")
+                        .HasForeignKey("OptionPositionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("optionPosition");
+                });
+
+            modelBuilder.Entity("CryptoWallet.Domain.Entities.OptionPosition", b =>
+                {
+                    b.Navigation("optionTransaction");
                 });
 #pragma warning restore 612, 618
         }

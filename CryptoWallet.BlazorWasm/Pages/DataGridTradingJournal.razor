@@ -16,6 +16,8 @@ else
                       Disabled=@(allRowsExpanded == true || expandMode == DataGridExpandMode.Single) />
         <RadzenButton Text="Collapse all rows" Click="@(args => ToggleRowsExpand(false))"
                       Disabled=@(allRowsExpanded == false || expandMode == DataGridExpandMode.Single) />
+
+        <RadzenButton Text="Online Position" Click="@(args => onlinePositionTransaction())" />
     </div>
 
 
@@ -25,14 +27,8 @@ else
 
 
         <Template Context="OptionPositionVM2">
-            <RadzenCard Style="margin-bottom:20px">
-                Company:
-                <b>@OptionPositionVM2?.InstrumentName</b>
-            </RadzenCard>
-             
                     <RadzenTabs>
                         <Tabs>
-                            <RadzenTabsItem Text="Order Details">
                         <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" Data="@OptionPositionVM2.optionTransactionDetalis" TItem="optionTransactionDetalisVM">
                                     <Columns>
                                 <RadzenDataGridColumn TItem="optionTransactionDetalisVM" Property="InstrumentName" Title="InstrumentName" />
@@ -42,11 +38,9 @@ else
 
                                     </Columns>
                                 </RadzenDataGrid>
-                            </RadzenTabsItem>
                         </Tabs>
                     </RadzenTabs>
         </Template>
-
 
         <Columns>
             <RadzenDataGridColumn TItem="OptionPositionVM" Property="InstrumentName" Title="Instrument Name" Width="120px" />
@@ -55,7 +49,6 @@ else
             <RadzenDataGridColumn TItem="OptionPositionVM" Property="MarkPrice" Title="MarkPrice" Width="120px" />
             <RadzenDataGridColumn TItem="OptionPositionVM" Property="TotalProfitLoss" Title="Total ProfitLoss" Width="120px" />
             <RadzenDataGridColumn TItem="OptionPositionVM" Property="delta" Title="delta" Width="120px" />
-
         </Columns>
     </RadzenDataGrid>
 
