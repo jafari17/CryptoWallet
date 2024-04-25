@@ -18,8 +18,4 @@
     <ProjectReference Include="..\CryptoWallet.Domain\CryptoWallet.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Services\User\Commands\Update\" />
-  </ItemGroup>
-
 </Project>

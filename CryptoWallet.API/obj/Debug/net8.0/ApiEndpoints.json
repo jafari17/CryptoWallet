@@ -1,5 +1,25 @@
 [
   {
+    "ContainingType": "CryptoWallet.API.Controllers.AssetController",
+    "Method": "GetAssetList",
+    "RelativePath": "api/Asset/GetAssetList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CryptoWallet.API.Controllers.AssetController",
+    "Method": "SavelastAsset",
+    "RelativePath": "api/Asset/SavelastAsset",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CryptoWallet.API.Controllers.OptionPositionController",
     "Method": "GetOptionPositionList",
     "RelativePath": "api/OptionPosition/GetOptionPositionList",
@@ -64,67 +84,5 @@
     "Order": 0,
     "Parameters": [],
     "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CryptoWallet.API.Controllers.UserController",
-    "Method": "CreateUser",
-    "RelativePath": "api/User/CreateUser",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "UserModel",
-        "Type": "CryptoWallet.Application.Services.User.Commands.Create.CreateUserCommand",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CryptoWallet.API.Controllers.UserController",
-    "Method": "GetUserById",
-    "RelativePath": "api/User/GetUserById",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "userId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CryptoWallet.API.Controllers.UserController",
-    "Method": "GetUserList",
-    "RelativePath": "api/User/GetUserList",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "CryptoWallet.API.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[CryptoWallet.API.WeatherForecast, CryptoWallet.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
   }
 ]

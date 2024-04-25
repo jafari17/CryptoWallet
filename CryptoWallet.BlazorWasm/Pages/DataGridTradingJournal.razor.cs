@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Net.Http.Json;
 using Radzen;
 using Radzen.Blazor;
+ 
 
 
 
@@ -37,10 +38,10 @@ namespace CryptoWallet.BlazorWasm.Pages
         protected override async Task OnInitializedAsync()
         {
 
-            await base.OnInitializedAsync();
-  
+             
+
             try
-            { 
+            {
                 oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList/false");
             }
             catch (Exception)
@@ -55,7 +56,7 @@ namespace CryptoWallet.BlazorWasm.Pages
         }
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-            base.OnAfterRender(firstRender);
+             
 
             if (firstRender)
             {
@@ -80,7 +81,7 @@ namespace CryptoWallet.BlazorWasm.Pages
             public double MarkPrice { get; set; }
             public double TotalProfitLoss { get; set; }
             public double delta { get; set; }
-
+             
             public ICollection<optionTransactionDetalisVM> optionTransactionDetalis { get; set; }
 
             public OptionPositionVM()

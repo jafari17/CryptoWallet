@@ -31,14 +31,7 @@ builder.Services.AddCors(options =>
 
 
 builder.Services.AddHostedService<TimerBackgroundService>();
-
-
-
-
-
-
 var app = builder.Build();
-
 
 if (app.Environment.IsDevelopment())
 {

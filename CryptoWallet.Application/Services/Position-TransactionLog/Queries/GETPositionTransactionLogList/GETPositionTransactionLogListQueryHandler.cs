@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using CryptoWallet.Application.Contracts;
 using CryptoWallet.Application.Contracts.Persistence;
-using CryptoWallet.Application.Services.Option_Transaction.Commands.Queries.GetOptionTransactionList;
+using CryptoWallet.Application.Services.Option_Transaction.Queries.GetOptionTransactionList;
 using CryptoWallet.Application.ViewModels;
 using CryptoWallet.Domain.Entities;
 using MediatR;

@@ -14,7 +14,7 @@ else
                          Data="@(Enum.GetValues(typeof(DataGridExpandMode)).Cast<DataGridExpandMode>().Select(t => new { Text = $"{t}", Value = t }))" Size="ButtonSize.Small" />
         <RadzenButton Text="Expand all rows" Click="@(args => ToggleRowsExpand(true))" style="margin-right: 16px"
                       Disabled=@(allRowsExpanded == true || expandMode == DataGridExpandMode.Single) />
-        <RadzenButton Text="Collapse all rows" Click="@(args => ToggleRowsExpand(false))"
+        <RadzenButton Text="Collapse all rows" Click="@(args => ToggleRowsExpand(false))" style="margin-right: 16px"
                       Disabled=@(allRowsExpanded == false || expandMode == DataGridExpandMode.Single) />
 
         <RadzenButton Text="Online Position" Click="@(args => onlinePositionTransaction())" />

@@ -1,0 +1,44 @@
+﻿<h3>Asset</h3>
+@page "/AssetJournal"
+@inject HttpClient Http
+@using System.Globalization
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 my-5">
+            <RadzenCard class="w-100 mb-4" Style="display: flex; align-items: center; gap: 0.5rem" >
+                <RadzenCheckBox @bind-Value="@smooth" Name="smooth"></RadzenCheckBox>
+                <RadzenLabel Text="Smooth" Component="smooth" Style="margin-right: 1rem;"/>
+                <RadzenCheckBox @bind-Value="@showDataLabels" Name="dataLabels"></RadzenCheckBox>
+                <RadzenLabel Text="Show Data Labels" Component="dataLabels" Style="margin-right: 1rem;" />
+                <RadzenCheckBox @bind-Value="@showMarkers" Name="markers"></RadzenCheckBox>
+                <RadzenLabel Text="Show Markers" Component="markers" />
+            </RadzenCard>
+            <RadzenChart>
+
+                <RadzenLineSeries Smooth="@smooth" Data="@AssetValueBTC" CategoryProperty="Date" Title="BTC" LineType="LineType.Dashed" ValueProperty="Value">
+                    <RadzenMarkers Visible="@showMarkers" MarkerType="MarkerType.Square" />
+                    <RadzenSeriesDataLabels Visible="@showDataLabels" />
+                </RadzenLineSeries>
+                <RadzenLineSeries Smooth="@smooth" Data="@AssetValueETH" CategoryProperty="Date" Title="ETH" LineType="LineType.Dashed" ValueProperty="Value">
+                    <RadzenMarkers Visible="@showMarkers" MarkerType="MarkerType.Square" />
+                    <RadzenSeriesDataLabels Visible="@showDataLabels" />
+                </RadzenLineSeries>
+                <RadzenLineSeries Smooth="@smooth" Data="@AssetValueUSDC" CategoryProperty="Date" Title="USDC" LineType="LineType.Dashed" ValueProperty="Value">
+                    <RadzenMarkers Visible="@showMarkers" MarkerType="MarkerType.Square" />
+                    <RadzenSeriesDataLabels Visible="@showDataLabels" />
+                </RadzenLineSeries>
+                <RadzenLineSeries Smooth="@smooth" Data="@AssetValueUSDT" CategoryProperty="Date" Title="USDT" LineType="LineType.Dashed" ValueProperty="Value">
+                    <RadzenMarkers Visible="@showMarkers" MarkerType="MarkerType.Square" />
+                    <RadzenSeriesDataLabels Visible="@showDataLabels" />
+                </RadzenLineSeries>
+
+                <RadzenCategoryAxis Padding="20" />
+                <RadzenValueAxis Formatter="@FormatAsUSD">
+                    <RadzenGridLines Visible="true" />
+                    <RadzenAxisTitle Text="Value in USD" />
+                </RadzenValueAxis>
+            </RadzenChart>
+        </div>
+    </div>
+</div>

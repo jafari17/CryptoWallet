@@ -17,7 +17,6 @@ namespace CryptoWallet.API.Controllers
             _mediator = mediator;
         }
 
-
         [HttpGet("{lastUpdate}")]
         public async Task<IActionResult> GetPositionTransactionLogList(bool lastUpdate)
         {
@@ -25,10 +24,6 @@ namespace CryptoWallet.API.Controllers
             var response = await _mediator.Send(query);
             return Ok(response);
         }
-
- 
-
-
 
         [HttpGet]
         public async Task<IActionResult> SavePositionList()

@@ -38,6 +38,8 @@ namespace CryptoWallet.Domain.Entities
         public double Position { get; set; }
         public string Info { get; set; }
         public int IdJson { get; set; }
+        //public string? description { get; set; }
+
         public OptionPosition optionPosition { get; set; }
     }
 }

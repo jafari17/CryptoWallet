@@ -1,6 +1,5 @@
 ﻿using CryptoWallet.Application.AutoMapperProfile;
 using CryptoWallet.Application.Contracts.Persistence;
-using CryptoWallet.Application.Services.User.Commands;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using System;

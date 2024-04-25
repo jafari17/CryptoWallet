@@ -21,30 +21,24 @@ namespace CryptoWallet.Infrastructure.DbContexts
         {
 
         }
-        public virtual DbSet<UserTest> userTests { get; set; } = null!;
+
         public virtual DbSet<OptionPositionHistory> optionPositionHistory { get; set; } = null!;
         public virtual DbSet<OptionTransaction> optionTransaction { get; set; } = null!;
-        public virtual DbSet<OptionPosition> optionPosition  { get; set; } = null!;
-
-
+        public virtual DbSet<OptionPosition> optionPosition { get; set; } = null!;
+        public virtual DbSet<Asset> asset { get; set; } = null!;
 
         #region Required
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             ConfigUserTest(modelBuilder);
             ConfigOptionPosition(modelBuilder);
-            //ConfigOptionTransaction(modelBuilder);
+            ConfigAsset(modelBuilder);
 
         }
 
         private void ConfigUserTest(ModelBuilder modelBuilder)
         {
-            #region User
-            modelBuilder.Entity<UserTest>().HasKey(t => t.UserId);
-            modelBuilder.Entity<UserTest>().Property(t => t.Name).HasMaxLength(250);
-            modelBuilder.Entity<UserTest>().Property(t => t.Family).HasMaxLength(250);
-            modelBuilder.Entity<UserTest>().Property(t => t.Email).HasMaxLength(350);
-            #endregion
+ 
 
             #region optionPosition
             modelBuilder.Entity<OptionPositionHistory>().HasKey(t => t.OptionPositionId);
@@ -53,6 +47,8 @@ namespace CryptoWallet.Infrastructure.DbContexts
             #region optionTransaction
             modelBuilder.Entity<OptionTransaction>().HasKey(t => t.TransactionLogId);
             #endregion
+
+ 
         }
         #endregion
 
@@ -60,7 +56,7 @@ namespace CryptoWallet.Infrastructure.DbContexts
         {
             modelBuilder.Entity<OptionPosition>(entity =>
             {
-                entity.ToTable("OptionPositions");  
+                entity.ToTable("OptionPositions");
 
                 entity.HasKey(e => e.OptionPositionId);
 
@@ -72,22 +68,10 @@ namespace CryptoWallet.Infrastructure.DbContexts
                      .IsRequired();
             });
         }
-        //private void ConfigOptionTransaction(ModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Entity<OptionTransaction>(entity =>
-        //    {
-        //        entity.ToTable("OptionTransactions"); 
-
-        //        entity.HasKey(e => e.TransactionLogId);
-
-        //        entity.Property(e => e.TransactionLogId).HasColumnName("TransactionLogId");
-
-        //        entity.HasOne(t => t.optionPosition)
-        //             .WithMany(e => e.optionTransaction)
-        //             .HasForeignKey(t => t.OptionPositionId)
-        //             .IsRequired();
-        //    });
-        //}
-
+        private void ConfigAsset(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Asset>().HasKey(t => t.AssetId);
         }
+
+    }
 }

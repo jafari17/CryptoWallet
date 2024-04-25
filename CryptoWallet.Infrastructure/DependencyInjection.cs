@@ -30,10 +30,10 @@ namespace CryptoWallet.Infrastructure
             services.AddScoped<IExchangeReceive, ExchangeDeribitReceive>();
 
 
-            services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IOptionPositionHistoryRepository, OptionPositionHistoryRepository>();
             services.AddScoped<IOptionTransactionRepository, OptionTransactionRepository>();
             services.AddScoped<IOptionPositionRepository, OptionPositionRepository>();
+            services.AddScoped<IAssetRepository, AssetRepository>();
             
             return services;
         }

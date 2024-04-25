@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using CryptoWallet.Application.Services.Asset_.Queries.GetAssetList;
 using CryptoWallet.Application.Services.Position_TransactionLog.Queries.GETPositionTransactionLogList;
 using CryptoWallet.Application.ViewModels;
 using CryptoWallet.Domain.Entities;
@@ -19,6 +20,11 @@ namespace CryptoWallet.Application.AutoMapperProfile
             .ForMember(dest => dest.optionTransactionDetalis, opt => opt.MapFrom(src => src.optionTransaction));
 
             CreateMap<OptionTransaction, OptionTransactionDetalis>();
+
+            CreateMap<Asset, GetAssetListQueryResponse>();
+
+
+
 
         }
     }

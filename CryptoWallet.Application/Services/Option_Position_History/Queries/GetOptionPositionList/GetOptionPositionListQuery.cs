@@ -1,5 +1,4 @@
-﻿using CryptoWallet.Application.Services.User.Queries.GetUserList;
-using MediatR;
+﻿using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;

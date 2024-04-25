@@ -17,6 +17,33 @@ namespace CryptoWallet.Infrastructure.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.3");
 
+            modelBuilder.Entity("CryptoWallet.Domain.Entities.Asset", b =>
+                {
+                    b.Property<int>("AssetId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("RegisterTime")
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("Value")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("currency")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<decimal>("equity")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("AssetId");
+
+                    b.ToTable("asset");
+                });
+
             modelBuilder.Entity("CryptoWallet.Domain.Entities.OptionPosition", b =>
                 {
                     b.Property<int>("OptionPositionId")

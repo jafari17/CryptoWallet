@@ -1,5 +1,4 @@
 ﻿using CryptoWallet.Application.Contracts.Persistence;
- using CryptoWallet.Application.Services.User.Queries.GetUserList;
 using MediatR;
 using System;
 using System.Collections.Generic;

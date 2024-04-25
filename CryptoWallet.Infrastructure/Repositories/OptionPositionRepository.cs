@@ -23,11 +23,6 @@ namespace CryptoWallet.Infrastructure.Repositories
             await _context.optionPosition.AddAsync(optionPosition);
         }
 
-        //public Task<IEnumerable<OptionPosition>> GetLastOptionPositionAsync(long responseOut)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
         public async Task<List<OptionPosition>> GetListOptionPositionAsync()
         {
             return await _context.optionPosition.Include(op => op.optionTransaction).ToListAsync();

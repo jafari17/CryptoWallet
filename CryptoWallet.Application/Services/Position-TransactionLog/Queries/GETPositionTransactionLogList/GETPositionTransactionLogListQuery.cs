@@ -1,4 +1,4 @@
-﻿using CryptoWallet.Application.Services.Option_Transaction.Commands.Queries.GetOptionTransactionList;
+﻿using CryptoWallet.Application.Services.Option_Transaction.Queries.GetOptionTransactionList;
 using MediatR;
 using System;
 using System.Collections.Generic;

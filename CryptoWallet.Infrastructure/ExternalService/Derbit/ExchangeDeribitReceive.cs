@@ -26,6 +26,55 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
             _mapper = mapper;
         }
 
+        public async Task<List<Asset>> GetLastAsset()
+        {
+            dynamic data = await getApiResponse($"https://test.deribit.com/api/v2/private/get_account_summaries?");
+
+            DateTime dateTimeNow = DateTime.Now;
+
+            List<Asset> Listassets = new List<Asset>();
+            Console.WriteLine(data.result.summaries);
+
+            foreach ( var item in data.result.summaries) 
+            {
+                Asset newAsset = new Asset() { };
+                newAsset.currency = item.currency;
+                newAsset.equity = item.equity;
+                newAsset.RegisterTime = dateTimeNow; 
+                if (item.equity != 0 && ( item.currency == "BTC" || item.currency == "ETH" ))
+                {
+                    dynamic indexPrice = await getApiResponse($"https://test.deribit.com/api/v2/public/get_index?currency={newAsset.currency}");
+                    Console.WriteLine("+++++++ indexPrice   +++++++++");
+                    Console.WriteLine(indexPrice);
+                    Console.WriteLine("+++++++ indexPrice   +++++++++");
+
+                    //var data11 = JsonConvert.DeserializeObject(indexPrice);
+
+                    //Console.WriteLine(indexPrice.result);
+                    //Console.WriteLine(indexPrice.result[0]);
+                    //Console.WriteLine(indexPrice.result[1]);
+                    if(item.currency == "BTC" || item.currency == "ETH") 
+                    { 
+                    if(item.currency == "BTC") newAsset.Price = indexPrice.result.BTC;
+                    
+                    if(item.currency == "ETH") newAsset.Price = indexPrice.result.ETH;
+                    
+                    newAsset.Value = newAsset.Price * newAsset.equity;
+                    }
+                    Listassets.Add(newAsset);
+                }
+                if ( item.currency == "USDT" || item.currency == "USDC")
+                {
+                    newAsset.Price = 1;
+                    newAsset.Value = item.equity;
+                    Listassets.Add(newAsset);
+                }
+
+            }
+
+            return Listassets;
+        }
+
         public async Task<List<OptionPosition>> GetLastGetLastPositionsAndTransactionLog()
         {
             var ListPosition = await GetLastPositions();
@@ -43,10 +92,7 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
                     }
                 }
             }
-
             var oPositionResponse = _mapper.Map<List<OptionPosition>>(ListPosition);
-
-
             return oPositionResponse;
         }
 
@@ -133,21 +179,6 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
             return ListOptionTransactionDto;
         }
 
-
-        public async Task get_Test()
-        {
-            dynamic data = await getApiResponse("https://test.deribit.com/api/v2/private/get_order_history_by_instrument");
-
-            List<OptionPositionDto> ListoptionVM = new List<OptionPositionDto>();
-
-            foreach (var item in data.result)
-            {
-                Console.WriteLine(item);
-                Console.ReadKey();
-            }
-
-        }
-
         private async Task<dynamic> getApiResponse(string url)
         {
             string token = await GetToken();
@@ -183,7 +214,7 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
             //};
             //var json = JsonConvert.SerializeObject(request);
 
-
+            //string json  = "{\"id\":4,\"method\":\"public/auth\",\"params2\":{\"grant_type\":\"client_credentials\",\"scope\":\"session:apiconsole-0yc7ajb4qf0k\",\"client_id\":\"twbo_VX6\",\"client_secret\":\"pYresnQwzeweoDrJqUb4BCmATd3dXA1-4Dwekb3roMk\"},\"jsonrpc\":\"2.0\"}";
             //string json = "{\"id\":4,\"method\":\"public/auth\",\"params\":{\"grant_type\":\"client_credentials\",\"scope\":\"session:apiconsole-0yc7ajb4qf0k\",\"client_id\":\"y-ZAPr8Z\",\"client_secret\":\"Qr4OqT3QJJML8YWFH47-EfUTn-Hq9D-5MS8F9V0NFEs\"},\"jsonrpc\":\"2.0\"}";
             string json = "{\"id\":4,\"method\":\"public/auth\",\"params\":{\"grant_type\":\"client_credentials\",\"scope\":\"session:apiconsole-0yc7ajb4qf0k\",\"client_id\":\"twbo_VX6\",\"client_secret\":\"pYresnQwzeweoDrJqUb4BCmATd3dXA1-4Dwekb3roMk\"},\"jsonrpc\":\"2.0\"}";
             var data = new StringContent(json, Encoding.UTF8, "application/json");
@@ -192,6 +223,8 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
             var response = await client.PostAsync(url, data);
 
             var result = response.Content.ReadAsStringAsync().Result;
+
+            Console.WriteLine(result);
 
             dynamic data11 = JsonConvert.DeserializeObject(result);
 
@@ -204,3 +237,4 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
         }
     }
 }
+

@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using CryptoWallet.Application.Contracts;
 using CryptoWallet.Application.Contracts.Persistence;
-using CryptoWallet.Application.Services.User.Commands.Create;
 using CryptoWallet.Application.ViewModels;
 using CryptoWallet.Domain.Entities;
 using MediatR;

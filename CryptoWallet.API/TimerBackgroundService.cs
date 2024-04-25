@@ -1,7 +1,7 @@
 ﻿using CryptoWallet.Application.Services.Option_Position_History.Commands.Create;
 using CryptoWallet.Application.Services.Option_Transaction.Commands.Create;
 using CryptoWallet.Application.Services.Position_TransactionLog.Commands.Create;
-using CryptoWallet.Application.Services.User.Queries.GetUser;
+
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

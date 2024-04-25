@@ -3,7 +3,7 @@
 using CryptoWallet.Application.Services.Option_Position_History.Commands.Create;
 using CryptoWallet.Application.Services.Option_Position_History.Queries.GetOptionList;
 using CryptoWallet.Application.Services.Option_Transaction.Commands.Create;
-using CryptoWallet.Application.Services.User.Queries.GetUserList;
+ 
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
