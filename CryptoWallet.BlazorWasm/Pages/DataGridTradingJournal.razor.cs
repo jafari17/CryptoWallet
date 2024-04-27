@@ -37,9 +37,6 @@ namespace CryptoWallet.BlazorWasm.Pages
         }
         protected override async Task OnInitializedAsync()
         {
-
-             
-
             try
             {
                 oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList/false");
@@ -56,12 +53,10 @@ namespace CryptoWallet.BlazorWasm.Pages
         }
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
-             
-
-            if (firstRender)
-            {
-                await grid.ExpandRow(oPositionVM.FirstOrDefault());
-            }
+            //if (firstRender)
+            //{
+            //    await grid.ExpandRow(oPositionVM.FirstOrDefault());
+            //}
         }
 
         async Task onlinePositionTransaction()
@@ -81,7 +76,15 @@ namespace CryptoWallet.BlazorWasm.Pages
             public double MarkPrice { get; set; }
             public double TotalProfitLoss { get; set; }
             public double delta { get; set; }
-             
+
+            public DateTime RegisterTime { get; set; }
+            public long ResponseOut { get; set; }
+            public string? description { get; set; }
+
+            public bool? Active { get; set; }
+
+
+
             public ICollection<optionTransactionDetalisVM> optionTransactionDetalis { get; set; }
 
             public OptionPositionVM()
@@ -120,6 +123,8 @@ namespace CryptoWallet.BlazorWasm.Pages
             public double Position { get; set; }
             public string Info { get; set; }
             public int IdJson { get; set; }
+            public string Description { get; set; }
+
         }
     }
 }

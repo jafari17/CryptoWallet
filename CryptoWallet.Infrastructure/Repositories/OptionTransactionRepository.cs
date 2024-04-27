@@ -19,10 +19,8 @@ namespace CryptoWallet.Infrastructure.Repositories
             _context = context;
         }
         public async Task AddOptionTransactionAsync(OptionTransaction optionTransaction)
-        {
-
-            await _context.optionTransaction.AddAsync(optionTransaction);
-
+        { 
+            await _context.optionTransaction.AddAsync(optionTransaction); 
         }
 
         public async Task<IEnumerable<OptionTransaction>> GetOptionTransactionListAsync()
@@ -45,10 +43,8 @@ namespace CryptoWallet.Infrastructure.Repositories
                 }
                 catch (Exception)
                 {
-
                     return 0;
                 }
-
             }
             else { return 0; }
         }
@@ -56,6 +52,13 @@ namespace CryptoWallet.Infrastructure.Repositories
         public async Task SaveChangesAsync()
         {
             await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateDescriptionOptionTransactionAsync(int optionTransactionId,string Description)
+        {
+            var ot= await _context.optionTransaction.FirstOrDefaultAsync(x => x.TransactionLogId == optionTransactionId);
+            ot.Description = Description;
+            _context.optionTransaction.Update(ot);
         }
     }
 }

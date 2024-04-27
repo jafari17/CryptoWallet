@@ -1,6 +1,6 @@
 ﻿@page "/DataGridTradingJournal"
 @inject HttpClient Http
-
+@inject DialogService DialogService
 
 @if (oPositionVM == null)
 {
@@ -27,19 +27,32 @@ else
 
 
         <Template Context="OptionPositionVM2">
-                    <RadzenTabs>
-                        <Tabs>
-                        <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" Data="@OptionPositionVM2.optionTransactionDetalis" TItem="optionTransactionDetalisVM">
-                                    <Columns>
-                                <RadzenDataGridColumn TItem="optionTransactionDetalisVM" Property="InstrumentName" Title="InstrumentName" />
-                                <RadzenDataGridColumn TItem="optionTransactionDetalisVM" Property="Amount" Title="Amount" />
-                                <RadzenDataGridColumn TItem="optionTransactionDetalisVM" Property="IndexPrice" Title="IndexPrice" />
-                                <RadzenDataGridColumn TItem="optionTransactionDetalisVM" Property="Price" Title="Price" />
+            <RadzenTabs>
+                <Tabs>
+                    <RadzenDataGrid AllowFiltering="true" AllowPaging="true" AllowSorting="true" Data="@OptionPositionVM2.optionTransactionDetalis" TItem="optionTransactionDetalisVM">
+                        <Columns>
+                            <RadzenDataGridColumn TItem="optionTransactionDetalisVM" Property="InstrumentName" Title="InstrumentName" />
+                            <RadzenDataGridColumn TItem="optionTransactionDetalisVM" Property="Amount" Title="Amount" />
+                            <RadzenDataGridColumn TItem="optionTransactionDetalisVM" Property="IndexPrice" Title="IndexPrice" />
+                            <RadzenDataGridColumn TItem="optionTransactionDetalisVM" Property="Price" Title="Price" />
+                            <RadzenDataGridColumn TItem="optionTransactionDetalisVM" Property="Description" Title="Description" />
 
-                                    </Columns>
-                                </RadzenDataGrid>
-                        </Tabs>
-                    </RadzenTabs>
+
+                            <RadzenDataGridColumn TItem="optionTransactionDetalisVM" Property="Description" Title="">
+                                <Template Context="optionTransactionDetalisVM">
+
+                                    <RadzenButton Text="Edit" ButtonStyle="ButtonStyle.Secondary"
+                                                  Click=@(args => DialogService.Confirm($"<textarea rows='3'cols='40'> {@optionTransactionDetalisVM.Description} </textarea>", @optionTransactionDetalisVM.InstrumentName, new ConfirmOptions() { OkButtonText = "Yes", CancelButtonText = "No" })) />
+                                </Template>
+
+                            </RadzenDataGridColumn>
+
+                        </Columns>
+
+     
+                    </RadzenDataGrid>
+                </Tabs>
+            </RadzenTabs>
         </Template>
 
         <Columns>
@@ -49,7 +62,18 @@ else
             <RadzenDataGridColumn TItem="OptionPositionVM" Property="MarkPrice" Title="MarkPrice" Width="120px" />
             <RadzenDataGridColumn TItem="OptionPositionVM" Property="TotalProfitLoss" Title="Total ProfitLoss" Width="120px" />
             <RadzenDataGridColumn TItem="OptionPositionVM" Property="delta" Title="delta" Width="120px" />
-        </Columns>
-    </RadzenDataGrid>
+            <RadzenDataGridColumn TItem="OptionPositionVM" Property="description" Title="delta" Width="120px" />
 
+            <RadzenDataGridColumn TItem="OptionPositionVM" Property="" Title="" Width="120px">
+                <Template Context="OptionPositionVM">
+
+                    <RadzenButton Text="Edit" ButtonStyle="ButtonStyle.Secondary"
+                                  Click=@(args => DialogService.Confirm($"<textarea rows='3'cols='40'> {@OptionPositionVM.description} </textarea>" , @OptionPositionVM.InstrumentName, new ConfirmOptions() { OkButtonText = "Yes", CancelButtonText = "No" })) />
+ 
+ 
+                </Template>
+            </RadzenDataGridColumn>
+        </Columns>
+    </RadzenDataGrid> 
 }
+ 

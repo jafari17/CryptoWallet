@@ -17,7 +17,7 @@ namespace CryptoWallet.Domain.Entities
         public double delta { get; set; }
         public DateTime RegisterTime { get; set; }
         public long ResponseOut { get; set; }
-
+        public string? description { get; set; }
         public bool? Active { get; set; }
        
 

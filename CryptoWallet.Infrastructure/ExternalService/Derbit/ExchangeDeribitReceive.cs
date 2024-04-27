@@ -102,6 +102,8 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
 
             List<OptionPositionDto> ListoptionVM = new List<OptionPositionDto>();
 
+            DateTime nowDate = DateTime.Now;
+
             foreach (var item in data.result)
             {
                 OptionPositionDto optionVM = new OptionPositionDto()
@@ -113,7 +115,8 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
                     TotalProfitLoss = item.total_profit_loss,
                     delta = item.delta,
                     ResponseOut = data.usOut,
-                    RegisterTime = DateTime.Now,
+                    RegisterTime = nowDate 
+,
                 };
                 ListoptionVM.Add(optionVM);
             }

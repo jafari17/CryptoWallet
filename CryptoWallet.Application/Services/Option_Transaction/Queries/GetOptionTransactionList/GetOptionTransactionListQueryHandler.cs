@@ -58,6 +58,7 @@ namespace CryptoWallet.Application.Services.Option_Transaction.Queries.GetOption
                     Position = item.Position,
                     Info = item.Info,
                     IdJson = item.IdJson,
+                    Description = item.Description,
                 };
 
                 optionTransactionListQueryResponse.Add(optionTransactionDetalis);

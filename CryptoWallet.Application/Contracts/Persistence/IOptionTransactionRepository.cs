@@ -11,8 +11,8 @@ namespace CryptoWallet.Application.Contracts.Persistence
     {
         Task AddOptionTransactionAsync(OptionTransaction optionTransaction);
         Task<IEnumerable<OptionTransaction>> GetOptionTransactionListAsync();
-        Task<OptionTransaction> GetOptionTransactionAsync(int optionTransactionId);
-
+        Task<OptionTransaction> GetOptionTransactionAsync(int optionTransactionId); 
+        Task UpdateDescriptionOptionTransactionAsync(int optionTransactionId, string Description); 
         Task<long> GetTimestampMax();
         Task SaveChangesAsync();
     }

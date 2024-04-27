@@ -19,9 +19,9 @@ namespace CryptoWallet.Application.Services.Option_Position_History.Queries.GetO
         public async Task<IEnumerable<GetOptionPositionListQueryResponse>> Handle(GetOptionPositionListQuery request, CancellationToken cancellationToken)
         {
 
-            long ResponseOut =await  _optionPositionRepository.GetResponseOutMax();
+            //long ResponseOut =await  _optionPositionRepository.GetResponseOutMax();
 
-            var optionPositionList = await _optionPositionRepository.GetLastOptionPositionHistoryAsync(ResponseOut);
+            var optionPositionList = await _optionPositionRepository.GetListOptionPositionHistoryAsync();
 
             List<GetOptionPositionListQueryResponse> optionPositionListQueryResponse = new List<GetOptionPositionListQueryResponse>();
             foreach (var item in optionPositionList)

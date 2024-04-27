@@ -51,6 +51,9 @@ namespace CryptoWallet.Infrastructure.Migrations
                         .HasColumnType("INTEGER")
                         .HasColumnName("OptionPositionId");
 
+                    b.Property<bool?>("Active")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("InstrumentName")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -72,6 +75,9 @@ namespace CryptoWallet.Infrastructure.Migrations
 
                     b.Property<double>("delta")
                         .HasColumnType("REAL");
+
+                    b.Property<string>("description")
+                        .HasColumnType("TEXT");
 
                     b.Property<double>("size")
                         .HasColumnType("REAL");
@@ -142,6 +148,10 @@ namespace CryptoWallet.Infrastructure.Migrations
                         .HasColumnType("REAL");
 
                     b.Property<string>("Currency")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -226,32 +236,6 @@ namespace CryptoWallet.Infrastructure.Migrations
                     b.HasIndex("OptionPositionId");
 
                     b.ToTable("optionTransaction");
-                });
-
-            modelBuilder.Entity("CryptoWallet.Domain.Entities.UserTest", b =>
-                {
-                    b.Property<int>("UserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(350)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Family")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("UserId");
-
-                    b.ToTable("userTests");
                 });
 
             modelBuilder.Entity("CryptoWallet.Domain.Entities.OptionTransaction", b =>

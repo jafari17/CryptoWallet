@@ -18,6 +18,8 @@ namespace CryptoWallet.Application.Services.Position_TransactionLog.Queries.GETP
         public double delta { get; set; }
         public DateTime RegisterTime { get; set; }
         public long ResponseOut { get; set; }
+        public string description { get; set; }
+        public bool Active { get; set; }
         public List<OptionTransactionDetalis> optionTransactionDetalis { get; set; }
 
         public GETPositionTransactionLogListQueryResponse()
@@ -58,5 +60,7 @@ namespace CryptoWallet.Application.Services.Position_TransactionLog.Queries.GETP
         public double Position { get; set; }
         public string Info { get; set; }
         public int IdJson { get; set; }
+        public string Description { get; set; }
+
     }
 }

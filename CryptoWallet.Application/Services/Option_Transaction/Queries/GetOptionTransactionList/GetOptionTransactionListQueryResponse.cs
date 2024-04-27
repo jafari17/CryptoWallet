@@ -40,5 +40,6 @@ namespace CryptoWallet.Application.Services.Option_Transaction.Queries.GetOption
         public double Position { get; set; }
         public string Info { get; set; }
         public int IdJson { get; set; }
+        public string Description { get; set; }
     }
 }
