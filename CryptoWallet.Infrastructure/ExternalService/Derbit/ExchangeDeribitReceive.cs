@@ -4,6 +4,7 @@ using CryptoWallet.Application.Services.Position_TransactionLog.Queries.GETPosit
 using CryptoWallet.Application.ViewModels;
 using CryptoWallet.Domain.Entities;
 using MediatR;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SQLitePCL;
@@ -17,13 +18,20 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
 {
     public class ExchangeDeribitReceive : IExchangeReceive
     {
+        private readonly string _derbitSite;
         private readonly IMediator _mediator;
         private readonly IMapper _mapper;
+        private readonly IConfiguration _configuration;
 
-        public ExchangeDeribitReceive(IMediator mediator, IMapper mapper)
+
+
+        public ExchangeDeribitReceive(IMediator mediator, IMapper mapper, IConfiguration configuration)
         {
             _mediator = mediator;
             _mapper = mapper;
+            _configuration = configuration;
+
+            _derbitSite = _configuration["DerbitSite"];
         }
 
         public async Task<List<Asset>> GetLastAsset()
@@ -98,7 +106,7 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
 
         public async Task<List<OptionPositionDto>> GetLastPositions()
         {
-            dynamic data = await getApiResponse("https://test.deribit.com/api/v2/private/get_positions");
+            dynamic data = await getApiResponse($"{_derbitSite}/api/v2/private/get_positions");
 
             List<OptionPositionDto> ListoptionVM = new List<OptionPositionDto>();
 
@@ -125,7 +133,7 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
 
         public async Task<List<OptionTransactionDto>> GetOptionTransactionDtoLog(long timestampStrat)
         {
-            dynamic data = await getApiResponse($"https://test.deribit.com/api/v2/private/get_transaction_log?currency=BTC&end_timestamp=9999999999999&query=option&start_timestamp={timestampStrat}");
+            dynamic data = await getApiResponse($"{_derbitSite}/api/v2/private/get_transaction_log?currency=BTC&end_timestamp=9999999999999&query=option&start_timestamp={timestampStrat}");
 
             List<OptionTransactionDto> ListOptionTransactionDto = new List<OptionTransactionDto>();
             int c = 0;
@@ -222,7 +230,7 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
             string json = "{\"id\":4,\"method\":\"public/auth\",\"params\":{\"grant_type\":\"client_credentials\",\"scope\":\"session:apiconsole-0yc7ajb4qf0k\",\"client_id\":\"twbo_VX6\",\"client_secret\":\"pYresnQwzeweoDrJqUb4BCmATd3dXA1-4Dwekb3roMk\"},\"jsonrpc\":\"2.0\"}";
             var data = new StringContent(json, Encoding.UTF8, "application/json");
 
-            var url = "https://test.deribit.com/api/v2/public/auth"; // Replace with your actual API endpoint
+            var url = $"{_derbitSite}/api/v2/public/auth"; // Replace with your actual API endpoint
             var response = await client.PostAsync(url, data);
 
             var result = response.Content.ReadAsStringAsync().Result;

@@ -31,7 +31,8 @@ namespace CryptoWallet.BlazorWasm.Pages
 
         string FormatAsUSD(object value)
         {
-            return ((double)value).ToString("C0", CultureInfo.CreateSpecificCulture("en-US"));
+            //return ((double)value).ToString("C0", CultureInfo.CreateSpecificCulture("en-US"));
+            return ((double)value).ToString();
         }
 
         List<ChartOP> listChartOP = new List<ChartOP>();
@@ -47,16 +48,16 @@ namespace CryptoWallet.BlazorWasm.Pages
                     ChartOP chartOP = new ChartOP();
                     var listInstrumentOP =   ListAssets.Where(x => x.InstrumentName == item.InstrumentName).ToList();
 
+                    chartOP.InstrumentName = item.InstrumentName;
                     foreach (var instrumentOP in listInstrumentOP)
                     {
                         DataItem DI = new DataItem
                         {
-                            Date = item.RegisterTime,
-                            Value = item.average_price
+                            Date = instrumentOP.RegisterTime,
+                            Value = instrumentOP.MarkPrice 
                         };
                         chartOP.DataItems.Add(DI);
                     }
-
                     listChartOP.Add(chartOP);
                 }
             }

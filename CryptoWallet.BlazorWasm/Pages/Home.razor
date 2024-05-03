@@ -1,5 +1,5 @@
 ﻿@page "/"
- 
+ @inject HttpClient Http
 <PageTitle>Home</PageTitle>
 
 <h1>Hello, world!</h1>
@@ -12,13 +12,38 @@ Welcome to your new app.
 <br/>
 <RadzenButton Text=@text />
 <RadzenTextBox @bind-Value=@text />
-@code {
-    string text = "Hi";
-}
+
 
 @inject DialogService DialogService
 
-<div class="rz-p-12 rz-text-align-center">
-    <RadzenButton Text="Alert dialog" ButtonStyle="ButtonStyle.Secondary"
-                  Click=@(args => DialogService.Alert("Some message!", "MyTitle", new AlertOptions() { OkButtonText = "Yes" })) />
-</div>
+    <RadzenButton Text="Dialog with inline Blazor content" ButtonStyle="ButtonStyle.Secondary" Click=@ShowInlineDialog />
+ 
+@code {
+    string text = "Hi";
+    string Titel = "tttt";
+
+    int orderID = 10248;
+
+    async Task ShowInlineDialog()
+    {
+        var result = await DialogService.OpenAsync("Simple Dialog", ds =>
+    @<RadzenStack Gap="1.5rem">
+        <p>Confirm Order ID <b>@orderID</b>?</p>
+        <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween">
+            <RadzenStack Orientation="Orientation.Horizontal">
+                <RadzenButton Text="Ok" Click="() => ds.Close(true)" Style="width: 80px;" />
+                <RadzenButton Text="Okaaaa" Click="() => IncrementCount()" Style="width: 80px;" />
+                <RadzenButton Text="Cancel" Click="() => ds.Close(false)" ButtonStyle="ButtonStyle.Light" />
+            </RadzenStack>
+            <RadzenButton Text="Refresh" Click="(() => { orderID = 10249; ds.Refresh(); })" ButtonStyle="ButtonStyle.Light" />
+        </RadzenStack>
+    </RadzenStack>);
+    }
+
+        private async Task IncrementCount()
+        {
+            await Http.GetAsync("https://localhost:7185/api/OptionTransaction/UpdateOptionTransaction?optionTransactionId=6&Description=www");
+
+        }
+
+}         

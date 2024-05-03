@@ -37,7 +37,9 @@ namespace CryptoWallet.Application.Services.Position_TransactionLog.Queries.GETP
                 optionPositionList = await _optionPositionRepository.GetListOptionPositionAsync();
             }
 
-            var oPositionResponse =   _mapper.Map<List<GETPositionTransactionLogListQueryResponse>>(optionPositionList);
+           var optionPositionListActive = optionPositionList.Where(x =>x.Active == true).ToList();
+
+            var oPositionResponse =   _mapper.Map<List<GETPositionTransactionLogListQueryResponse>>(optionPositionListActive);
             return oPositionResponse;
 
         }

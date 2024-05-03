@@ -3,39 +3,53 @@
 @inject HttpClient Http
 @using System.Globalization
 
-<div class="container">
-    <div class="row">
-        <div class="col-sm-12 my-5">
-            <RadzenCard class="w-100 mb-4" Style="display: flex; align-items: center; gap: 0.5rem">
-                <RadzenCheckBox @bind-Value="@smooth" Name="smooth"></RadzenCheckBox>
-                <RadzenLabel Text="Smooth" Component="smooth" Style="margin-right: 1rem;" />
-                <RadzenCheckBox @bind-Value="@showDataLabels" Name="dataLabels"></RadzenCheckBox>
-                <RadzenLabel Text="Show Data Labels" Component="dataLabels" Style="margin-right: 1rem;" />
-                <RadzenCheckBox @bind-Value="@showMarkers" Name="markers"></RadzenCheckBox>
-                <RadzenLabel Text="Show Markers" Component="markers" />
-            </RadzenCard>
-            <RadzenChart>
+@if (listChartOP == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
 
- 
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 my-5">
+
+
+
+                <RadzenCard class="w-100 mb-4" Style="display: flex; align-items: center; gap: 0.5rem">
+                    <RadzenCheckBox @bind-Value="@smooth" Name="smooth"></RadzenCheckBox>
+                    <RadzenLabel Text="Smooth" Component="smooth" Style="margin-right: 1rem;" />
+                    <RadzenCheckBox @bind-Value="@showDataLabels" Name="dataLabels"></RadzenCheckBox>
+                    <RadzenLabel Text="Show Data Labels" Component="dataLabels" Style="margin-right: 1rem;" />
+                    <RadzenCheckBox @bind-Value="@showMarkers" Name="markers"></RadzenCheckBox>
+                    <RadzenLabel Text="Show Markers" Component="markers" />
+                </RadzenCard>
+
                 @foreach (var item in listChartOP)
                 {
-                    <RadzenLineSeries Smooth="@smooth" Data="@item.DataItems" CategoryProperty="Date" Title="@item.InstrumentName" LineType="LineType.Dashed" ValueProperty="Value">
-                        <RadzenMarkers Visible="@showMarkers" MarkerType="MarkerType.Square" />
-                        <RadzenSeriesDataLabels Visible="@showDataLabels" />
-                    </RadzenLineSeries>
+
+                <RadzenChart>
+
+
+                        <RadzenLineSeries Smooth="@smooth" Data="@item.DataItems" CategoryProperty="Date" Title="@item.InstrumentName" LineType="LineType.Dashed" ValueProperty="Value">
+                            <RadzenMarkers Visible="@showMarkers" MarkerType="MarkerType.Square" />
+                            <RadzenSeriesDataLabels Visible="@showDataLabels" />
+                        </RadzenLineSeries>
+                   
+
+                    <RadzenCategoryAxis Padding="20" />
+                    <RadzenValueAxis Formatter="@FormatAsUSD">
+                        <RadzenGridLines Visible="true" />
+                            <RadzenAxisTitle Text="Value in MarkPrice" />
+                    </RadzenValueAxis>
+                </RadzenChart>
                 }
-
-
-                
-
-                <RadzenCategoryAxis Padding="20" />
-                <RadzenValueAxis Formatter="@FormatAsUSD">
-                    <RadzenGridLines Visible="true" />
-                    <RadzenAxisTitle Text="Value in USD" />
-                </RadzenValueAxis>
-            </RadzenChart>
+            </div>
         </div>
     </div>
-</div>
 
 
+}

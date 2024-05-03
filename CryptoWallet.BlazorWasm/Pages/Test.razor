@@ -1,11 +1,6 @@
 ﻿<h3>Test</h3>
 @page "/Test"
-
-@inject DialogService DialogService
-
-<div class="rz-p-12 rz-text-align-center">
-    <RadzenButton Text="Alert dialog" ButtonStyle="ButtonStyle.Secondary"
-                  Click=@(args => DialogService.Alert("Some message!", "MyTitle", new AlertOptions() { OkButtonText = "Yes" })) />
-</div>
+@inject HttpClient Http
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
 
  

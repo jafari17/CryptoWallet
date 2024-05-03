@@ -31,11 +31,7 @@ namespace CryptoWallet.Application.Services.Option_Position_History.Commands.Cre
         public async Task<bool> Handle(CreateOptionPositionHistoryCommand request, CancellationToken cancellationToken)
         {
 
-
-
-
             List<OptionPositionDto> OPositionDto =await _exchangeReceive.GetLastPositions();
-
 
             foreach (var item in OPositionDto)
             {
@@ -55,11 +51,12 @@ namespace CryptoWallet.Application.Services.Option_Position_History.Commands.Cre
 
                     var oPositionMaper = _mapper.Map< OptionPositionHistory> (item);
 
-                    await _optionRepository.AddOptionPositionHistoryAsync(oPositionMaper);
+                     _optionRepository.AddOptionPositionHistoryAsync(oPositionMaper);
 
                 }
             }
-            await _optionRepository.SaveChangesAsync();
+             _optionRepository.SaveChangesAsync();
+             await  _optionRepository.SaveChangesAsync();
 
             return await Task.FromResult(true);
         }

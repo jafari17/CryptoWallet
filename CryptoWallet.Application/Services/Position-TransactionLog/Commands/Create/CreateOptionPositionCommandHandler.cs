@@ -26,12 +26,9 @@ namespace CryptoWallet.Application.Services.Position_TransactionLog.Commands.Cre
 
         }
         public async Task<bool> Handle(CreateOptionPositionCommand request, CancellationToken cancellationToken)
-        {
-             
-            List<OptionPositionDto> OPositionDto = await _exchangeReceive.GetLastPositions();
-
-            List<OptionPosition> optionPositionList = new List<OptionPosition>();
-
+        { 
+            List<OptionPositionDto> OPositionDto = await _exchangeReceive.GetLastPositions(); 
+            List<OptionPosition> optionPositionList = new List<OptionPosition>(); 
             optionPositionList = await _oPositionRepository.GetListOptionPositionAsync();
 
             foreach (var item in OPositionDto)
@@ -60,9 +57,7 @@ namespace CryptoWallet.Application.Services.Position_TransactionLog.Commands.Cre
                     item.Active = false;
                     await _oPositionRepository.UpdateOptionPositionAsync(item);
                 }
-            }
-
-
+            } 
             await _oPositionRepository.SaveChangesAsync();
 
             return await Task.FromResult(true);

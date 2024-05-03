@@ -17,3 +17,5 @@ namespace CryptoWallet.Application.Contracts.Persistence
         Task SaveChangesAsync();
     }
 }
+ 
+

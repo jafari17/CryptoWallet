@@ -60,6 +60,27 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "CryptoWallet.API.Controllers.OptionTransactionController",
+    "Method": "UpdateOptionTransaction",
+    "RelativePath": "api/OptionTransaction/UpdateOptionTransaction",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "optionTransactionId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CryptoWallet.API.Controllers.PositionTransactionLogController",
     "Method": "GetPositionTransactionLogList",
     "RelativePath": "api/PositionTransactionLog/GetPositionTransactionLogList/{lastUpdate}",
@@ -83,6 +104,27 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CryptoWallet.API.Controllers.PositionTransactionLogController",
+    "Method": "UpdateOptionPosition",
+    "RelativePath": "api/PositionTransactionLog/UpdateOptionPosition",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "Description",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   }
 ]

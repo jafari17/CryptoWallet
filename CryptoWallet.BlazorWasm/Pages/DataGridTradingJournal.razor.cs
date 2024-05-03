@@ -4,7 +4,10 @@ using System.ComponentModel.DataAnnotations;
 using System.Net.Http.Json;
 using Radzen;
 using Radzen.Blazor;
- 
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+
 
 
 
@@ -21,7 +24,8 @@ namespace CryptoWallet.BlazorWasm.Pages
         RadzenDataGrid<OptionPositionVM> grid;
 
         IEnumerable<optionTransactionDetalisVM>? oTransactionVM;
- 
+
+        static HttpClient client = new HttpClient();
         async Task ToggleRowsExpand(bool? value)
         {
             allRowsExpanded = value;
@@ -61,15 +65,59 @@ namespace CryptoWallet.BlazorWasm.Pages
 
         async Task onlinePositionTransaction()
         {
-            oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList/true");
+            await Http.GetAsync("https://localhost:7185/api/PositionTransactionLog/SavePositionList");
+            oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList/false");
 
         }
+        private async Task EditDescriptionTransaction(long ID ,string Description)
+        {
+            if (Description != null)
+            {
+                await Http.GetAsync($"https://localhost:7185/api/OptionTransaction/UpdateOptionTransaction?optionTransactionId={ID}&Description={Description}");
+                oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList/false");
+
+            }
+
+            DialogService.Close();
+        }
+        private async Task EditDescriptionPosition(int id ,string description)
+        {
+            if (description != null)
+            {
+                var x = await Http.GetAsync($"https://localhost:7185/api/PositionTransactionLog/UpdateOptionPosition?ID={id}&Description={description}");
+                oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList/false");
 
 
+
+
+
+
+                //    UpdateDec updateDec = new UpdateDec()
+                //{
+                //    ID = 10,
+                //    Description = description
+                //};
+
+                //HttpResponseMessage response = await client.PostAsJsonAsync(
+                //"https://localhost:7185/api/PositionTransactionLog/UpdateOptionPosition", updateDec);
+
+
+
+            }
+
+            grid.Reset();
+            DialogService.Close();
+
+        }
+        public class UpdateDec
+        {
+            public int ID { get; set; }
+            public string Description { get; set; }
+        }
 
         public class OptionPositionVM
         {
-            public int optionId { get; set; }
+            public int optionPositionId { get; set; }
             public string InstrumentName { get; set; }
             public double size { get; set; }
             public double average_price { get; set; }

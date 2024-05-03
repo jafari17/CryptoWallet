@@ -1,7 +1,7 @@
 ﻿@page "/DataGridTradingJournal"
 @inject HttpClient Http
 @inject DialogService DialogService
-
+@inject NavigationManager NavigationManager;
 @if (oPositionVM == null)
 {
     <p><em>Loading...</em></p>
@@ -24,8 +24,6 @@ else
 
     <RadzenDataGrid @ref="grid" Data="@oPositionVM" TItem="OptionPositionVM" AllowFiltering="true" AllowPaging="true" PageSize="3" AllowSorting="true" RowRender="@RowRender" ExpandMode="@expandMode">
 
-
-
         <Template Context="OptionPositionVM2">
             <RadzenTabs>
                 <Tabs>
@@ -37,43 +35,102 @@ else
                             <RadzenDataGridColumn TItem="optionTransactionDetalisVM" Property="Price" Title="Price" />
                             <RadzenDataGridColumn TItem="optionTransactionDetalisVM" Property="Description" Title="Description" />
 
-
-                            <RadzenDataGridColumn TItem="optionTransactionDetalisVM" Property="Description" Title="">
+                            <RadzenDataGridColumn TItem="optionTransactionDetalisVM" Property="" Title="">
                                 <Template Context="optionTransactionDetalisVM">
+                                    <RadzenButton Text="Dialog " ButtonStyle="ButtonStyle.Light" Click="ShowInlineDialog">
 
-                                    <RadzenButton Text="Edit" ButtonStyle="ButtonStyle.Secondary"
-                                                  Click=@(args => DialogService.Confirm($"<textarea rows='3'cols='40'> {@optionTransactionDetalisVM.Description} </textarea>", @optionTransactionDetalisVM.InstrumentName, new ConfirmOptions() { OkButtonText = "Yes", CancelButtonText = "No" })) />
+                                        Edit
+                                        @{
+                                            IDTransaction = optionTransactionDetalisVM.TransactionLogId;
+                                            TitelTransaction = optionTransactionDetalisVM.InstrumentName;
+                                            DescriptionTransaction = optionTransactionDetalisVM.Description;
+                                        }
+                                    </RadzenButton>
                                 </Template>
-
                             </RadzenDataGridColumn>
-
                         </Columns>
-
-     
                     </RadzenDataGrid>
                 </Tabs>
             </RadzenTabs>
         </Template>
 
         <Columns>
-            <RadzenDataGridColumn TItem="OptionPositionVM" Property="InstrumentName" Title="Instrument Name" Width="120px" />
-            <RadzenDataGridColumn TItem="OptionPositionVM" Property="size" Title="size" Width="120px" />
+            <RadzenDataGridColumn TItem="OptionPositionVM" Property="InstrumentName" Title="Instrument Name" Width="180px" />
+            <RadzenDataGridColumn TItem="OptionPositionVM" Property="size" Title="size" Width="50px" />
             <RadzenDataGridColumn TItem="OptionPositionVM" Property="average_price" Title="average price" Width="120px" />
             <RadzenDataGridColumn TItem="OptionPositionVM" Property="MarkPrice" Title="MarkPrice" Width="120px" />
             <RadzenDataGridColumn TItem="OptionPositionVM" Property="TotalProfitLoss" Title="Total ProfitLoss" Width="120px" />
             <RadzenDataGridColumn TItem="OptionPositionVM" Property="delta" Title="delta" Width="120px" />
-            <RadzenDataGridColumn TItem="OptionPositionVM" Property="description" Title="delta" Width="120px" />
-
+            <RadzenDataGridColumn TItem="OptionPositionVM" Property="description" Title="description" Width="120px" />
+ 
             <RadzenDataGridColumn TItem="OptionPositionVM" Property="" Title="" Width="120px">
                 <Template Context="OptionPositionVM">
 
-                    <RadzenButton Text="Edit" ButtonStyle="ButtonStyle.Secondary"
-                                  Click=@(args => DialogService.Confirm($"<textarea rows='3'cols='40'> {@OptionPositionVM.description} </textarea>" , @OptionPositionVM.InstrumentName, new ConfirmOptions() { OkButtonText = "Yes", CancelButtonText = "No" })) />
- 
- 
+                    <RadzenButton Text="Dialog " ButtonStyle="ButtonStyle.Primary" Click="ShowInlineDialogPosition"> 
+                        Edit
+                        @{
+                            IDPosition = OptionPositionVM.optionPositionId;
+                            TitelPosition = OptionPositionVM.InstrumentName;
+                            DescriptionPosition = OptionPositionVM.description;
+                        }
+                    </RadzenButton>
                 </Template>
             </RadzenDataGridColumn>
         </Columns>
-    </RadzenDataGrid> 
+    </RadzenDataGrid>
 }
- 
+
+
+@code {
+    long IDTransaction;
+     string TitelTransaction = "";
+    string DescriptionTransaction = "";
+
+    async Task ShowInlineDialog()
+    {
+        
+        long IDTransaction2;
+       string textareaTransaction;
+
+        var result = await DialogService.OpenAsync(TitelTransaction, ds =>
+    @<RadzenStack Gap="1.5rem">
+
+        @{textareaTransaction = null;}
+        <textarea rows='3' cols='50' @bind=textareaTransaction> @DescriptionTransaction    </textarea>
+
+        <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween">
+            <RadzenStack Orientation="Orientation.Horizontal">
+                <template>
+                    @{IDTransaction2 = IDTransaction;}
+                </template>
+                <RadzenButton Text="Ok" Click="() =>    EditDescriptionTransaction(IDTransaction2,textareaTransaction)" Style="width: 80px;" />
+                <RadzenButton Text="Cancel" Click="() => ds.Close(false)" ButtonStyle="ButtonStyle.Light" />
+            </RadzenStack>
+        </RadzenStack>
+    </RadzenStack>);
+    } 
+    int IDPosition;
+    int IDPosition2;
+    string DescriptionPosition = "";
+    string TitelPosition = "";
+    public string textareaPosition;
+
+    async Task ShowInlineDialogPosition()
+    {
+        var result = await DialogService.OpenAsync(TitelPosition, ds =>
+    @<RadzenStack Gap="1.5rem">
+
+        @{textareaPosition = null;}
+        <textarea rows='3' cols='50' @bind=textareaPosition> @DescriptionPosition    </textarea>
+        <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween">
+            <RadzenStack Orientation="Orientation.Horizontal">
+                <template>
+                    @{IDPosition2 = IDPosition;}
+                </template>
+                <RadzenButton Text="Ok" Click="() =>    EditDescriptionPosition(IDPosition2,textareaPosition)" Style="width: 80px;" />
+                <RadzenButton Text="Cancel" Click="() => ds.Close(false)" ButtonStyle="ButtonStyle.Light" />
+            </RadzenStack>
+        </RadzenStack>
+    </RadzenStack>);
+    } 
+}

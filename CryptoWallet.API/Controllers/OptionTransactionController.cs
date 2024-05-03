@@ -1,5 +1,7 @@
-﻿using CryptoWallet.Application.Services.Option_Position_History.Queries.GetOptionList;
+﻿using CryptoWallet.Application.Contracts.Persistence;
+using CryptoWallet.Application.Services.Option_Position_History.Queries.GetOptionList;
 using CryptoWallet.Application.Services.Option_Transaction.Commands.Create;
+using CryptoWallet.Application.Services.Option_Transaction.Commands.Update;
 using CryptoWallet.Application.Services.Option_Transaction.Queries.GetOptionTransactionList;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -11,10 +13,12 @@ namespace CryptoWallet.API.Controllers
     public class OptionTransactionController : Controller
     {
         private readonly IMediator _mediator;
+        private readonly IOptionTransactionRepository _optionTransactionRepository;
 
-        public OptionTransactionController(IMediator mediator)
+        public OptionTransactionController(IMediator mediator, IOptionTransactionRepository optionTransactionRepository)
         {
             _mediator = mediator;
+            _optionTransactionRepository = optionTransactionRepository;
         }
 
         [HttpGet]
@@ -35,6 +39,15 @@ namespace CryptoWallet.API.Controllers
             return Ok(response);
         }
 
- 
+
+        [HttpGet]
+        public async Task<IActionResult> UpdateOptionTransaction(int optionTransactionId, string Description)
+        {
+
+            var command = new UpdateOptionTransactionCommand(optionTransactionId , Description);
+            var response = await _mediator.Send(command);
+            return Ok(response);
+
+        }
     }
 }

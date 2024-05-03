@@ -1,5 +1,7 @@
-﻿using CryptoWallet.Application.Services.Option_Position_History.Queries.GetOptionList;
+﻿using CryptoWallet.Application.Contracts.Persistence;
+using CryptoWallet.Application.Services.Option_Position_History.Queries.GetOptionList;
 using CryptoWallet.Application.Services.Position_TransactionLog.Commands.Create;
+using CryptoWallet.Application.Services.Position_TransactionLog.Commands.Update;
 using CryptoWallet.Application.Services.Position_TransactionLog.Queries.GETPositionTransactionLogList;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -12,9 +14,11 @@ namespace CryptoWallet.API.Controllers
     public class PositionTransactionLogController : Controller
     {
         private readonly IMediator _mediator;
-        public PositionTransactionLogController(IMediator mediator)
+        private readonly IOptionPositionRepository _optionPositionRepository;
+        public PositionTransactionLogController(IMediator mediator, IOptionPositionRepository optionPositionRepository)
         {
             _mediator = mediator;
+            _optionPositionRepository = optionPositionRepository;
         }
 
         [HttpGet("{lastUpdate}")]
@@ -33,5 +37,13 @@ namespace CryptoWallet.API.Controllers
             return Ok(response);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> UpdateOptionPosition(int ID, string Description)
+        {
+            var command = new UpdateOptionPositionCommand(ID, Description);
+            var response = await _mediator.Send(command);
+            Console.WriteLine(response);
+            return Ok(response);
+        }
     }
 }

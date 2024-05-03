@@ -25,7 +25,17 @@ namespace CryptoWallet.Infrastructure.Repositories
 
         public async Task<List<OptionPosition>> GetListOptionPositionAsync()
         {
-            return await _context.optionPosition.Include(op => op.optionTransaction).ToListAsync();
+            try
+            {
+                var r = await _context.optionPosition.Include(op => op.optionTransaction).ToListAsync();
+                return r;
+            }
+            catch (Exception)
+            {
+
+                return await _context.optionPosition.ToListAsync();
+            }
+
         }
 
         public Task<OptionPosition> GetOptionPositionAsync(int optionPositionId)
@@ -41,6 +51,13 @@ namespace CryptoWallet.Infrastructure.Repositories
         public async Task UpdateOptionPositionAsync(OptionPosition optionPosition)
         {
             _context.Entry(await _context.optionPosition.FirstOrDefaultAsync(x => x.OptionPositionId == optionPosition.OptionPositionId)).CurrentValues.SetValues(optionPosition);
+        }
+
+        public async Task UpdateDescriptionOptionPositionAsync(int optionPositionId, string Description)
+        {
+            var ot = await _context.optionPosition.FirstOrDefaultAsync(x => x.OptionPositionId == optionPositionId);
+            ot.description = Description;
+            _context.optionPosition.Update(ot);
         }
     }
 }
