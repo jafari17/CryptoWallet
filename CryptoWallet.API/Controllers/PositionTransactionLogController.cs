@@ -3,6 +3,7 @@ using CryptoWallet.Application.Services.Option_Position_History.Queries.GetOptio
 using CryptoWallet.Application.Services.Position_TransactionLog.Commands.Create;
 using CryptoWallet.Application.Services.Position_TransactionLog.Commands.Update;
 using CryptoWallet.Application.Services.Position_TransactionLog.Queries.GETPositionTransactionLogList;
+using CryptoWallet.Application.ViewModels;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -21,10 +22,10 @@ namespace CryptoWallet.API.Controllers
             _optionPositionRepository = optionPositionRepository;
         }
 
-        [HttpGet("{lastUpdate}")]
-        public async Task<IActionResult> GetPositionTransactionLogList(bool lastUpdate)
+        [HttpGet]
+        public async Task<IActionResult> GetPositionTransactionLogList( )
         {
-            var query = new GETPositionTransactionLogListQuery(lastUpdate);
+            var query = new GETPositionTransactionLogListQuery();
             var response = await _mediator.Send(query);
             return Ok(response);
         }
@@ -37,10 +38,10 @@ namespace CryptoWallet.API.Controllers
             return Ok(response);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> UpdateOptionPosition(int ID, string Description)
+        [HttpPost]
+        public async Task<IActionResult> UpdateOptionPosition(DescriptionDto model )
         {
-            var command = new UpdateOptionPositionCommand(ID, Description);
+            var command = new UpdateOptionPositionCommand(model.ID, model.Description);
             var response = await _mediator.Send(command);
             Console.WriteLine(response);
             return Ok(response);

@@ -3,231 +3,104 @@
   "WorkspaceRootPath": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.api\\timerbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|solutionrelative:cryptowallet.api\\timerbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\position-transactionlog\\commands\\create\\createoptionpositioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\position-transactionlog\\commands\\create\\createoptionpositioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3069CD56-0FAB-4EDE-9DA1-000B9D42DEDE}|CryptoWallet.Infrastructure\\CryptoWallet.Infrastructure.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.infrastructure\\repositories\\optionpositionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3069CD56-0FAB-4EDE-9DA1-000B9D42DEDE}|CryptoWallet.Infrastructure\\CryptoWallet.Infrastructure.csproj|solutionrelative:cryptowallet.infrastructure\\repositories\\optionpositionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\contracts\\persistence\\ioptionpositionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\contracts\\persistence\\ioptionpositionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\position-transactionlog\\queries\\getpositiontransactionloglist\\getpositiontransactionloglistqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\position-transactionlog\\queries\\getpositiontransactionloglist\\getpositiontransactionloglistqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\option_transaction\\commands\\create\\createoptiontransactioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\option_transaction\\commands\\create\\createoptiontransactioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3069CD56-0FAB-4EDE-9DA1-000B9D42DEDE}|CryptoWallet.Infrastructure\\CryptoWallet.Infrastructure.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.infrastructure\\externalservice\\derbit\\exchangederibitreceive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3069CD56-0FAB-4EDE-9DA1-000B9D42DEDE}|CryptoWallet.Infrastructure\\CryptoWallet.Infrastructure.csproj|solutionrelative:cryptowallet.infrastructure\\externalservice\\derbit\\exchangederibitreceive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2242A88B-4CBD-49FE-9C94-E3EFD5C2CAAE}|CryptoWallet.Domain\\CryptoWallet.Domain.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.domain\\entities\\optiontransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2242A88B-4CBD-49FE-9C94-E3EFD5C2CAAE}|CryptoWallet.Domain\\CryptoWallet.Domain.csproj|solutionrelative:cryptowallet.domain\\entities\\optiontransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.blazorwasm\\pages\\datagridtradingjournal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|solutionrelative:cryptowallet.blazorwasm\\pages\\datagridtradingjournal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.blazorwasm\\pages\\tradingchart.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|solutionrelative:cryptowallet.blazorwasm\\pages\\tradingchart.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.blazorwasm\\pages\\tradingjournal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|solutionrelative:cryptowallet.blazorwasm\\pages\\tradingjournal.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.blazorwasm\\cryptowallet.blazorwasm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|solutionrelative:cryptowallet.blazorwasm\\cryptowallet.blazorwasm.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\contracts\\iexchangereceive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\contracts\\iexchangereceive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\option_position_history\\commands\\create\\createoptionpositionhistorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\option_position_history\\commands\\create\\createoptionpositionhistorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\option_position_history\\commands\\create\\createoptionpositionhistorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\option_position_history\\commands\\create\\createoptionpositionhistorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|solutionrelative:cryptowallet.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2242A88B-4CBD-49FE-9C94-E3EFD5C2CAAE}|CryptoWallet.Domain\\CryptoWallet.Domain.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.domain\\entities\\optionposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2242A88B-4CBD-49FE-9C94-E3EFD5C2CAAE}|CryptoWallet.Domain\\CryptoWallet.Domain.csproj|solutionrelative:cryptowallet.domain\\entities\\optionposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|solutionrelative:cryptowallet.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\position-transactionlog\\queries\\getpositiontransactionloglist\\getpositiontransactionloglistqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\position-transactionlog\\queries\\getpositiontransactionloglist\\getpositiontransactionloglistqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\option_transaction\\commands\\create\\createoptiontransactioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\option_transaction\\commands\\create\\createoptiontransactioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.blazorwasm\\pages\\test.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|solutionrelative:cryptowallet.blazorwasm\\pages\\test.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.blazorwasm\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|solutionrelative:cryptowallet.blazorwasm\\layout\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\position-transactionlog\\queries\\getpositiontransactionloglist\\getpositiontransactionloglistquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\position-transactionlog\\queries\\getpositiontransactionloglist\\getpositiontransactionloglistquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.blazorwasm\\pages\\datagridtradingjournal.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|solutionrelative:cryptowallet.blazorwasm\\pages\\datagridtradingjournal.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.api\\controllers\\optionpositioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|solutionrelative:cryptowallet.api\\controllers\\optionpositioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\asset_\\commands\\create\\createassetcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\asset_\\commands\\create\\createassetcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|solutionrelative:cryptowallet.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\asset_\\commands\\create\\createassetcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\asset_\\commands\\create\\createassetcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\position-transactionlog\\commands\\create\\createoptionpositioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\position-transactionlog\\commands\\create\\createoptionpositioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\contracts\\iexchangeaccountsummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\contracts\\iexchangeaccountsummary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.blazorwasm\\pages\\tradingchart.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|solutionrelative:cryptowallet.blazorwasm\\pages\\tradingchart.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.blazorwasm\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|solutionrelative:cryptowallet.blazorwasm\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.api\\controllers\\optiontransactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|solutionrelative:cryptowallet.api\\controllers\\optiontransactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\option_position_history\\queries\\getoptionpositionlist\\getoptionpositionlistqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\option_position_history\\queries\\getoptionpositionlist\\getoptionpositionlistqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.api\\controllers\\positiontransactionlogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|solutionrelative:cryptowallet.api\\controllers\\positiontransactionlogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\position-transactionlog\\commands\\update\\updateoptionpositioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\position-transactionlog\\commands\\update\\updateoptionpositioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3069CD56-0FAB-4EDE-9DA1-000B9D42DEDE}|CryptoWallet.Infrastructure\\CryptoWallet.Infrastructure.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.infrastructure\\repositories\\optiontransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3069CD56-0FAB-4EDE-9DA1-000B9D42DEDE}|CryptoWallet.Infrastructure\\CryptoWallet.Infrastructure.csproj|solutionrelative:cryptowallet.infrastructure\\repositories\\optiontransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\option_transaction\\commands\\update\\updateoptiontransactioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\option_transaction\\commands\\update\\updateoptiontransactioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\option_transaction\\commands\\update\\updateoptiontransactioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\option_transaction\\commands\\update\\updateoptiontransactioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\position-transactionlog\\commands\\update\\updateoptionpositioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\position-transactionlog\\commands\\update\\updateoptionpositioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\contracts\\persistence\\ioptionpositionhistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\contracts\\persistence\\ioptionpositionhistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\contracts\\persistence\\ioptiontransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\contracts\\persistence\\ioptiontransactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.blazorwasm\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|solutionrelative:cryptowallet.blazorwasm\\pages\\counter.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.blazorwasm\\pages\\test.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|solutionrelative:cryptowallet.blazorwasm\\pages\\test.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|I:\\blazor-webassembly\\23_BlazorIntroductory_Madaeny\\ProductDetails.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\option_transaction\\queries\\getoptiontransactionlist\\getoptiontransactionlistqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\option_transaction\\queries\\getoptiontransactionlist\\getoptiontransactionlistqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\option_transaction\\queries\\getoptiontransactionlist\\getoptiontransactionlistqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\option_transaction\\queries\\getoptiontransactionlist\\getoptiontransactionlistqueryresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\viewmodels\\optiontransactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\viewmodels\\optiontransactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3069CD56-0FAB-4EDE-9DA1-000B9D42DEDE}|CryptoWallet.Infrastructure\\CryptoWallet.Infrastructure.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3069CD56-0FAB-4EDE-9DA1-000B9D42DEDE}|CryptoWallet.Infrastructure\\CryptoWallet.Infrastructure.csproj|solutionrelative:cryptowallet.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\viewmodels\\optionpositiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\viewmodels\\optionpositiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.blazorwasm\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|solutionrelative:cryptowallet.blazorwasm\\layout\\mainlayout.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.blazorwasm\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|solutionrelative:cryptowallet.blazorwasm\\app.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.blazorwasm\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|solutionrelative:cryptowallet.blazorwasm\\_imports.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.blazorwasm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB8113FD-5B2A-4911-8933-2C306CD89F12}|CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj|solutionrelative:cryptowallet.blazorwasm\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2242A88B-4CBD-49FE-9C94-E3EFD5C2CAAE}|CryptoWallet.Domain\\CryptoWallet.Domain.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.domain\\entities\\optionpositionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2242A88B-4CBD-49FE-9C94-E3EFD5C2CAAE}|CryptoWallet.Domain\\CryptoWallet.Domain.csproj|solutionrelative:cryptowallet.domain\\entities\\optionpositionhistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\option_position_history\\queries\\getoptionpositionlist\\getoptionpositionlistqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\option_position_history\\queries\\getoptionpositionlist\\getoptionpositionlistqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3069CD56-0FAB-4EDE-9DA1-000B9D42DEDE}|CryptoWallet.Infrastructure\\CryptoWallet.Infrastructure.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.infrastructure\\migrations\\20240503124815_decnull.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3069CD56-0FAB-4EDE-9DA1-000B9D42DEDE}|CryptoWallet.Infrastructure\\CryptoWallet.Infrastructure.csproj|solutionrelative:cryptowallet.infrastructure\\migrations\\20240503124815_decnull.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2242A88B-4CBD-49FE-9C94-E3EFD5C2CAAE}|CryptoWallet.Domain\\CryptoWallet.Domain.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.domain\\entities\\optionposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2242A88B-4CBD-49FE-9C94-E3EFD5C2CAAE}|CryptoWallet.Domain\\CryptoWallet.Domain.csproj|solutionrelative:cryptowallet.domain\\entities\\optionposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3069CD56-0FAB-4EDE-9DA1-000B9D42DEDE}|CryptoWallet.Infrastructure\\CryptoWallet.Infrastructure.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.infrastructure\\externalservice\\derbit\\exchangederibitreceive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3069CD56-0FAB-4EDE-9DA1-000B9D42DEDE}|CryptoWallet.Infrastructure\\CryptoWallet.Infrastructure.csproj|solutionrelative:cryptowallet.infrastructure\\externalservice\\derbit\\exchangederibitreceive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.api\\timerbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|solutionrelative:cryptowallet.api\\timerbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|solutionrelative:cryptowallet.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.api\\cryptowallet.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|solutionrelative:cryptowallet.api\\cryptowallet.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.api\\controllers\\optiontransactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|solutionrelative:cryptowallet.api\\controllers\\optiontransactioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\viewmodels\\descriptiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\viewmodels\\descriptiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\viewmodels\\optionpositiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\viewmodels\\optionpositiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.api\\controllers\\positiontransactionlogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|solutionrelative:cryptowallet.api\\controllers\\positiontransactionlogcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\viewmodels\\optiontransactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\viewmodels\\optiontransactiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\asset_\\commands\\create\\createassetcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\asset_\\commands\\create\\createassetcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\option_position_history\\commands\\create\\createoptionpositionhistorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\option_position_history\\commands\\create\\createoptionpositionhistorycommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\asset_\\commands\\create\\createassetcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\asset_\\commands\\create\\createassetcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.api\\controllers\\assetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|solutionrelative:cryptowallet.api\\controllers\\assetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\option_position_history\\commands\\create\\createoptionpositionhistorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\option_position_history\\commands\\create\\createoptionpositionhistorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\option_transaction\\commands\\create\\createoptiontransactioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\option_transaction\\commands\\create\\createoptiontransactioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\position-transactionlog\\queries\\getpositiontransactionloglist\\getpositiontransactionloglistqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\position-transactionlog\\queries\\getpositiontransactionloglist\\getpositiontransactionloglistqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\position-transactionlog\\commands\\create\\createoptionpositioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\position-transactionlog\\commands\\create\\createoptionpositioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2242A88B-4CBD-49FE-9C94-E3EFD5C2CAAE}|CryptoWallet.Domain\\CryptoWallet.Domain.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.domain\\entities\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2242A88B-4CBD-49FE-9C94-E3EFD5C2CAAE}|CryptoWallet.Domain\\CryptoWallet.Domain.csproj|solutionrelative:cryptowallet.domain\\entities\\asset.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\position-transactionlog\\commands\\create\\createoptionpositioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\position-transactionlog\\commands\\create\\createoptionpositioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.application\\services\\position-transactionlog\\queries\\getpositiontransactionloglist\\getpositiontransactionloglistquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E7C5436C-6F5F-4A24-A852-AA26DC311A44}|CryptoWallet.Application\\CryptoWallet.Application.csproj|solutionrelative:cryptowallet.application\\services\\position-transactionlog\\queries\\getpositiontransactionloglist\\getpositiontransactionloglistquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3069CD56-0FAB-4EDE-9DA1-000B9D42DEDE}|CryptoWallet.Infrastructure\\CryptoWallet.Infrastructure.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.infrastructure\\repositories\\optionpositionhistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3069CD56-0FAB-4EDE-9DA1-000B9D42DEDE}|CryptoWallet.Infrastructure\\CryptoWallet.Infrastructure.csproj|solutionrelative:cryptowallet.infrastructure\\repositories\\optionpositionhistoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|c:\\users\\red\\documents\\githubp\\cryptowallet\\cryptowallet.api\\controllers\\optionpositioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3270199-AD5A-43FC-B08F-F5F67D6DB6FA}|CryptoWallet.API\\CryptoWallet.API.csproj|solutionrelative:cryptowallet.api\\controllers\\optionpositioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -237,7 +110,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 253,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -246,159 +119,195 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CreateOptionPositionCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Create\\CreateOptionPositionCommandHandler.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Create\\CreateOptionPositionCommandHandler.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Create\\CreateOptionPositionCommandHandler.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Create\\CreateOptionPositionCommandHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADwAAAAMAAAA",
+              "Title": "GetOptionPositionListQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Position_History\\Queries\\GetOptionPositionList\\GetOptionPositionListQueryHandler.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Option_Position_History\\Queries\\GetOptionPositionList\\GetOptionPositionListQueryHandler.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Position_History\\Queries\\GetOptionPositionList\\GetOptionPositionListQueryHandler.cs",
+              "RelativeToolTip": "CryptoWallet.Application\\Services\\Option_Position_History\\Queries\\GetOptionPositionList\\GetOptionPositionListQueryHandler.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAA/wCAAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T12:11:21.991Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IOptionPositionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Contracts\\Persistence\\IOptionPositionRepository.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Contracts\\Persistence\\IOptionPositionRepository.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Contracts\\Persistence\\IOptionPositionRepository.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Contracts\\Persistence\\IOptionPositionRepository.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAApwA0AAAA9AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T09:38:21.26Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GETPositionTransactionLogListQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Queries\\GETPositionTransactionLogList\\GETPositionTransactionLogListQueryHandler.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Queries\\GETPositionTransactionLogList\\GETPositionTransactionLogListQueryHandler.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Queries\\GETPositionTransactionLogList\\GETPositionTransactionLogListQueryHandler.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Queries\\GETPositionTransactionLogList\\GETPositionTransactionLogListQueryHandler.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAEwCQAAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T16:57:01.084Z"
+              "WhenOpened": "2024-05-09T09:28:42.32Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TimerBackgroundService.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\TimerBackgroundService.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.API\\TimerBackgroundService.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\TimerBackgroundService.cs",
-              "RelativeToolTip": "CryptoWallet.API\\TimerBackgroundService.cs",
-              "ViewState": "AQIAACkAAAAAAAAAAAAywDwAAAAAAAAA",
+              "Title": "OptionPositionHistory.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Domain\\Entities\\OptionPositionHistory.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.Domain\\Entities\\OptionPositionHistory.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Domain\\Entities\\OptionPositionHistory.cs",
+              "RelativeToolTip": "CryptoWallet.Domain\\Entities\\OptionPositionHistory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAkwBAAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T09:25:01.778Z",
+              "WhenOpened": "2024-05-09T09:22:14.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OptionPosition.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Domain\\Entities\\OptionPosition.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.Domain\\Entities\\OptionPosition.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Domain\\Entities\\OptionPosition.cs",
+              "RelativeToolTip": "CryptoWallet.Domain\\Entities\\OptionPosition.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T09:22:09.357Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "CreateOptionTransactionCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Create\\CreateOptionTransactionCommandHandler.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Create\\CreateOptionTransactionCommandHandler.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Create\\CreateOptionTransactionCommandHandler.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Create\\CreateOptionTransactionCommandHandler.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAewC0AAAAMAAAA",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\Program.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.API\\Program.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\Program.cs",
+              "RelativeToolTip": "CryptoWallet.API\\Program.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAADwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T12:29:36.339Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OptionPositionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Infrastructure\\Repositories\\OptionPositionRepository.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Infrastructure\\Repositories\\OptionPositionRepository.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Infrastructure\\Repositories\\OptionPositionRepository.cs",
-              "RelativeToolTip": "CryptoWallet.Infrastructure\\Repositories\\OptionPositionRepository.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAkwCIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T09:39:01.192Z"
+              "WhenOpened": "2024-05-09T08:39:42.885Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "CryptoWallet.API",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\CryptoWallet.API.csproj",
+              "RelativeDocumentMoniker": "CryptoWallet.API\\CryptoWallet.API.csproj",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\CryptoWallet.API.csproj",
+              "RelativeToolTip": "CryptoWallet.API\\CryptoWallet.API.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-09T08:39:35.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OptionPositionDto.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\ViewModels\\OptionPositionDto.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.Application\\ViewModels\\OptionPositionDto.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\ViewModels\\OptionPositionDto.cs",
+              "RelativeToolTip": "CryptoWallet.Application\\ViewModels\\OptionPositionDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T07:20:44.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DescriptionDto.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\ViewModels\\DescriptionDto.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.Application\\ViewModels\\DescriptionDto.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\ViewModels\\DescriptionDto.cs",
+              "RelativeToolTip": "CryptoWallet.Application\\ViewModels\\DescriptionDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T07:18:19.584Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ExchangeDeribitReceive.cs",
               "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Infrastructure\\ExternalService\\Derbit\\ExchangeDeribitReceive.cs",
               "RelativeDocumentMoniker": "CryptoWallet.Infrastructure\\ExternalService\\Derbit\\ExchangeDeribitReceive.cs",
               "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Infrastructure\\ExternalService\\Derbit\\ExchangeDeribitReceive.cs",
               "RelativeToolTip": "CryptoWallet.Infrastructure\\ExternalService\\Derbit\\ExchangeDeribitReceive.cs",
-              "ViewState": "AQIAALEAAAAAAAAAAAApwL4AAAAIAAAA",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAAAG8AAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-01T14:22:40.786Z"
+              "WhenOpened": "2024-05-07T13:46:12.203Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "OptionTransaction.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Domain\\Entities\\OptionTransaction.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Domain\\Entities\\OptionTransaction.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Domain\\Entities\\OptionTransaction.cs",
-              "RelativeToolTip": "CryptoWallet.Domain\\Entities\\OptionTransaction.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAA0wCgAAAAWAAAA",
+              "DocumentIndex": 4,
+              "Title": "TimerBackgroundService.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\TimerBackgroundService.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.API\\TimerBackgroundService.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\TimerBackgroundService.cs",
+              "RelativeToolTip": "CryptoWallet.API\\TimerBackgroundService.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAxwDcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T16:55:13.688Z"
+              "WhenOpened": "2024-05-07T13:33:03.903Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "TradingJournal.razor",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\TradingJournal.razor",
-              "RelativeDocumentMoniker": "CryptoWallet.BlazorWasm\\Pages\\TradingJournal.razor",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\TradingJournal.razor",
-              "RelativeToolTip": "CryptoWallet.BlazorWasm\\Pages\\TradingJournal.razor",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-26T15:11:54.647Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "TradingChart.razor",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\TradingChart.razor",
-              "RelativeDocumentMoniker": "CryptoWallet.BlazorWasm\\Pages\\TradingChart.razor",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\TradingChart.razor",
-              "RelativeToolTip": "CryptoWallet.BlazorWasm\\Pages\\TradingChart.razor",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAAC0AAABFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-26T11:54:21.66Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "DataGridTradingJournal.razor",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\DataGridTradingJournal.razor",
-              "RelativeDocumentMoniker": "CryptoWallet.BlazorWasm\\Pages\\DataGridTradingJournal.razor",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\DataGridTradingJournal.razor",
-              "RelativeToolTip": "CryptoWallet.BlazorWasm\\Pages\\DataGridTradingJournal.razor",
-              "ViewState": "AQIAADAAAAAAAAAAAAAAADkAAAB2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-26T15:11:58.293Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IExchangeReceive.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Contracts\\IExchangeReceive.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Contracts\\IExchangeReceive.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Contracts\\IExchangeReceive.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Contracts\\IExchangeReceive.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAApwA0AAAA2AAAA",
+              "Title": "PositionTransactionLogController.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\Controllers\\PositionTransactionLogController.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.API\\Controllers\\PositionTransactionLogController.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\Controllers\\PositionTransactionLogController.cs",
+              "RelativeToolTip": "CryptoWallet.API\\Controllers\\PositionTransactionLogController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAYwCkAAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T09:26:51.029Z"
+              "WhenOpened": "2024-05-07T13:36:57.434Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "CryptoWallet.BlazorWasm.csproj",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj",
-              "RelativeDocumentMoniker": "CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj",
-              "RelativeToolTip": "CryptoWallet.BlazorWasm\\CryptoWallet.BlazorWasm.csproj",
+              "Title": "OptionTransactionDto.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\ViewModels\\OptionTransactionDto.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.Application\\ViewModels\\OptionTransactionDto.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\ViewModels\\OptionTransactionDto.cs",
+              "RelativeToolTip": "CryptoWallet.Application\\ViewModels\\OptionTransactionDto.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-05-03T13:56:08.661Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-09T07:18:38.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OptionTransactionController.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\Controllers\\OptionTransactionController.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.API\\Controllers\\OptionTransactionController.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\Controllers\\OptionTransactionController.cs",
+              "RelativeToolTip": "CryptoWallet.API\\Controllers\\OptionTransactionController.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAuwDcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-08T09:43:31.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CreateAssetCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Asset_\\Commands\\Create\\CreateAssetCommandHandler.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Asset_\\Commands\\Create\\CreateAssetCommandHandler.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Asset_\\Commands\\Create\\CreateAssetCommandHandler.cs",
+              "RelativeToolTip": "CryptoWallet.Application\\Services\\Asset_\\Commands\\Create\\CreateAssetCommandHandler.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T13:58:48.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CreateAssetCommand.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Asset_\\Commands\\Create\\CreateAssetCommand.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Asset_\\Commands\\Create\\CreateAssetCommand.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Asset_\\Commands\\Create\\CreateAssetCommand.cs",
+              "RelativeToolTip": "CryptoWallet.Application\\Services\\Asset_\\Commands\\Create\\CreateAssetCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T16:08:12.114Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AssetController.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\Controllers\\AssetController.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.API\\Controllers\\AssetController.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\Controllers\\AssetController.cs",
+              "RelativeToolTip": "CryptoWallet.API\\Controllers\\AssetController.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAmwBYAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T13:36:57.466Z"
             },
             {
               "$type": "Document",
@@ -408,13 +317,13 @@
               "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Option_Position_History\\Commands\\Create\\CreateOptionPositionHistoryCommandHandler.cs",
               "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Position_History\\Commands\\Create\\CreateOptionPositionHistoryCommandHandler.cs",
               "RelativeToolTip": "CryptoWallet.Application\\Services\\Option_Position_History\\Commands\\Create\\CreateOptionPositionHistoryCommandHandler.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAEwCMAAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T10:06:19.153Z"
+              "WhenOpened": "2024-05-07T13:36:57.45Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "CreateOptionPositionHistoryCommand.cs",
               "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Position_History\\Commands\\Create\\CreateOptionPositionHistoryCommand.cs",
               "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Option_Position_History\\Commands\\Create\\CreateOptionPositionHistoryCommand.cs",
@@ -422,115 +331,67 @@
               "RelativeToolTip": "CryptoWallet.Application\\Services\\Option_Position_History\\Commands\\Create\\CreateOptionPositionHistoryCommand.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T10:07:18.758Z"
+              "WhenOpened": "2024-05-07T16:06:23.262Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "GETPositionTransactionLogListQueryResponse.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Queries\\GETPositionTransactionLogList\\GETPositionTransactionLogListQueryResponse.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Queries\\GETPositionTransactionLogList\\GETPositionTransactionLogListQueryResponse.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Queries\\GETPositionTransactionLogList\\GETPositionTransactionLogListQueryResponse.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Queries\\GETPositionTransactionLogList\\GETPositionTransactionLogListQueryResponse.cs",
-              "ViewState": "AQIAADYAAAAAAAAAAAAuwD8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T14:45:15.134Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "CreateOptionTransactionCommand.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Create\\CreateOptionTransactionCommand.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Create\\CreateOptionTransactionCommand.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Create\\CreateOptionTransactionCommand.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Create\\CreateOptionTransactionCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T12:29:09.126Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.API\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\WeatherForecast.cs",
-              "RelativeToolTip": "CryptoWallet.API\\WeatherForecast.cs",
+              "Title": "GETPositionTransactionLogListQueryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Queries\\GETPositionTransactionLogList\\GETPositionTransactionLogListQueryHandler.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Queries\\GETPositionTransactionLogList\\GETPositionTransactionLogListQueryHandler.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Queries\\GETPositionTransactionLogList\\GETPositionTransactionLogListQueryHandler.cs",
+              "RelativeToolTip": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Queries\\GETPositionTransactionLogList\\GETPositionTransactionLogListQueryHandler.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T12:47:12.861Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 56,
-              "Title": "20240503124815_decNull.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Infrastructure\\Migrations\\20240503124815_decNull.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Infrastructure\\Migrations\\20240503124815_decNull.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Infrastructure\\Migrations\\20240503124815_decNull.cs",
-              "RelativeToolTip": "CryptoWallet.Infrastructure\\Migrations\\20240503124815_decNull.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T12:48:15.638Z"
+              "WhenOpened": "2024-05-07T15:10:38.174Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\appsettings.json",
-              "RelativeDocumentMoniker": "CryptoWallet.API\\appsettings.json",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\appsettings.json",
-              "RelativeToolTip": "CryptoWallet.API\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-02T14:58:13.162Z"
+              "Title": "CreateOptionTransactionCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Create\\CreateOptionTransactionCommandHandler.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Create\\CreateOptionTransactionCommandHandler.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Create\\CreateOptionTransactionCommandHandler.cs",
+              "RelativeToolTip": "CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Create\\CreateOptionTransactionCommandHandler.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACUAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T15:11:56.621Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "OptionPosition.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Domain\\Entities\\OptionPosition.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Domain\\Entities\\OptionPosition.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Domain\\Entities\\OptionPosition.cs",
-              "RelativeToolTip": "CryptoWallet.Domain\\Entities\\OptionPosition.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAA+wBMAAAAVAAAA",
+              "DocumentIndex": 19,
+              "Title": "CreateOptionPositionCommandHandler.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Create\\CreateOptionPositionCommandHandler.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Create\\CreateOptionPositionCommandHandler.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Create\\CreateOptionPositionCommandHandler.cs",
+              "RelativeToolTip": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Create\\CreateOptionPositionCommandHandler.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAwwBwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T16:43:20.192Z"
+              "WhenOpened": "2024-05-07T13:36:57.497Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 20,
-              "Title": "Test.razor",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\Test.razor",
-              "RelativeDocumentMoniker": "CryptoWallet.BlazorWasm\\Pages\\Test.razor",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\Test.razor",
-              "RelativeToolTip": "CryptoWallet.BlazorWasm\\Pages\\Test.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-26T15:29:15.801Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "NavMenu.razor",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Layout\\NavMenu.razor",
-              "RelativeDocumentMoniker": "CryptoWallet.BlazorWasm\\Layout\\NavMenu.razor",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Layout\\NavMenu.razor",
-              "RelativeToolTip": "CryptoWallet.BlazorWasm\\Layout\\NavMenu.razor",
-              "ViewState": "AQIAACEAAAAAAAAAAAAUwCAAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-26T15:07:52.209Z"
+              "Title": "Asset.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Domain\\Entities\\Asset.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.Domain\\Entities\\Asset.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Domain\\Entities\\Asset.cs",
+              "RelativeToolTip": "CryptoWallet.Domain\\Entities\\Asset.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T15:08:02.074Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 23,
-              "Title": "DataGridTradingJournal.razor.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\DataGridTradingJournal.razor.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.BlazorWasm\\Pages\\DataGridTradingJournal.razor.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\DataGridTradingJournal.razor.cs",
-              "RelativeToolTip": "CryptoWallet.BlazorWasm\\Pages\\DataGridTradingJournal.razor.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAWwEMAAABmAAAA",
+              "Title": "OptionPositionHistoryRepository.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Infrastructure\\Repositories\\OptionPositionHistoryRepository.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.Infrastructure\\Repositories\\OptionPositionHistoryRepository.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Infrastructure\\Repositories\\OptionPositionHistoryRepository.cs",
+              "RelativeToolTip": "CryptoWallet.Infrastructure\\Repositories\\OptionPositionHistoryRepository.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAmwDoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T15:58:46.759Z"
+              "WhenOpened": "2024-05-07T13:36:57.466Z"
             },
             {
               "$type": "Document",
@@ -542,7 +403,19 @@
               "RelativeToolTip": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Queries\\GETPositionTransactionLogList\\GETPositionTransactionLogListQuery.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T12:04:54.707Z"
+              "WhenOpened": "2024-05-07T14:02:18.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CreateOptionPositionCommand.cs",
+              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Create\\CreateOptionPositionCommand.cs",
+              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Create\\CreateOptionPositionCommand.cs",
+              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Create\\CreateOptionPositionCommand.cs",
+              "RelativeToolTip": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Create\\CreateOptionPositionCommand.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-07T14:02:23.106Z"
             },
             {
               "$type": "Document",
@@ -552,379 +425,9 @@
               "RelativeDocumentMoniker": "CryptoWallet.API\\Controllers\\OptionPositionController.cs",
               "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\Controllers\\OptionPositionController.cs",
               "RelativeToolTip": "CryptoWallet.API\\Controllers\\OptionPositionController.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABAAAAAIAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAmwBkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T15:03:19.917Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "CreateAssetCommand.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Asset_\\Commands\\Create\\CreateAssetCommand.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Asset_\\Commands\\Create\\CreateAssetCommand.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Asset_\\Commands\\Create\\CreateAssetCommand.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Services\\Asset_\\Commands\\Create\\CreateAssetCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T09:32:20.132Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "CreateAssetCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Asset_\\Commands\\Create\\CreateAssetCommandHandler.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Asset_\\Commands\\Create\\CreateAssetCommandHandler.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Asset_\\Commands\\Create\\CreateAssetCommandHandler.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Services\\Asset_\\Commands\\Create\\CreateAssetCommandHandler.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABoAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T10:00:39.549Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "CryptoWallet.API\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\appsettings.Development.json",
-              "RelativeToolTip": "CryptoWallet.API\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-02T14:58:18.86Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "IExchangeAccountSummary.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Contracts\\IExchangeAccountSummary.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Contracts\\IExchangeAccountSummary.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Contracts\\IExchangeAccountSummary.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Contracts\\IExchangeAccountSummary.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-03T09:26:49.452Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "CreateOptionPositionCommand.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Create\\CreateOptionPositionCommand.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Create\\CreateOptionPositionCommand.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Create\\CreateOptionPositionCommand.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Create\\CreateOptionPositionCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T13:27:41.666Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "TradingChart.razor.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\TradingChart.razor.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.BlazorWasm\\Pages\\TradingChart.razor.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\TradingChart.razor.cs",
-              "RelativeToolTip": "CryptoWallet.BlazorWasm\\Pages\\TradingChart.razor.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAUwDgAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T12:05:45.018Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "Home.razor",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\Home.razor",
-              "RelativeDocumentMoniker": "CryptoWallet.BlazorWasm\\Pages\\Home.razor",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\Home.razor",
-              "RelativeToolTip": "CryptoWallet.BlazorWasm\\Pages\\Home.razor",
-              "ViewState": "AQIAACUAAAAAAAAAAAAqwBMAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-26T15:19:47.924Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\DependencyInjection.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\DependencyInjection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-02T14:57:47.78Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "OptionTransactionController.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\Controllers\\OptionTransactionController.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.API\\Controllers\\OptionTransactionController.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\Controllers\\OptionTransactionController.cs",
-              "RelativeToolTip": "CryptoWallet.API\\Controllers\\OptionTransactionController.cs",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAnwDEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T15:03:16.686Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "GetOptionPositionListQueryResponse.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Position_History\\Queries\\GetOptionPositionList\\GetOptionPositionListQueryResponse.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Option_Position_History\\Queries\\GetOptionPositionList\\GetOptionPositionListQueryResponse.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Position_History\\Queries\\GetOptionPositionList\\GetOptionPositionListQueryResponse.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Services\\Option_Position_History\\Queries\\GetOptionPositionList\\GetOptionPositionListQueryResponse.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAuwAsAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T14:45:08.291Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "PositionTransactionLogController.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\Controllers\\PositionTransactionLogController.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.API\\Controllers\\PositionTransactionLogController.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.API\\Controllers\\PositionTransactionLogController.cs",
-              "RelativeToolTip": "CryptoWallet.API\\Controllers\\PositionTransactionLogController.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAYwCkAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T13:31:57.01Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "UpdateOptionPositionCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Update\\UpdateOptionPositionCommandHandler.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Update\\UpdateOptionPositionCommandHandler.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Update\\UpdateOptionPositionCommandHandler.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Update\\UpdateOptionPositionCommandHandler.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAcwBgAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T13:27:22.084Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 37,
-              "Title": "OptionTransactionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Infrastructure\\Repositories\\OptionTransactionRepository.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Infrastructure\\Repositories\\OptionTransactionRepository.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Infrastructure\\Repositories\\OptionTransactionRepository.cs",
-              "RelativeToolTip": "CryptoWallet.Infrastructure\\Repositories\\OptionTransactionRepository.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAIAwwDkAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T09:39:08.408Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 39,
-              "Title": "UpdateOptionTransactionCommand.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Update\\UpdateOptionTransactionCommand.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Update\\UpdateOptionTransactionCommand.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Update\\UpdateOptionTransactionCommand.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Update\\UpdateOptionTransactionCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T12:29:06.512Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 38,
-              "Title": "UpdateOptionTransactionCommandHandler.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Update\\UpdateOptionTransactionCommandHandler.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Update\\UpdateOptionTransactionCommandHandler.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Update\\UpdateOptionTransactionCommandHandler.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Services\\Option_Transaction\\Commands\\Update\\UpdateOptionTransactionCommandHandler.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAACAAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T12:28:50.208Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 40,
-              "Title": "UpdateOptionPositionCommand.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Update\\UpdateOptionPositionCommand.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Update\\UpdateOptionPositionCommand.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Update\\UpdateOptionPositionCommand.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Services\\Position-TransactionLog\\Commands\\Update\\UpdateOptionPositionCommand.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T13:27:38.466Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 41,
-              "Title": "IOptionPositionHistoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Contracts\\Persistence\\IOptionPositionHistoryRepository.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Contracts\\Persistence\\IOptionPositionHistoryRepository.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Contracts\\Persistence\\IOptionPositionHistoryRepository.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Contracts\\Persistence\\IOptionPositionHistoryRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T09:37:56.671Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "IOptionTransactionRepository.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Contracts\\Persistence\\IOptionTransactionRepository.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Contracts\\Persistence\\IOptionTransactionRepository.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Contracts\\Persistence\\IOptionTransactionRepository.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Contracts\\Persistence\\IOptionTransactionRepository.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T09:22:47.791Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 43,
-              "Title": "Counter.razor",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\Counter.razor",
-              "RelativeDocumentMoniker": "CryptoWallet.BlazorWasm\\Pages\\Counter.razor",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\Counter.razor",
-              "RelativeToolTip": "CryptoWallet.BlazorWasm\\Pages\\Counter.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-26T15:29:09.77Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "Test.razor.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\Test.razor.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.BlazorWasm\\Pages\\Test.razor.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Pages\\Test.razor.cs",
-              "RelativeToolTip": "CryptoWallet.BlazorWasm\\Pages\\Test.razor.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAkwAsAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-27T17:09:44.463Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 45,
-              "Title": "ProductDetails.razor",
-              "DocumentMoniker": "I:\\blazor-webassembly\\23_BlazorIntroductory_Madaeny\\ProductDetails.razor",
-              "ToolTip": "I:\\blazor-webassembly\\23_BlazorIntroductory_Madaeny\\ProductDetails.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-27T16:18:13.842Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
-              "Title": "GetOptionTransactionListQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Transaction\\Queries\\GetOptionTransactionList\\GetOptionTransactionListQueryHandler.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Option_Transaction\\Queries\\GetOptionTransactionList\\GetOptionTransactionListQueryHandler.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Transaction\\Queries\\GetOptionTransactionList\\GetOptionTransactionListQueryHandler.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Services\\Option_Transaction\\Queries\\GetOptionTransactionList\\GetOptionTransactionListQueryHandler.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAkwDwAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T17:04:17.739Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "GetOptionTransactionListQueryResponse.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Transaction\\Queries\\GetOptionTransactionList\\GetOptionTransactionListQueryResponse.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Option_Transaction\\Queries\\GetOptionTransactionList\\GetOptionTransactionListQueryResponse.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Transaction\\Queries\\GetOptionTransactionList\\GetOptionTransactionListQueryResponse.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Services\\Option_Transaction\\Queries\\GetOptionTransactionList\\GetOptionTransactionListQueryResponse.cs",
-              "ViewState": "AQIAACMAAAAAAAAAAAA0wCoAAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T17:03:01.585Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 48,
-              "Title": "OptionTransactionDto.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\ViewModels\\OptionTransactionDto.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\ViewModels\\OptionTransactionDto.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\ViewModels\\OptionTransactionDto.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\ViewModels\\OptionTransactionDto.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAuwCsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T16:55:43.384Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 49,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Infrastructure\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Infrastructure\\DependencyInjection.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Infrastructure\\DependencyInjection.cs",
-              "RelativeToolTip": "CryptoWallet.Infrastructure\\DependencyInjection.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T16:56:20.419Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 54,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Program.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.BlazorWasm\\Program.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Program.cs",
-              "RelativeToolTip": "CryptoWallet.BlazorWasm\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T15:24:06.584Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 52,
-              "Title": "App.razor",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\App.razor",
-              "RelativeDocumentMoniker": "CryptoWallet.BlazorWasm\\App.razor",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\App.razor",
-              "RelativeToolTip": "CryptoWallet.BlazorWasm\\App.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-26T15:24:57.688Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 50,
-              "Title": "OptionPositionDto.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\ViewModels\\OptionPositionDto.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\ViewModels\\OptionPositionDto.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\ViewModels\\OptionPositionDto.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\ViewModels\\OptionPositionDto.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T16:44:12.429Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 53,
-              "Title": "_Imports.razor",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\_Imports.razor",
-              "RelativeDocumentMoniker": "CryptoWallet.BlazorWasm\\_Imports.razor",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\_Imports.razor",
-              "RelativeToolTip": "CryptoWallet.BlazorWasm\\_Imports.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-26T15:24:59.388Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 51,
-              "Title": "MainLayout.razor",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Layout\\MainLayout.razor",
-              "RelativeDocumentMoniker": "CryptoWallet.BlazorWasm\\Layout\\MainLayout.razor",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.BlazorWasm\\Layout\\MainLayout.razor",
-              "RelativeToolTip": "CryptoWallet.BlazorWasm\\Layout\\MainLayout.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAUAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-26T15:53:09.111Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 55,
-              "Title": "GetOptionPositionListQueryHandler.cs",
-              "DocumentMoniker": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Position_History\\Queries\\GetOptionPositionList\\GetOptionPositionListQueryHandler.cs",
-              "RelativeDocumentMoniker": "CryptoWallet.Application\\Services\\Option_Position_History\\Queries\\GetOptionPositionList\\GetOptionPositionListQueryHandler.cs",
-              "ToolTip": "C:\\Users\\RED\\Documents\\GitHubP\\CryptoWallet\\CryptoWallet.Application\\Services\\Option_Position_History\\Queries\\GetOptionPositionList\\GetOptionPositionListQueryHandler.cs",
-              "RelativeToolTip": "CryptoWallet.Application\\Services\\Option_Position_History\\Queries\\GetOptionPositionList\\GetOptionPositionListQueryHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T12:11:22.007Z"
+              "WhenOpened": "2024-05-07T13:36:57.497Z"
             }
           ]
         },

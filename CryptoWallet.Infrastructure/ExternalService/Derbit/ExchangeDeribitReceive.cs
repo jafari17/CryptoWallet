@@ -52,9 +52,7 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
                 if (item.equity != 0 && ( item.currency == "BTC" || item.currency == "ETH" ))
                 {
                     dynamic indexPrice = await getApiResponse($"https://test.deribit.com/api/v2/public/get_index?currency={newAsset.currency}");
-                    Console.WriteLine("+++++++ indexPrice   +++++++++");
-                    Console.WriteLine(indexPrice);
-                    Console.WriteLine("+++++++ indexPrice   +++++++++");
+ 
 
                     //var data11 = JsonConvert.DeserializeObject(indexPrice);
 
@@ -107,6 +105,9 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
         public async Task<List<OptionPositionDto>> GetLastPositions()
         {
             dynamic data = await getApiResponse($"{_derbitSite}/api/v2/private/get_positions");
+
+            Console.WriteLine(data);
+
 
             List<OptionPositionDto> ListoptionVM = new List<OptionPositionDto>();
 
@@ -180,10 +181,10 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
                     catch (Exception)
                     {
 
-                        Console.WriteLine("__________________________________________________");
+                        Console.WriteLine("_________________________Exception_________________________");
                         Console.WriteLine(c);
                         Console.WriteLine(item);
-                        Console.WriteLine("__________________________________________________");
+                        Console.WriteLine("______________________________Exception____________________");
                     }
                 }
             }
@@ -235,8 +236,7 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
 
             var result = response.Content.ReadAsStringAsync().Result;
 
-            Console.WriteLine(result);
-
+           
             dynamic data11 = JsonConvert.DeserializeObject(result);
 
             var token = data11.result.access_token;

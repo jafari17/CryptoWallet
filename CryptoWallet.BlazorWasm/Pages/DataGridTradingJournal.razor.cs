@@ -7,8 +7,9 @@ using Radzen.Blazor;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
-
-
+using System.Text;
+ 
+using Newtonsoft.Json;
 
 
 namespace CryptoWallet.BlazorWasm.Pages
@@ -43,7 +44,7 @@ namespace CryptoWallet.BlazorWasm.Pages
         {
             try
             {
-                oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList/false");
+                oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList");
             }
             catch (Exception)
             {
@@ -66,7 +67,7 @@ namespace CryptoWallet.BlazorWasm.Pages
         async Task onlinePositionTransaction()
         {
             await Http.GetAsync("https://localhost:7185/api/PositionTransactionLog/SavePositionList");
-            oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList/false");
+            oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList");
 
         }
         private async Task EditDescriptionTransaction(long ID ,string Description)
@@ -74,7 +75,7 @@ namespace CryptoWallet.BlazorWasm.Pages
             if (Description != null)
             {
                 await Http.GetAsync($"https://localhost:7185/api/OptionTransaction/UpdateOptionTransaction?optionTransactionId={ID}&Description={Description}");
-                oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList/false");
+                oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList");
 
             }
 
@@ -84,24 +85,34 @@ namespace CryptoWallet.BlazorWasm.Pages
         {
             if (description != null)
             {
-                var x = await Http.GetAsync($"https://localhost:7185/api/PositionTransactionLog/UpdateOptionPosition?ID={id}&Description={description}");
-                oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList/false");
+                //var x = await Http.GetAsync($"https://localhost:7185/api/PositionTransactionLog/UpdateOptionPosition?ID={id}&Description={description}");
+                //oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/PositionTransactionLog/GetPositionTransactionLogList");
 
 
 
 
 
 
-                //    UpdateDec updateDec = new UpdateDec()
+                //UpdateDec updateDec = new UpdateDec()
                 //{
                 //    ID = 10,
                 //    Description = description
                 //};
 
-                //HttpResponseMessage response = await client.PostAsJsonAsync(
+                //var response = await Http.PostAsync("https://localhost:7185/api/PositionTransactionLog/UpdateOptionPosition", new StringContent(
+                // JsonConvert.SerializeObject(updateDec), Encoding.UTF8, "https://localhost:7185/api/PositionTransactionLog/UpdateOptionPosition"));
+
+
+                //string json = JsonConvert.SerializeObject(updateDec);
+
+                //HttpResponseMessage response = await Http.PostAsync(
                 //"https://localhost:7185/api/PositionTransactionLog/UpdateOptionPosition", updateDec);
 
-
+                var response = await Http.PostAsJsonAsync("https://localhost:7185/api/PositionTransactionLog/UpdateOptionPosition", new UpdateDec
+                {
+                    ID = 10,
+                    Description = description
+                });
 
             }
 

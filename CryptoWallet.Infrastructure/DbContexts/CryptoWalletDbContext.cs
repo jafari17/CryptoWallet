@@ -19,7 +19,7 @@ namespace CryptoWallet.Infrastructure.DbContexts
             (DbContextOptions<CryptoWalletDbContext> options)
             : base(options)
         {
-
+            this.ChangeTracker.LazyLoadingEnabled = false;
         }
 
         public virtual DbSet<OptionPositionHistory> optionPositionHistory { get; set; } = null!;

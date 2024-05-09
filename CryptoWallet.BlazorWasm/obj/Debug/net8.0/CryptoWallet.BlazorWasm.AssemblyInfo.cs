@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CryptoWallet.BlazorWasm")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+41b139394a000e91e25d0897d434bd727a2c40d3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c86f4d2a191ce534e94f35ede212a1815ff50b82")]
 [assembly: System.Reflection.AssemblyProductAttribute("CryptoWallet.BlazorWasm")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CryptoWallet.BlazorWasm")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

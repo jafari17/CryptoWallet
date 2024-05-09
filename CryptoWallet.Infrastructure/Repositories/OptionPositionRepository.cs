@@ -23,17 +23,19 @@ namespace CryptoWallet.Infrastructure.Repositories
             await _context.optionPosition.AddAsync(optionPosition);
         }
 
-        public async Task<List<OptionPosition>> GetListOptionPositionAsync()
+        public    async Task<List<OptionPosition>> GetListOptionPositionAsync()
         {
             try
             {
-                var r = await _context.optionPosition.Include(op => op.optionTransaction).ToListAsync();
+                var r = await  _context.optionPosition.Include(op => op.optionTransaction).ToListAsync();
                 return r;
             }
             catch (Exception)
             {
-
-                return await _context.optionPosition.ToListAsync();
+                Console.WriteLine("________+++++++++++++++++++_________");
+                Console.WriteLine(Exception.ReferenceEquals);
+                Console.WriteLine("________+++++++++++++++++++_________");
+                return await  _context.optionPosition.ToListAsync();
             }
 
         }

@@ -16,7 +16,7 @@ namespace CryptoWallet.Application.Services.Position_TransactionLog.Commands.Cre
     {
         private readonly IOptionPositionRepository _oPositionRepository;
         private readonly IExchangeReceive _exchangeReceive;
-         private readonly IMapper _mapper;
+        private readonly IMapper _mapper;
 
         public CreateOptionPositionCommandHandler(IOptionPositionRepository oPositionRepository, IExchangeReceive exchangeReceive, IMapper mapper)
         {
@@ -26,38 +26,44 @@ namespace CryptoWallet.Application.Services.Position_TransactionLog.Commands.Cre
 
         }
         public async Task<bool> Handle(CreateOptionPositionCommand request, CancellationToken cancellationToken)
-        { 
-            List<OptionPositionDto> OPositionDto = await _exchangeReceive.GetLastPositions(); 
-            List<OptionPosition> optionPositionList = new List<OptionPosition>(); 
-            optionPositionList = await _oPositionRepository.GetListOptionPositionAsync();
+        {
+
+
+            List<OptionPositionDto> OPositionDto = await _exchangeReceive.GetLastPositions();
+            //List<OptionPosition> optionPositionList = new List<OptionPosition>();
+            var optionPositionList = await _oPositionRepository.GetListOptionPositionAsync();
+
+
 
             foreach (var item in OPositionDto)
             {
                 if (item.size != 0 && optionPositionList.Any(x => x.InstrumentName == item.InstrumentName))
                 {
                     var oPositionMaper = _mapper.Map<OptionPosition>(item);
+                    
+
+                    var optionPosition = optionPositionList.FirstOrDefault(x => x.InstrumentName == oPositionMaper.InstrumentName);
                     oPositionMaper.Active = true;
-                     var optionPosition = optionPositionList.FirstOrDefault(x =>x.InstrumentName == oPositionMaper.InstrumentName);
                     oPositionMaper.OptionPositionId = optionPosition.OptionPositionId;
                     oPositionMaper.description = optionPosition.description;
-                    
+
                     await _oPositionRepository.UpdateOptionPositionAsync(oPositionMaper);
                 }
-                else if (item.size != 0 )
+                else if (item.size != 0)
                 {
-                    var oPositionMaper = _mapper.Map<OptionPosition>(item); 
+                    var oPositionMaper = _mapper.Map<OptionPosition>(item);
                     oPositionMaper.Active = true;
-                    await _oPositionRepository.AddOptionPositionAsync(oPositionMaper); 
+                    await _oPositionRepository.AddOptionPositionAsync(oPositionMaper);
                 }
             }
-            foreach (var item in optionPositionList) 
+            foreach (var item in optionPositionList)
             {
                 if (!OPositionDto.Any(x => x.InstrumentName == item.InstrumentName))
-                { 
+                {
                     item.Active = false;
                     await _oPositionRepository.UpdateOptionPositionAsync(item);
                 }
-            } 
+            }
             await _oPositionRepository.SaveChangesAsync();
 
             return await Task.FromResult(true);

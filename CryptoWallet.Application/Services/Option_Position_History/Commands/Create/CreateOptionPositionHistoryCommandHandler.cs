@@ -17,7 +17,7 @@ namespace CryptoWallet.Application.Services.Option_Position_History.Commands.Cre
     {
         private readonly IOptionPositionHistoryRepository _optionRepository;
         private readonly IExchangeReceive _exchangeReceive;
-        private readonly IOptionPositionHistoryRepository _optionPositionRepository;
+ 
         private readonly IMapper _mapper;
 
         public CreateOptionPositionHistoryCommandHandler(IOptionPositionHistoryRepository optionRepository, IExchangeReceive exchangeReceive , IMapper mapper)
@@ -33,32 +33,44 @@ namespace CryptoWallet.Application.Services.Option_Position_History.Commands.Cre
 
             List<OptionPositionDto> OPositionDto =await _exchangeReceive.GetLastPositions();
 
+            var OP = await _optionRepository.GetListOptionPositionHistoryAsync();
+            var MaxRegisterTime = OP.Max(x => x.RegisterTime);
+            var LasrRegister = OP.Where(x => x.RegisterTime == MaxRegisterTime).ToList();
+
             foreach (var item in OPositionDto)
             {
                 if(item.size != 0)
                 {
-                    //Domain.Entities.OptionPosition oPosition = new Domain.Entities.OptionPosition()
-                    //{
-                    //    InstrumentName = item.InstrumentName,
-                    //    size = item.size,
-                    //    average_price = item.average_price,
-                    //    MarkPrice = item.MarkPrice,
-                    //    TotalProfitLoss = item.TotalProfitLoss,
-                    //    delta = item.delta,
-                    //    RegisterTime = DateTime.Now,
-                    //    ResponseOut=item.ResponseOut,
-                    //};
-
-                    var oPositionMaper = _mapper.Map< OptionPositionHistory> (item);
-
-                     _optionRepository.AddOptionPositionHistoryAsync(oPositionMaper);
-
+                    if (ChecRegisterTime(MaxRegisterTime))
+                    {
+                        var oPositionMaper = _mapper.Map<OptionPositionHistory>(item);
+                        _optionRepository.AddOptionPositionHistoryAsync(oPositionMaper);
+                    }
+                    else if (!LasrRegister.Any(x => x.InstrumentName == item.InstrumentName))
+                    {
+                        var oPositionMaper = _mapper.Map<OptionPositionHistory>(item);
+                        _optionRepository.AddOptionPositionHistoryAsync(oPositionMaper);
+                    }
                 }
             }
-             _optionRepository.SaveChangesAsync();
-             await  _optionRepository.SaveChangesAsync();
+
+              await _optionRepository.SaveChangesAsync();
 
             return await Task.FromResult(true);
+        }
+
+        bool ChecRegisterTime(DateTime MaxRegisterTime)
+        {
+            DateTime now = DateTime.Now;
+
+            DateTime NowAdd = now.AddHours(-24);
+
+
+            if (MaxRegisterTime <= NowAdd)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

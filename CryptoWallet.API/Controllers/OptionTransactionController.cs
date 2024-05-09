@@ -3,6 +3,8 @@ using CryptoWallet.Application.Services.Option_Position_History.Queries.GetOptio
 using CryptoWallet.Application.Services.Option_Transaction.Commands.Create;
 using CryptoWallet.Application.Services.Option_Transaction.Commands.Update;
 using CryptoWallet.Application.Services.Option_Transaction.Queries.GetOptionTransactionList;
+using CryptoWallet.Application.ViewModels;
+using CryptoWallet.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -40,11 +42,11 @@ namespace CryptoWallet.API.Controllers
         }
 
 
-        [HttpGet]
-        public async Task<IActionResult> UpdateOptionTransaction(int optionTransactionId, string Description)
+        [HttpPost]
+        public async Task<IActionResult> UpdateOptionTransaction(DescriptionDto model)
         {
 
-            var command = new UpdateOptionTransactionCommand(optionTransactionId , Description);
+            var command = new UpdateOptionTransactionCommand(model.ID, model.Description);
             var response = await _mediator.Send(command);
             return Ok(response);
 
