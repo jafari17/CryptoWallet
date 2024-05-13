@@ -25,7 +25,13 @@ namespace CryptoWallet.Application.ViewModels
         public string InstrumentName { get; set; }
         public string OrderId { get; set; }
         public double Amount { get; set; }
-        public double MarkPrice { get; set; }
+
+        private double markPrice;
+        public double MarkPrice
+        {
+            get { return markPrice; }
+            set { markPrice = Math.Round(value, 4); }
+        }
         public string Username { get; set; }
         public double IndexPrice { get; set; }
         public double Cashflow { get; set; }

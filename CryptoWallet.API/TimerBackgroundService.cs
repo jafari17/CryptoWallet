@@ -55,16 +55,16 @@ namespace CryptoWallet.API
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
-             
+
             _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromSeconds(_TimeSpanSeconds));
         }
 
-        private  async void DoWork(object? state)
+        private async void DoWork(object? state)
         {
 
-               
-            await CheckiActiveTime();
-                {
+
+            if (CheckiActiveTime())
+            {
 
                 //HttpClient HC = new HttpClient();
                 //System.Threading.Thread.Sleep(5000);
@@ -100,43 +100,39 @@ namespace CryptoWallet.API
                 //Console.WriteLine("_________________________Telegram_________________________");
 
                 //HC.GetAsync($"{_BaseAddress}/api/Telegram/AutoMessage");
-
-
-
-
-
+                 
                 Console.WriteLine(DateTime.Now);
             }
-           
+
         }
 
 
-        private async Task<bool> CheckiActiveTime()
+        private bool CheckiActiveTime()
         {
 
-             
-            DateTime TehranNow  = TehranDatetimeNow();
+
+            DateTime TehranNow = TehranDatetimeNow();
             int hour = TehranNow.Hour;
 
-              Console.WriteLine(TimeSpan.FromSeconds(300000));
+ 
 
-            Console.WriteLine("befor TimeSpan");
-
-              //System.Threading.Thread.Sleep(1000 * 60 * 60 * 24);
-
-               Console.WriteLine("After TimeSpan");
-
-            if (hour < 11 && daily != TehranNow.Day )
+            if (hour < 10 )
             {
                 Console.WriteLine(" 12pm and 6am ");
-
-                 daily = TehranNow.Day;
-
                 return false;
-
-
             }
-            else { return true; }
+            else
+            {
+                if(daily == TehranNow.Day)
+                {
+                    return false;
+                }
+                else
+                {
+                    daily = TehranNow.Day;
+                    return true;
+                }
+            }
         }
 
         private DateTime TehranDatetimeNow()
@@ -146,7 +142,5 @@ namespace CryptoWallet.API
 
             return now;
         }
-
-
     }
 }

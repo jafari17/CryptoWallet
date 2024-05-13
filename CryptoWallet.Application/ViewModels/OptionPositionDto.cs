@@ -14,12 +14,27 @@ namespace CryptoWallet.Application.ViewModels
     {
         public long optionId { get; set; }
 
-        public double FloatingProfitLossUsd { get; set; }
+         
+
+        private double floatingProfitLossUsd;
+        public double FloatingProfitLossUsd
+        {
+            get { return floatingProfitLossUsd; }
+            set { floatingProfitLossUsd = Math.Round(value, 2); }
+        }
+
         public double AveragePriceUsd { get; set; }
         public double TotalProfitLoss { get; set; }
         public double RealizedProfitLoss { get; set; }
         public double FloatingProfitLoss { get; set; }
-        public double AveragePrice { get; set; }
+         
+
+        private double averagePrice;
+        public double AveragePrice
+        {
+            get { return averagePrice; }
+            set { averagePrice = Math.Round(value, 4); }
+        }
         public double Theta { get; set; }
         public double Vega { get; set; }
         public double Gamma { get; set; }
@@ -29,13 +44,12 @@ namespace CryptoWallet.Application.ViewModels
         public double SettlementPrice { get; set; }
         public string InstrumentName { get; set; }
 
-        public double MarkPrice { get; set; }
-
-        //public double MarkPrice
-        //{
-        //    get { return MarkPrice; }
-        //    set { MarkPrice = Math.Round(value, 4); }
-        //}
+        private double markPrice;
+        public double MarkPrice
+        {
+            get { return markPrice; }
+            set { markPrice = Math.Round(value, 4); }
+        }
         public double IndexPrice { get; set; }
         public string Direction { get; set; }
         public string Kind { get; set; }
