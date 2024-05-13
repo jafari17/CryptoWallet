@@ -13,12 +13,12 @@ using System.Threading.Tasks;
 
 namespace CryptoWallet.Application.Services.Position_TransactionLog.Queries.GETPositionTransactionLogList
 {
-    public  class GETPositionTransactionLogListQueryHandler : IRequestHandler<GETPositionTransactionLogListQuery, IEnumerable<GETPositionTransactionLogListQueryResponse>>
+    public class GETPositionTransactionLogListQueryHandler : IRequestHandler<GETPositionTransactionLogListQuery, IEnumerable<GETPositionTransactionLogListQueryResponse>>
     {
         private readonly IOptionPositionRepository _optionPositionRepository;
         private readonly IExchangeReceive _exchangeReceive;
         private readonly IMapper _mapper;
-        public GETPositionTransactionLogListQueryHandler(IOptionPositionRepository optionPositionRepository,IMapper mapper, IExchangeReceive exchangeReceive)
+        public GETPositionTransactionLogListQueryHandler(IOptionPositionRepository optionPositionRepository, IMapper mapper, IExchangeReceive exchangeReceive)
         {
             _optionPositionRepository = optionPositionRepository;
             _exchangeReceive = exchangeReceive;
@@ -28,18 +28,12 @@ namespace CryptoWallet.Application.Services.Position_TransactionLog.Queries.GETP
         public async Task<IEnumerable<GETPositionTransactionLogListQueryResponse>> Handle(GETPositionTransactionLogListQuery request, CancellationToken cancellationToken)
         {
             List<OptionPosition> optionPositionList = new List<OptionPosition>();
-            if (request.LastUpdate)
-            {
-                optionPositionList = await _exchangeReceive.GetLastGetLastPositionsAndTransactionLog();
-            }
-            else 
-            { 
-                optionPositionList = await _optionPositionRepository.GetListOptionPositionAsync();
-            }
 
-           var optionPositionListActive = optionPositionList.Where(x =>x.Active == true).ToList();
+            optionPositionList = await _optionPositionRepository.GetListOptionPositionAsync();
 
-            var oPositionResponse =   _mapper.Map<List<GETPositionTransactionLogListQueryResponse>>(optionPositionListActive);
+            var optionPositionListActive = optionPositionList.Where(x => x.Active == true).ToList();
+
+            var oPositionResponse = _mapper.Map<List<GETPositionTransactionLogListQueryResponse>>(optionPositionListActive);
             return oPositionResponse;
 
         }

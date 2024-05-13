@@ -24,4 +24,8 @@
     <ProjectReference Include="..\CryptoWallet.Application\CryptoWallet.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ExternalService\NewFolder\" />
+  </ItemGroup>
+
 </Project>

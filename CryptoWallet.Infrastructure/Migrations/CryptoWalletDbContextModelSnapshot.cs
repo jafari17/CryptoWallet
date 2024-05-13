@@ -54,11 +54,49 @@ namespace CryptoWallet.Infrastructure.Migrations
                     b.Property<bool?>("Active")
                         .HasColumnType("INTEGER");
 
+                    b.Property<double>("AveragePrice")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("AveragePriceUsd")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("Delta")
+                        .HasColumnType("REAL");
+
+                    b.Property<string>("Direction")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("FloatingProfitLoss")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("FloatingProfitLossUsd")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("Gamma")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("IndexPrice")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("InitialMargin")
+                        .HasColumnType("REAL");
+
                     b.Property<string>("InstrumentName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Kind")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("MaintenanceMargin")
+                        .HasColumnType("REAL");
+
                     b.Property<double>("MarkPrice")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("RealizedProfitLoss")
                         .HasColumnType("REAL");
 
                     b.Property<DateTime>("RegisterTime")
@@ -67,20 +105,23 @@ namespace CryptoWallet.Infrastructure.Migrations
                     b.Property<long>("ResponseOut")
                         .HasColumnType("INTEGER");
 
+                    b.Property<double>("SettlementPrice")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("Size")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("Theta")
+                        .HasColumnType("REAL");
+
                     b.Property<double>("TotalProfitLoss")
                         .HasColumnType("REAL");
 
-                    b.Property<double>("average_price")
-                        .HasColumnType("REAL");
-
-                    b.Property<double>("delta")
+                    b.Property<double>("Vega")
                         .HasColumnType("REAL");
 
                     b.Property<string>("description")
                         .HasColumnType("TEXT");
-
-                    b.Property<double>("size")
-                        .HasColumnType("REAL");
 
                     b.HasKey("OptionPositionId");
 
@@ -89,15 +130,53 @@ namespace CryptoWallet.Infrastructure.Migrations
 
             modelBuilder.Entity("CryptoWallet.Domain.Entities.OptionPositionHistory", b =>
                 {
-                    b.Property<int>("OptionPositionId")
+                    b.Property<long>("OptionPositionId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<double>("AveragePrice")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("AveragePriceUsd")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("Delta")
+                        .HasColumnType("REAL");
+
+                    b.Property<string>("Direction")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("FloatingProfitLoss")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("FloatingProfitLossUsd")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("Gamma")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("IndexPrice")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("InitialMargin")
+                        .HasColumnType("REAL");
 
                     b.Property<string>("InstrumentName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Kind")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<double>("MaintenanceMargin")
+                        .HasColumnType("REAL");
+
                     b.Property<double>("MarkPrice")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("RealizedProfitLoss")
                         .HasColumnType("REAL");
 
                     b.Property<DateTime>("RegisterTime")
@@ -106,16 +185,19 @@ namespace CryptoWallet.Infrastructure.Migrations
                     b.Property<long>("ResponseOut")
                         .HasColumnType("INTEGER");
 
+                    b.Property<double>("SettlementPrice")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("Size")
+                        .HasColumnType("REAL");
+
+                    b.Property<double>("Theta")
+                        .HasColumnType("REAL");
+
                     b.Property<double>("TotalProfitLoss")
                         .HasColumnType("REAL");
 
-                    b.Property<double>("average_price")
-                        .HasColumnType("REAL");
-
-                    b.Property<double>("delta")
-                        .HasColumnType("REAL");
-
-                    b.Property<double>("size")
+                    b.Property<double>("Vega")
                         .HasColumnType("REAL");
 
                     b.HasKey("OptionPositionId");

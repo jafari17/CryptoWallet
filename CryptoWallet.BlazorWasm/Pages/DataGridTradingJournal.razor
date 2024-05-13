@@ -22,7 +22,7 @@ else
 
 
 
-    <RadzenDataGrid @ref="grid" Data="@oPositionVM" TItem="OptionPositionVM" AllowFiltering="true" AllowPaging="true" PageSize="3" AllowSorting="true" RowRender="@RowRender" ExpandMode="@expandMode">
+    <RadzenDataGrid @ref="grid" Data="@oPositionVM" TItem="OptionPositionVM" AllowFiltering="true" AllowPaging="true" PageSize="5" AllowSorting="true" RowRender="@RowRender" ExpandMode="@expandMode">
 
         <Template Context="OptionPositionVM2">
             <RadzenTabs>
@@ -56,12 +56,12 @@ else
 
         <Columns>
             <RadzenDataGridColumn TItem="OptionPositionVM" Property="InstrumentName" Title="Instrument Name" Width="180px" />
-            <RadzenDataGridColumn TItem="OptionPositionVM" Property="size" Title="size" Width="50px" />
-            <RadzenDataGridColumn TItem="OptionPositionVM" Property="average_price" Title="average price" Width="120px" />
+            <RadzenDataGridColumn TItem="OptionPositionVM" Property="Size" Title="size" Width="50px" />
+            <RadzenDataGridColumn TItem="OptionPositionVM" Property="AveragePrice" Title="Average Price" Width="120px" />
             <RadzenDataGridColumn TItem="OptionPositionVM" Property="MarkPrice" Title="MarkPrice" Width="120px" />
-            <RadzenDataGridColumn TItem="OptionPositionVM" Property="TotalProfitLoss" Title="Total ProfitLoss" Width="120px" />
-            <RadzenDataGridColumn TItem="OptionPositionVM" Property="delta" Title="delta" Width="120px" />
-            <RadzenDataGridColumn TItem="OptionPositionVM" Property="description" Title="description" Width="120px" />
+            <RadzenDataGridColumn TItem="OptionPositionVM" Property="FloatingProfitLossUsd" Title="FloatingProfitLossUsd" Width="120px" />
+  
+            <RadzenDataGridColumn TItem="OptionPositionVM" Property="Description" Title="Description" Width="120px" />
  
             <RadzenDataGridColumn TItem="OptionPositionVM" Property="" Title="" Width="120px">
                 <Template Context="OptionPositionVM">
@@ -71,7 +71,7 @@ else
                         @{
                             IDPosition = OptionPositionVM.optionPositionId;
                             TitelPosition = OptionPositionVM.InstrumentName;
-                            DescriptionPosition = OptionPositionVM.description;
+                            DescriptionPosition = OptionPositionVM.Description;
                         }
                     </RadzenButton>
                 </Template>
@@ -96,7 +96,7 @@ else
     @<RadzenStack Gap="1.5rem">
 
         @{textareaTransaction = null;}
-        <textarea rows='3' cols='50' @bind=textareaTransaction> @DescriptionTransaction    </textarea>
+        <textarea rows='5' cols='50' @bind=textareaTransaction> @DescriptionTransaction    </textarea>
 
         <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween">
             <RadzenStack Orientation="Orientation.Horizontal">
@@ -121,7 +121,7 @@ else
     @<RadzenStack Gap="1.5rem">
 
         @{textareaPosition = null;}
-        <textarea rows='3' cols='50' @bind=textareaPosition> @DescriptionPosition    </textarea>
+        <textarea rows='5' cols='50' @bind=textareaPosition> @DescriptionPosition    </textarea>
         <RadzenStack Orientation="Orientation.Horizontal" Gap="0.5rem" AlignItems="AlignItems.Center" JustifyContent="JustifyContent.SpaceBetween">
             <RadzenStack Orientation="Orientation.Horizontal">
                 <template>

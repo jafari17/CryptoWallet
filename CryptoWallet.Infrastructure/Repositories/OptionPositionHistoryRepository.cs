@@ -57,7 +57,16 @@ namespace CryptoWallet.Infrastructure.Repositories
 
         public async Task SaveChangesAsync()
         {
-               await _context.SaveChangesAsync();
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Error SaveChanges");
+                throw;
+            }
+               
         }
     }
 }

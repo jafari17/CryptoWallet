@@ -28,13 +28,42 @@ namespace CryptoWallet.Application.Services.Asset_.Commands.Create
             
             List<Asset> assets = await _exchangeReceive.GetLastAsset();
 
+            var asset = await _AssetRepository.GetListAssetAsync(); 
+            var MaxRegisterTime = asset.Max(x => x.RegisterTime);
+            var LasrRegister = asset.Where(x => x.RegisterTime == MaxRegisterTime).ToList();
+
+
+
+
             foreach (var item in assets)
             {
-                _AssetRepository.AddAssetAsync(item);
+                if (ChecRegisterTime(MaxRegisterTime))
+                {
+                    _AssetRepository.AddAssetAsync(item);
+                }
+                else if(!LasrRegister.Any(x => x.currency == item.currency))
+                {
+                    _AssetRepository.AddAssetAsync(item);
+                }
+
             }
-            _AssetRepository.SaveChangesAsync();
+            await _AssetRepository.SaveChangesAsync();
 
             return await Task.FromResult(true);
+        }
+
+         bool ChecRegisterTime(DateTime  MaxRegisterTime)
+        {
+            DateTime now = DateTime.Now;
+
+            DateTime NowAdd = now.AddHours(-24);
+
+
+            if(MaxRegisterTime <= NowAdd )
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

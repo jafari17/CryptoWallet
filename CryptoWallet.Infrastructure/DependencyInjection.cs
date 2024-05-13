@@ -23,6 +23,7 @@ namespace CryptoWallet.Infrastructure
             services.AddDbContext<CryptoWalletDbContext>(option =>
             {
                 option.UseSqlite("Data Source=DB/CryptoWalletDb.db");
+                
             });
 
             

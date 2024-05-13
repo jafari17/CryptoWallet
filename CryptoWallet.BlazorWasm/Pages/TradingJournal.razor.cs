@@ -6,6 +6,9 @@ namespace CryptoWallet.BlazorWasm.Pages
 {
     public partial class TradingJournal
     {
+        string baseAddress = appsettings.BaseAddress;
+
+
         private OptionTransactionVM[]? oTransactionVM;
         private OptionPositionVM2[]? oPositionVM ;
 
@@ -26,7 +29,7 @@ namespace CryptoWallet.BlazorWasm.Pages
 
                 //oTransactionVM = await Http.GetFromJsonAsync<OptionTransactionVM[]>(ListString);
 
-                oTransactionVM = await Http.GetFromJsonAsync<OptionTransactionVM[]>("https://localhost:7185/api/OptionTransaction/GetOptionTransaction");
+                oTransactionVM = await Http.GetFromJsonAsync<OptionTransactionVM[]>($"{baseAddress}/api/OptionTransaction/GetOptionTransaction");
 
 
             }
@@ -39,7 +42,7 @@ namespace CryptoWallet.BlazorWasm.Pages
 
             try
             {
-                oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM2[]>("https://localhost:7185/api/OptionPosition/GetOptionPositionList");
+                oPositionVM = await Http.GetFromJsonAsync<OptionPositionVM2[]>($"{baseAddress}/api/OptionPosition/GetOptionPositionList");
 
             }
             catch (Exception)

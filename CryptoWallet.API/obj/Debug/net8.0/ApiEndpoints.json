@@ -63,19 +63,14 @@
     "ContainingType": "CryptoWallet.API.Controllers.OptionTransactionController",
     "Method": "UpdateOptionTransaction",
     "RelativePath": "api/OptionTransaction/UpdateOptionTransaction",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "optionTransactionId",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Description",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "model",
+        "Type": "CryptoWallet.Application.ViewModels.DescriptionDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
@@ -83,17 +78,11 @@
   {
     "ContainingType": "CryptoWallet.API.Controllers.PositionTransactionLogController",
     "Method": "GetPositionTransactionLogList",
-    "RelativePath": "api/PositionTransactionLog/GetPositionTransactionLogList/{lastUpdate}",
+    "RelativePath": "api/PositionTransactionLog/GetPositionTransactionLogList",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [
-      {
-        "Name": "lastUpdate",
-        "Type": "System.Boolean",
-        "IsRequired": true
-      }
-    ],
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -110,21 +99,26 @@
     "ContainingType": "CryptoWallet.API.Controllers.PositionTransactionLogController",
     "Method": "UpdateOptionPosition",
     "RelativePath": "api/PositionTransactionLog/UpdateOptionPosition",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "ID",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "Description",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "model",
+        "Type": "CryptoWallet.Application.ViewModels.DescriptionDto",
+        "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CryptoWallet.API.Controllers.TelegramController",
+    "Method": "AutoMessage",
+    "RelativePath": "api/Telegram/AutoMessage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   }
 ]
