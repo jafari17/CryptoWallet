@@ -24,7 +24,7 @@ namespace CryptoWallet.Infrastructure
             {
                 option.UseSqlite("Data Source=DB/CryptoWalletDb.db");
                 
-            },ServiceLifetime.Scoped);
+            });
 
             
 

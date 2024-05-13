@@ -1,3 +1,4 @@
+using Radzen.Blazor;
 using System.Globalization;
 using System.Net.Http.Json;
 using static CryptoWallet.BlazorWasm.Pages.DataGridTradingJournal;
@@ -7,6 +8,9 @@ namespace CryptoWallet.BlazorWasm.Pages
 {
     public partial class TradingChart
     {
+
+        string baseAddress = appsettings.BaseAddress;
+
         bool smooth = false;
         bool showDataLabels = true;
         bool showMarkers = true;
@@ -38,7 +42,7 @@ namespace CryptoWallet.BlazorWasm.Pages
         List<ChartOP> listChartOP = new List<ChartOP>();
         protected override async Task OnInitializedAsync()
         {
-            ListAssets = await Http.GetFromJsonAsync<OptionPositionVM[]>("https://localhost:7185/api/OptionPosition/GetOptionPositionList");
+            ListAssets = await Http.GetFromJsonAsync<OptionPositionVM[]>($"{baseAddress}/api/OptionPosition/GetOptionPositionList");
 
             //List<ChartOP> listChartOP = new List<ChartOP>();
             foreach (var item in ListAssets)
@@ -61,17 +65,31 @@ namespace CryptoWallet.BlazorWasm.Pages
                     listChartOP.Add(chartOP);
                 }
             }
+           
         }
 
         public class OptionPositionVM
         {
-            public int OptionPositionId { get; set; }
-            public string InstrumentName { get; set; }
-            public double size { get; set; }
-            public double average_price { get; set; }
-            public double MarkPrice { get; set; }
+            public long OptionPositionId { get; set; }
+            public double FloatingProfitLossUsd { get; set; }
+            public double AveragePriceUsd { get; set; }
             public double TotalProfitLoss { get; set; }
-            public double delta { get; set; }
+            public double RealizedProfitLoss { get; set; }
+            public double FloatingProfitLoss { get; set; }
+            public double AveragePrice { get; set; }
+            public double Theta { get; set; }
+            public double Vega { get; set; }
+            public double Gamma { get; set; }
+            public double Delta { get; set; }
+            public double InitialMargin { get; set; }
+            public double MaintenanceMargin { get; set; }
+            public double SettlementPrice { get; set; }
+            public string InstrumentName { get; set; }
+            public double MarkPrice { get; set; }
+            public double IndexPrice { get; set; }
+            public string Direction { get; set; }
+            public string Kind { get; set; }
+            public double Size { get; set; }
             public DateTime RegisterTime { get; set; }
             public long ResponseOut { get; set; }
         }

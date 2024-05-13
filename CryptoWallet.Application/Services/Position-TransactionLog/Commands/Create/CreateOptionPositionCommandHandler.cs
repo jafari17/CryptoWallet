@@ -37,7 +37,7 @@ namespace CryptoWallet.Application.Services.Position_TransactionLog.Commands.Cre
 
             foreach (var item in OPositionDto)
             {
-                if (item.size != 0 && optionPositionList.Any(x => x.InstrumentName == item.InstrumentName))
+                if (item.Size != 0 && optionPositionList.Any(x => x.InstrumentName == item.InstrumentName))
                 {
                     var oPositionMaper = _mapper.Map<OptionPosition>(item);
                     
@@ -49,7 +49,7 @@ namespace CryptoWallet.Application.Services.Position_TransactionLog.Commands.Cre
 
                     await _oPositionRepository.UpdateOptionPositionAsync(oPositionMaper);
                 }
-                else if (item.size != 0)
+                else if (item.Size != 0)
                 {
                     var oPositionMaper = _mapper.Map<OptionPosition>(item);
                     oPositionMaper.Active = true;

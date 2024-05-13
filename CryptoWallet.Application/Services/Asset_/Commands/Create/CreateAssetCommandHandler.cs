@@ -47,7 +47,7 @@ namespace CryptoWallet.Application.Services.Asset_.Commands.Create
                 }
 
             }
-            
+            await _AssetRepository.SaveChangesAsync();
 
             return await Task.FromResult(true);
         }

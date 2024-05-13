@@ -43,33 +43,33 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
             List<Asset> Listassets = new List<Asset>();
             Console.WriteLine(data.result.summaries);
 
-            foreach ( var item in data.result.summaries) 
+            foreach (var item in data.result.summaries)
             {
                 Asset newAsset = new Asset() { };
                 newAsset.currency = item.currency;
                 newAsset.equity = item.equity;
-                newAsset.RegisterTime = dateTimeNow; 
-                if (item.equity != 0 && ( item.currency == "BTC" || item.currency == "ETH" ))
+                newAsset.RegisterTime = dateTimeNow;
+                if (item.equity != 0 && (item.currency == "BTC" || item.currency == "ETH"))
                 {
                     dynamic indexPrice = await getApiResponse($"https://test.deribit.com/api/v2/public/get_index?currency={newAsset.currency}");
- 
+
 
                     //var data11 = JsonConvert.DeserializeObject(indexPrice);
 
                     //Console.WriteLine(indexPrice.result);
                     //Console.WriteLine(indexPrice.result[0]);
                     //Console.WriteLine(indexPrice.result[1]);
-                    if(item.currency == "BTC" || item.currency == "ETH") 
-                    { 
-                    if(item.currency == "BTC") newAsset.Price = indexPrice.result.BTC;
-                    
-                    if(item.currency == "ETH") newAsset.Price = indexPrice.result.ETH;
-                    
-                    newAsset.Value = newAsset.Price * newAsset.equity;
+                    if (item.currency == "BTC" || item.currency == "ETH")
+                    {
+                        if (item.currency == "BTC") newAsset.Price = indexPrice.result.BTC;
+
+                        if (item.currency == "ETH") newAsset.Price = indexPrice.result.ETH;
+
+                        newAsset.Value = newAsset.Price * newAsset.equity;
                     }
                     Listassets.Add(newAsset);
                 }
-                if ( item.currency == "USDT" || item.currency == "USDC")
+                if (item.currency == "USDT" || item.currency == "USDC")
                 {
                     newAsset.Price = 1;
                     newAsset.Value = item.equity;
@@ -115,18 +115,59 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
 
             foreach (var item in data.result)
             {
+
+                Console.WriteLine(item);
+
+
                 OptionPositionDto optionVM = new OptionPositionDto()
                 {
-                    InstrumentName = item.instrument_name,
-                    size = item.size,
-                    average_price = item.average_price,
-                    MarkPrice = item.mark_price,
-                    TotalProfitLoss = item.total_profit_loss,
-                    delta = item.delta,
-                    ResponseOut = data.usOut,
-                    RegisterTime = nowDate 
-,
+                    //FloatingProfitLossUsd = item.floating_profit_loss_usd,
+                    //AveragePriceUsd = item.average_price_usd,
+                    //TotalProfitLoss = item.total_profit_loss,
+                    //RealizedProfitLoss = item.realized_profit_loss,
+                    //FloatingProfitLoss = item.floating_profit_loss,
+                    //AveragePrice = item.average_price,
+                    //Theta = item.theta,
+                    //Vega = item.vega,
+                    //Gamma = item.gamma,
+                    //Delta = item.delta,
+                    //InitialMargin = item.initial_margin,
+                    //MaintenanceMargin = item.maintenance_margin,
+                    //SettlementPrice = item.settlement_price,
+                    //InstrumentName = item.instrument_name,
+                    //MarkPrice = item.mark_price,
+                    //IndexPrice = item.index_price,
+                    //Direction = item.direction,
+                    //Kind = item.kind,
+                    //Size = item.size,
+                    //ResponseOut = data.usOut,
+                    //RegisterTime = nowDate,
+
                 };
+
+
+                optionVM.FloatingProfitLossUsd = item.floating_profit_loss_usd;
+                optionVM.AveragePriceUsd = item.average_price_usd;
+                optionVM.TotalProfitLoss = item.total_profit_loss;
+                optionVM.RealizedProfitLoss = item.realized_profit_loss;
+                optionVM.FloatingProfitLoss = item.floating_profit_loss;
+                optionVM.AveragePrice = item.average_price;
+                optionVM.Theta = item.theta;
+                optionVM.Vega = item.vega;
+                optionVM.Gamma = item.gamma;
+                optionVM.Delta = item.delta;
+                optionVM.InitialMargin = item.initial_margin;
+                optionVM.MaintenanceMargin = item.maintenance_margin;
+                optionVM.SettlementPrice = item.settlement_price;
+                optionVM.InstrumentName = item.instrument_name;
+                optionVM.MarkPrice = item.mark_price;
+                optionVM.IndexPrice = item.index_price;
+                optionVM.Direction = item.direction;
+                optionVM.Kind = item.kind;
+                optionVM.Size = item.size;
+                optionVM.ResponseOut = data.usOut;
+                optionVM.RegisterTime = nowDate;
+
                 ListoptionVM.Add(optionVM);
             }
             return ListoptionVM;
@@ -236,7 +277,7 @@ namespace CryptoWallet.Infrastructure.ExternalService.Derbit
 
             var result = response.Content.ReadAsStringAsync().Result;
 
-           
+
             dynamic data11 = JsonConvert.DeserializeObject(result);
 
             var token = data11.result.access_token;

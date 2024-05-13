@@ -39,7 +39,7 @@ namespace CryptoWallet.Application.Services.Option_Position_History.Commands.Cre
 
             foreach (var item in OPositionDto)
             {
-                if(item.size != 0)
+                if(item.Size != 0)
                 {
                     if (ChecRegisterTime(MaxRegisterTime))
                     {

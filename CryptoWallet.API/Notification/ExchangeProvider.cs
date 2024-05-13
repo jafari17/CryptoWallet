@@ -52,7 +52,11 @@ namespace CryptoWallet.API.Notification
 
             foreach (var item in response)
             {
-                massage = massage + $"Instrument: {item.InstrumentName} Value: {item.MarkPrice}\n";
+
+               
+
+                massage = massage + $"Instrument: {item.InstrumentName} Size: {item.Size} \n MarkPrice: {item.MarkPrice} " +
+                    $" Average Price: {item.AveragePrice }  \n floating profit loss usd  {item.FloatingProfitLossUsd} \n\n   ";
             }
 
             return massage;

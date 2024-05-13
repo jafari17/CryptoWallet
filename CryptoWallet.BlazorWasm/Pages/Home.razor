@@ -19,6 +19,10 @@ Welcome to your new app.
     <RadzenButton Text="Dialog with inline Blazor content" ButtonStyle="ButtonStyle.Secondary" Click=@ShowInlineDialog />
  
 @code {
+
+
+    string baseAddress = appsettings.BaseAddress;
+
     string text = "Hi";
     string Titel = "tttt";
 
@@ -42,7 +46,7 @@ Welcome to your new app.
 
         private async Task IncrementCount()
         {
-            await Http.GetAsync("https://localhost:7185/api/OptionTransaction/UpdateOptionTransaction?optionTransactionId=6&Description=www");
+        await Http.GetAsync($"{baseAddress}/api/OptionTransaction/UpdateOptionTransaction?optionTransactionId=6&Description=www");
 
         }
 

@@ -110,5 +110,15 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CryptoWallet.API.Controllers.TelegramController",
+    "Method": "AutoMessage",
+    "RelativePath": "api/Telegram/AutoMessage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

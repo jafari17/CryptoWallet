@@ -45,11 +45,9 @@ namespace CryptoWallet.API.Controllers
         [HttpPost]
         public async Task<IActionResult> UpdateOptionTransaction(DescriptionDto model)
         {
-
             var command = new UpdateOptionTransactionCommand(model.ID, model.Description);
             var response = await _mediator.Send(command);
             return Ok(response);
-
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using CryptoWallet.Application.Contracts.Persistence;
+﻿using AutoMapper;
+using CryptoWallet.Application.Contracts.Persistence;
+using CryptoWallet.Application.Services.Position_TransactionLog.Queries.GETPositionTransactionLogList;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -11,9 +13,13 @@ namespace CryptoWallet.Application.Services.Option_Position_History.Queries.GetO
     public class GetOptionPositionListQueryHandler : IRequestHandler<GetOptionPositionListQuery, IEnumerable<GetOptionPositionListQueryResponse>>
     {
         private readonly IOptionPositionHistoryRepository _optionPositionRepository;
-        public GetOptionPositionListQueryHandler(IOptionPositionHistoryRepository optionPositionRepository)
+        private readonly IMapper _mapper;
+
+
+        public GetOptionPositionListQueryHandler(IOptionPositionHistoryRepository optionPositionRepository, IMapper mapper)
         {
             _optionPositionRepository = optionPositionRepository;
+            _mapper = mapper;
         }
 
         public async Task<IEnumerable<GetOptionPositionListQueryResponse>> Handle(GetOptionPositionListQuery request, CancellationToken cancellationToken)
@@ -23,24 +29,28 @@ namespace CryptoWallet.Application.Services.Option_Position_History.Queries.GetO
 
             var optionPositionList = await _optionPositionRepository.GetListOptionPositionHistoryAsync();
 
-            List<GetOptionPositionListQueryResponse> optionPositionListQueryResponse = new List<GetOptionPositionListQueryResponse>();
-            foreach (var item in optionPositionList)
-            {
-                var optionPosition = new GetOptionPositionListQueryResponse()
-                {
-                    OptionPositionId = item.OptionPositionId,
-                    InstrumentName = item.InstrumentName,
-                    size = item.size,
-                    average_price = item.average_price,
-                    MarkPrice = item.MarkPrice,
-                    TotalProfitLoss = item.TotalProfitLoss,
-                    delta = item.delta,
-                    RegisterTime = item.RegisterTime,
-                    ResponseOut = item.ResponseOut,
-                };
+            //List<GetOptionPositionListQueryResponse> optionPositionListQueryResponse = new List<GetOptionPositionListQueryResponse>();
+            //foreach (var item in optionPositionList)
+            //{
+            //    var optionPosition = new GetOptionPositionListQueryResponse()
+            //    {
+            //        OptionPositionId = item.OptionPositionId,
+            //        InstrumentName = item.InstrumentName,
+            //        size = item.size,
+            //        average_price = item.average_price,
+            //        MarkPrice = item.MarkPrice,
+            //        TotalProfitLoss = item.TotalProfitLoss,
+            //        delta = item.delta,
+            //        RegisterTime = item.RegisterTime,
+            //        ResponseOut = item.ResponseOut,
+            //    };
 
-                optionPositionListQueryResponse.Add(optionPosition);
-            }
+            //    optionPositionListQueryResponse.Add(optionPosition);
+            //}
+
+
+            var optionPositionListQueryResponse =  _mapper.Map<List<GetOptionPositionListQueryResponse>>(optionPositionList);
+
 
             return optionPositionListQueryResponse;
         }

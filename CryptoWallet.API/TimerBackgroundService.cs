@@ -18,10 +18,15 @@ using static System.Net.WebRequestMethods;
 namespace CryptoWallet.API
 {
     public class TimerBackgroundService : BackgroundService
+
     {
+
+        private int daily;
         private Timer? _timer = null;
 
         private readonly int _TimeSpanSeconds;
+
+        private readonly string _BaseAddress;
 
         private readonly IMediator _mediator;
 
@@ -37,6 +42,8 @@ namespace CryptoWallet.API
             _mediator = mediator;
             _configuration = configuration;
             _TimeSpanSeconds = _configuration.GetValue<int>("BackgroundTimeSpanSeconds");
+            _BaseAddress = _configuration["BaseAddress"];
+
             //_httpClient = httpClient;
 
 
@@ -48,92 +55,98 @@ namespace CryptoWallet.API
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+             
             _timer = new Timer(DoWork, null, TimeSpan.Zero, TimeSpan.FromSeconds(_TimeSpanSeconds));
         }
 
-        private  void DoWork(object? state)
+        private  async void DoWork(object? state)
         {
 
-                HttpClient HC = new HttpClient();
+               
+            await CheckiActiveTime();
+                {
 
-            //System.Threading.Thread.Sleep(20000);
-            //Console.WriteLine("_________________________Asset_________________________");
-            //Console.WriteLine("_________________________Asset_________________________");
-            //Console.WriteLine("_________________________Asset_________________________");
-            //HC.GetAsync("https://localhost:7185/api/Asset/SavelastAsset");
-
-
-            //System.Threading.Thread.Sleep(20000);
-            //Console.WriteLine("_________________________OptionPosition_________________________");
-            //Console.WriteLine("_________________________OptionPosition_________________________");
-            //Console.WriteLine("_________________________OptionPosition_________________________");
-            //HC.GetAsync("https://localhost:7185/api/OptionPosition/SavelastOptionPosition");
-
-            //System.Threading.Thread.Sleep(20000);
-
-            //Console.WriteLine("_________________________PositionTransactionLog_________________________");
-            //Console.WriteLine("_________________________PositionTransactionLog_________________________");
-            //Console.WriteLine("_________________________PositionTransactionLog_________________________");
-            //HC.GetAsync("https://localhost:7185/api/PositionTransactionLog/SavePositionList");
-
-            //System.Threading.Thread.Sleep(20000);
-            //Console.WriteLine("_________________________OptionTransaction_________________________");
-            //Console.WriteLine("_________________________OptionTransaction_________________________");
-            //Console.WriteLine("_________________________OptionTransaction_________________________");
-            //HC.GetAsync("https://localhost:7185/api/OptionTransaction/SavelastOptionTransaction");
+                //HttpClient HC = new HttpClient();
+                //System.Threading.Thread.Sleep(5000);
+                //Console.WriteLine("_________________________Asset_________________________");
+                //Console.WriteLine("_________________________Asset_________________________");
+                //Console.WriteLine("_________________________Asset_________________________");
+                //HC.GetAsync($"{_BaseAddress}/api/Asset/SavelastAsset");
 
 
+                //System.Threading.Thread.Sleep(20000);
+                //Console.WriteLine("_________________________OptionPosition_________________________");
+                //Console.WriteLine("_________________________OptionPosition_________________________");
+                //Console.WriteLine("_________________________OptionPosition_________________________");
+                //HC.GetAsync($"{_BaseAddress}/api/OptionPosition/SavelastOptionPosition");
+
+                //System.Threading.Thread.Sleep(20000);
+
+                //Console.WriteLine("_________________________PositionTransactionLog_________________________");
+                //Console.WriteLine("_________________________PositionTransactionLog_________________________");
+                //Console.WriteLine("_________________________PositionTransactionLog_________________________");
+                //HC.GetAsync($"{_BaseAddress}/api/PositionTransactionLog/SavePositionList");
+
+                //System.Threading.Thread.Sleep(20000);
+                //Console.WriteLine("_________________________OptionTransaction_________________________");
+                //Console.WriteLine("_________________________OptionTransaction_________________________");
+                //Console.WriteLine("_________________________OptionTransaction_________________________");
+                //HC.GetAsync($"{_BaseAddress}/api/OptionTransaction/SavelastOptionTransaction");
+
+
+                ////System.Threading.Thread.Sleep(20000);
+                //Console.WriteLine("_________________________Telegram_________________________");
+                //Console.WriteLine("_________________________Telegram_________________________");
+                //Console.WriteLine("_________________________Telegram_________________________");
+
+                //HC.GetAsync($"{_BaseAddress}/api/Telegram/AutoMessage");
 
 
 
 
 
-            ////var commandOPH = new CreateOptionPositionHistoryCommand();
-            //IMediator _iMediatorOPH = scope.ServiceProvider.GetRequiredService<IMediator>();
-            //var CryptoWalletDbContext = scope.ServiceProvider.GetRequiredService<CryptoWalletDbContext>();
-            ////var responseOPH = _iMediatorOPH.Send(commandOPH);
-
-            //var commandOP = new CreateOptionPositionCommand();
-            ///*IMediator _iMediatorOP = scope.ServiceProvider.GetRequiredService<IMediator>()*/
-            //;
-            //var responseOP = _iMediatorOPH.Send(commandOP);
-
-
-            //var commandOT = new CreateOptionTransactionCommand();
-            ////IMediator _iMediatorOT = scope.ServiceProvider.GetRequiredService<IMediator>();
-            //var responseOT = _iMediatorOPH.Send(commandOT).Result;
-
-            //var commandA = new CreateAssetCommand();
-            ////IMediator _iMediatorA = scope.ServiceProvider.GetRequiredService<IMediator>();
-            //var responseA = _iMediatorOPH.Send(commandA).Result;
-
-
-            //ExchangeProvider _exchangeProvider = scope.ServiceProvider.GetRequiredService<ExchangeProvider>();
-            //var X = _exchangeProvider.AutoMessage();
-
-
-            Console.WriteLine(DateTime.Now);
+                Console.WriteLine(DateTime.Now);
+            }
            
         }
 
 
-        private bool CheckiActiveTime()
+        private async Task<bool> CheckiActiveTime()
         {
 
-            double tehranOffset = 3.5;
-            DateTime now = DateTime.UtcNow.AddHours(tehranOffset);
-            int hour = now.Hour;
+             
+            DateTime TehranNow  = TehranDatetimeNow();
+            int hour = TehranNow.Hour;
 
-            Console.WriteLine(TimeSpan.FromSeconds(3000));
+              Console.WriteLine(TimeSpan.FromSeconds(300000));
 
+            Console.WriteLine("befor TimeSpan");
 
+              //System.Threading.Thread.Sleep(1000 * 60 * 60 * 24);
 
-            if (hour < 6)
+               Console.WriteLine("After TimeSpan");
+
+            if (hour < 11 && daily != TehranNow.Day )
             {
                 Console.WriteLine(" 12pm and 6am ");
+
+                 daily = TehranNow.Day;
+
                 return false;
+
+
             }
             else { return true; }
         }
+
+        private DateTime TehranDatetimeNow()
+        {
+            double tehranOffset = 3.5;
+            DateTime now = DateTime.UtcNow.AddHours(tehranOffset);
+
+            return now;
+        }
+
+
     }
 }
