@@ -66,41 +66,41 @@ namespace CryptoWallet.API
             if (CheckiActiveTime())
             {
 
-                //HttpClient HC = new HttpClient();
-                //System.Threading.Thread.Sleep(5000);
-                //Console.WriteLine("_________________________Asset_________________________");
-                //Console.WriteLine("_________________________Asset_________________________");
-                //Console.WriteLine("_________________________Asset_________________________");
-                //HC.GetAsync($"{_BaseAddress}/api/Asset/SavelastAsset");
+                HttpClient HC = new HttpClient();
+                System.Threading.Thread.Sleep(5000);
+                Console.WriteLine("_________________________Asset_________________________");
+                Console.WriteLine("_________________________Asset_________________________");
+                Console.WriteLine("_________________________Asset_________________________");
+                HC.GetAsync($"{_BaseAddress}/api/Asset/SavelastAsset");
+
+
+                System.Threading.Thread.Sleep(20000);
+                Console.WriteLine("_________________________OptionPosition_________________________");
+                Console.WriteLine("_________________________OptionPosition_________________________");
+                Console.WriteLine("_________________________OptionPosition_________________________");
+                HC.GetAsync($"{_BaseAddress}/api/OptionPosition/SavelastOptionPosition");
+
+                System.Threading.Thread.Sleep(20000);
+
+                Console.WriteLine("_________________________PositionTransactionLog_________________________");
+                Console.WriteLine("_________________________PositionTransactionLog_________________________");
+                Console.WriteLine("_________________________PositionTransactionLog_________________________");
+                HC.GetAsync($"{_BaseAddress}/api/PositionTransactionLog/SavePositionList");
+
+                System.Threading.Thread.Sleep(20000);
+                Console.WriteLine("_________________________OptionTransaction_________________________");
+                Console.WriteLine("_________________________OptionTransaction_________________________");
+                Console.WriteLine("_________________________OptionTransaction_________________________");
+                HC.GetAsync($"{_BaseAddress}/api/OptionTransaction/SavelastOptionTransaction");
 
 
                 //System.Threading.Thread.Sleep(20000);
-                //Console.WriteLine("_________________________OptionPosition_________________________");
-                //Console.WriteLine("_________________________OptionPosition_________________________");
-                //Console.WriteLine("_________________________OptionPosition_________________________");
-                //HC.GetAsync($"{_BaseAddress}/api/OptionPosition/SavelastOptionPosition");
+                Console.WriteLine("_________________________Telegram_________________________");
+                Console.WriteLine("_________________________Telegram_________________________");
+                Console.WriteLine("_________________________Telegram_________________________");
 
-                //System.Threading.Thread.Sleep(20000);
+                HC.GetAsync($"{_BaseAddress}/api/Telegram/AutoMessage");
 
-                //Console.WriteLine("_________________________PositionTransactionLog_________________________");
-                //Console.WriteLine("_________________________PositionTransactionLog_________________________");
-                //Console.WriteLine("_________________________PositionTransactionLog_________________________");
-                //HC.GetAsync($"{_BaseAddress}/api/PositionTransactionLog/SavePositionList");
-
-                //System.Threading.Thread.Sleep(20000);
-                //Console.WriteLine("_________________________OptionTransaction_________________________");
-                //Console.WriteLine("_________________________OptionTransaction_________________________");
-                //Console.WriteLine("_________________________OptionTransaction_________________________");
-                //HC.GetAsync($"{_BaseAddress}/api/OptionTransaction/SavelastOptionTransaction");
-
-
-                ////System.Threading.Thread.Sleep(20000);
-                //Console.WriteLine("_________________________Telegram_________________________");
-                //Console.WriteLine("_________________________Telegram_________________________");
-                //Console.WriteLine("_________________________Telegram_________________________");
-
-                //HC.GetAsync($"{_BaseAddress}/api/Telegram/AutoMessage");
-                 
                 Console.WriteLine(DateTime.Now);
             }
 

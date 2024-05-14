@@ -58,7 +58,7 @@ namespace CryptoWallet.BlazorWasm.Pages
                         DataItem DI = new DataItem
                         {
                             Date = instrumentOP.RegisterTime,
-                            Value = instrumentOP.MarkPrice 
+                            Value = instrumentOP.FloatingProfitLossUsd 
                         };
                         chartOP.DataItems.Add(DI);
                     }

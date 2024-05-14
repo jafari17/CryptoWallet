@@ -63,7 +63,7 @@ namespace CryptoWallet.Application.Services.Option_Position_History.Commands.Cre
         {
             DateTime now = DateTime.Now;
 
-            DateTime NowAdd = now.AddHours(-24);
+            DateTime NowAdd = now.AddHours(-23);
 
 
             if (MaxRegisterTime <= NowAdd)

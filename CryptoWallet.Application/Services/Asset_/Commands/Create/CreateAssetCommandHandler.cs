@@ -56,7 +56,7 @@ namespace CryptoWallet.Application.Services.Asset_.Commands.Create
         {
             DateTime now = DateTime.Now;
 
-            DateTime NowAdd = now.AddHours(-24);
+            DateTime NowAdd = now.AddHours(-23);
 
 
             if(MaxRegisterTime <= NowAdd )
