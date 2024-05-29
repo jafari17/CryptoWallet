@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("5t5a9d64-7b95-4155-9128-01975e6f444a")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("CryptoWallet.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f565a6a9f62758764bc7f4e1a178ebb80049e2f6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+45fa1ae6255af4c7a589de18b2b1a9931628b7aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("CryptoWallet.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CryptoWallet.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

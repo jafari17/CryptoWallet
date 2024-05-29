@@ -10,6 +10,7 @@ namespace CryptoWallet.BlazorWasm.Pages
         bool smooth = false;
         bool showDataLabels = true;
         bool showMarkers = true;
+        string baseAddress = appsettings.BaseAddress;
 
         IEnumerable<AssetVM> ListAssets;
         class DataItem
@@ -30,7 +31,7 @@ namespace CryptoWallet.BlazorWasm.Pages
 
         protected override async Task OnInitializedAsync()
         {
-            ListAssets = await Http.GetFromJsonAsync<AssetVM[]>("https://localhost:7185/api/Asset/GetAssetList");
+            ListAssets = await Http.GetFromJsonAsync<AssetVM[]>($"{baseAddress}/api/Asset/GetAssetList");
             foreach (var item in ListAssets)
             {
                 
